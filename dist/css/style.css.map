@@ -1,0 +1,1 @@
+{"version":3,"sources":["test.sass"],"names":[],"mappings":"AAAA;EACE,qBAAqB;EACrB,YAAY;EACZ,oBAAa;EAAb,aAAa;EACb,YAAY,EAAA","file":"style.css","sourcesContent":["body {\n  background-color: red;\n  height: 30vh;\n  display: flex;\n  color: white; }\n\n\n"]}

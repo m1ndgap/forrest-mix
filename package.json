@@ -1,0 +1,33 @@
+{
+  "name": "forrest-mix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "9.5.x",
+    "browser-sync": "2.26.x",
+    "gulp": "4.0.x",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-sass": "4.0.x",
+    "gulp-sourcemaps": "2.6.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "git add --all && git commit -m \"script push\" && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m1ndgap/forrest-mix.git"
+  },
+  "author": "mg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m1ndgap/forrest-mix/issues"
+  },
+  "homepage": "https://github.com/m1ndgap/forrest-mix#readme"
+}
