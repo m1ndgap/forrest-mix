@@ -7,7 +7,11 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var concat = require("gulp-concat");
+var rename = require("gulp-rename");
 var server = require("browser-sync").create();
+var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
+var phinclude = require("posthtml-include");
 
 gulp.task("css", function () {
     return gulp.src("source/sass/style.sass")
@@ -24,6 +28,9 @@ gulp.task("css", function () {
 
 gulp.task("html", function() {
     return gulp.src("source/*.html")
+        .pipe(posthtml([
+            phinclude()
+        ]))
         .pipe(gulp.dest("dist/"));
 });
 
@@ -39,6 +46,15 @@ gulp.task("js-vendor", function() {
         .pipe(gulp.dest("dist/js/"));
 });
 
+gulp.task("sprite", function() {
+    return gulp.src("source/img/*.svg")
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
+        .pipe(rename("sprite.svg"))
+        .pipe(gulp.dest("dist/img"));
+});
+
 
 gulp.task("server", function () {
     server.init({
@@ -52,9 +68,10 @@ gulp.task("server", function () {
     gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
     gulp.watch("source/*.html", gulp.series("html"));
     gulp.watch("source/js/*.js", gulp.series("js"));
+    gulp.watch("source/img/*.svg", gulp.series("sprite"));
     gulp.watch("source/js/vendor/*.js", gulp.series("js-vendor"));
     gulp.watch("source/*.html").on("change", server.reload);
     gulp.watch("source/js/**/*.js").on("change", server.reload);
 });
 
-gulp.task("start", gulp.series("css", "html", "js", "js-vendor", "server"));
+gulp.task("start", gulp.series("css", "html", "js", "js-vendor", "sprite", "server"));
