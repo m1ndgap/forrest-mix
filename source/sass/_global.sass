@@ -1,2 +1,33 @@
 html
   font-size: 62.5%
+
+.text-cap
+  text-transform: uppercase
+
+body
+  position: relative
+  @include resetmargin()
+  padding-left: 84px
+  background-color: $maincolor
+  font-family: 'Open Sans'
+  font-size: 1rem
+
+.btn
+  padding: 15px 20px
+  background-size: 200% 100%
+  background-image: linear-gradient(to right, $maincolor 50%, $black 50%);
+  background-position: 100%
+  border: 2px solid $maincolor
+  color: $maincolor
+  font-family: 'Open Sans'
+  font-size: 1.2rem
+  line-height: 1.1rem
+  letter-spacing: 1px
+  text-transform: uppercase
+  cursor: pointer
+  transition: background-position $transition, color $transition
+  &:hover
+    background-position: 0 0
+    color: $black
+
+

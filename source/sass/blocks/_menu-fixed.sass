@@ -1,0 +1,49 @@
+.menu-fixed
+  padding: 36px 0px
+  background-color: $black
+  height: 100vh
+  width: 84px
+  position: fixed
+  left: 0px
+  top: 0px
+
+
+  &__nav
+    margin: auto
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+    height: calc(100vh - 72px)
+
+  &__button-wrapper
+    margin-top: auto
+    position: relative
+    width: 84px
+    height: 200px
+
+
+  &__order-call-btn
+    transform: rotate(270deg) translate(-74px, -58px)
+    position: absolute
+    left: 0
+    top: 0
+    width: 200px
+    height: 46px
+    font-weight: 500
+    letter-spacing: 2px
+
+  &__link
+    margin-top: 24px
+    svg
+      transition: $transition
+    &--main
+      margin-top: 0
+      svg
+        fill: $white
+    &--telegram, &--whatsapp
+      svg
+        fill: $maincolor
+      &:hover
+        svg
+          fill: darken($maincolor, 10%)

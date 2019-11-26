@@ -12,6 +12,8 @@ var server = require("browser-sync").create();
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var phinclude = require("posthtml-include");
+var cheerio = require('gulp-cheerio');
+
 
 gulp.task("css", function () {
     return gulp.src("source/sass/style.sass")
@@ -50,6 +52,12 @@ gulp.task("sprite", function() {
     return gulp.src("source/img/*.svg")
         .pipe(svgstore({
             inlineSvg: true
+        }))
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+            },
+            parserOptions: { xmlMode: true }
         }))
         .pipe(rename("sprite.svg"))
         .pipe(gulp.dest("dist/img"));
