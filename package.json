@@ -9,6 +9,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "@cycjimmy/swiper-animation": "^4.0.1",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "gulp": "4.0.x",
