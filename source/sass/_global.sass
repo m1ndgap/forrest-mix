@@ -16,10 +16,17 @@ body
 .main-container
   height: calc(100vh - 84px)
 
+.main-content-container
+  width: 1171px
+  margin: 0 auto
+
+.main-section
+  position: relative
+
 .btn
   padding: 15px 20px
   background-size: 200% 100%
-  background-image: linear-gradient(to right, $maincolor 50%, $black 50%);
+  background-image: linear-gradient(to right, $maincolor 50%, $black 50%)
   background-position: 100%
   border: 2px solid $maincolor
   color: $maincolor
@@ -33,5 +40,28 @@ body
   &:hover
     background-position: 0 0
     color: $black
+  &:active
+    outline: none
+  &:focus
+    outline: 1px solid $maincolor
+
+.custom-underline
+  position: relative
+  &:after
+    position: absolute
+    display: block
+    content: ""
+    height: 2px
+    bottom: -4px
+    left: 0
+    right: 0
+    background-color: $white
+
+section
+  height: 900px
+  &:nth-of-type(even)
+    background-color: $section-bg
+  &:nth-of-type(odd)
+    background-color: $white
 
 

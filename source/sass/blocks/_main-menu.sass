@@ -9,6 +9,7 @@
   left: 84px
   top: 0
   z-index: 1111
+  user-select: none
 
 
   &__list
@@ -62,15 +63,25 @@
   &__bookbtn
     height: 84px
     border: none
-    background-color: $white
-    background-image: none
+    background-size: 200% 100%
+    background-image: linear-gradient(to right, $black 50%, $white 50%)
+    background-position: 100%
     color: $black
     font-weight: 500
+    font-size: 1.2rem
     letter-spacing: 2px
     display: flex
     align-items: center
     padding: 15px 36px
+    transition: 1000ms
     svg
       margin-right: 8px
       fill: $black
+      transition: 1000ms
+    &--active
+      background-position: 0 0
+      color: $white
+      cursor: pointer
+      svg
+        fill: $white
 

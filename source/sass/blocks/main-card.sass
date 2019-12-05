@@ -1,0 +1,208 @@
+.main-card
+
+  display: flex
+  flex-flow: column wrap
+  align-content: space-between
+  font-family: 'Open Sans', sans-serif
+  padding-top: 146px
+  max-height: 610px
+
+  &__main-title
+    @include resetmargin
+    position: relative
+    padding-left: 68px
+    text-transform: uppercase
+    font-size: 1.2rem
+    color: $black
+    letter-spacing: 1px
+    &:before
+      content: ""
+      display: block
+      background-color: $black
+      width: 52px
+      height: 1px
+      position: absolute
+      left: 0
+      top: 8px
+  &__subtitle
+    @include resetmargin
+    margin-top: 36px
+    font-size: 3.6rem
+    font-family: "Yeseva One", serif
+    font-weight: normal
+  &__text-wrapper
+    max-width: 45%
+    margin-top: 20px
+    min-height: 110px
+    display: flex
+    align-items: center
+  &__text
+    @include resetmargin
+    font-size: 1.5rem
+    line-height: 28px
+  &__features-title
+    @include resetmargin
+    font-family: "Yeseva One", serif
+    font-size: 1.8rem
+    margin-top: 22px
+  &__features-list
+    @include resetlist
+    margin-top: 16px
+    display: flex
+    flex-flow: column wrap
+    align-content: space-between
+    max-height: 160px
+  &__features-list-item
+    display: block
+    position: relative
+    font-size: 1.5rem
+    line-height: 28px
+    padding-left: 14px
+    color: $dark-text
+    max-width: 55%
+    &::before
+      position: absolute
+      left: 0
+      top: 12px
+      content: ""
+      display: block
+      width: 5px
+      height: 5px
+      border: 1px solid $dark-text
+      border-radius: 50%
+      background: none
+  &__details
+    margin-top: 74px
+    max-height: 40px
+    max-width: 45%
+    display: flex
+  &__detail
+    max-width: 200px
+    display: flex
+    align-items: center
+    margin-right: 20px
+  &__detail-icon
+    height: 36px
+    width: 36px
+    background-color: $maincolor
+    background-repeat: no-repeat
+    background-position: 13px 13px
+    border-radius: 50%
+    &--ruble
+      background-image: url("../img/icon-ruble.svg")
+    &--square-m
+      background-image: url("../img/icon-square-m.svg")
+      background-position: 9px 12px
+  &__detail-text
+    @include resetmargin
+    font-size: 1.8rem
+    font-family: "Yeseva One", serif
+    margin-left: 9px
+    sup
+      font-size: 1rem
+
+  &__interaction
+    margin-top: 25px
+    display: flex
+    align-items: center
+  &__book-btn
+    border: none
+    width: 256px
+    padding: 20px 20px
+  &__more-info
+    margin-left: 48px
+    text-transform: uppercase
+    letter-spacing: 2px
+    font-size: 1.2rem
+    color: $black
+    text-decoration: none
+  &__svg-cursive
+    position: absolute
+    right: 0
+    bottom: 146px
+    width: 150px
+    svg
+      fill: $maincolor
+    &--rooms
+      bottom: 120px
+
+  &__slider
+    position: relative
+    width: 456px
+    height: 610px
+    margin-right: 52px
+    &--left-side
+      order: -1
+      margin-right: 0
+      margin-left: 52px
+    .swiper-wrapper
+    .swiper-slide
+      .test
+        width: 1000px
+        height: 1000px
+        object-fit: cover
+      img
+        height: 610px
+        object-fit: cover
+        object-position: center
+
+
+    &-next, &-prev
+      border: none
+      box-sizing: border-box
+      width: 52px
+      height: 52px
+      &:after
+        font-size: 17px
+      &:focus, &:active
+        outline: none
+    &-prev
+      &--left
+        right: auto
+        top: auto
+        left: -52px
+        bottom: 0
+      &--right
+        left: auto
+        top: auto
+        right: 0
+        bottom: 0
+    &-next
+      &--left
+        right: auto
+        top: auto
+        left: 0
+        bottom: 0
+      &--right
+        left: auto
+        top: auto
+        right: -52px
+        bottom: 0
+    &-pagination
+      max-width: 100px
+      transform: rotate(90deg)
+      user-select: none
+      &--right
+        left: auto
+        bottom: auto
+        right: -95px
+        top: 41px
+      &--left
+        right: auto
+        bottom: auto
+        left: -95px
+        top: 41px
+    &-pagination-inside
+      position: relative
+      display: flex
+      flex-flow: row nowrap
+      font-size: 1.4rem
+    &-pagination-separator
+      margin: 10px 10px 0 10px
+      display: block
+      width: 54px
+      height: 1px
+      background-color: $black
+
+
+

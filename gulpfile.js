@@ -79,6 +79,7 @@ gulp.task("server", function () {
 
     gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
     gulp.watch("source/*.html", gulp.series("html"));
+    gulp.watch("source/img/*.svg", gulp.series("html"));
     gulp.watch("source/js/*.js", gulp.series("js"));
     gulp.watch("source/img/*.svg", gulp.series("sprite"));
     gulp.watch("source/img/*.{png, jpg, jpeg}", gulp.series("img"));

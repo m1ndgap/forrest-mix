@@ -7,27 +7,58 @@
 //     console.log(img.src);
 // };
 
+let slideDelay = 3000;
 const swiperAnimation = new SwiperAnimation();
-var mySwiper4 = new Swiper('.swiper-container', {
+var mySwiper4 = new Swiper('.slides .swiper-container', {
     loop: true,
     speed: 3000,
     autoplay: {
-        delay: 3000
+        delay: slideDelay,
+        disableOnInteraction: false,
     },
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + '<span class="swiper-inside-bullet"></span>' + '</span>';
+        },
     },
     on: {
         init: function () {
-            swiperAnimation.init(this).animate();
         },
-        slideChange: function () {
-            swiperAnimation.init(this).animate();
+        transitionEnd: function () {
+
         }
     }
 });
 
+let strokeWidth = 2;
+let trailColor = 'transparent';
+let mainColor = "#FFFFFF";
+let prgbar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
+    strokeWidth: strokeWidth,
+    duration: slideDelay,
+    color: mainColor,
+    trailColor: trailColor,
+    trailWidth: strokeWidth,
+    svgStyle: null
+});
+prgbar.animate(1.0, function () {
+    prgbar.destroy();
+});
+mySwiper4.on('transitionEnd', function() {
+    let bar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
+        strokeWidth: strokeWidth,
+        duration: slideDelay,
+        color: mainColor,
+        trailColor: trailColor,
+        trailWidth: strokeWidth,
+        svgStyle: null
+    });
+    bar.animate(1.0, function () {
+        bar.destroy();
+    });
+})
 
 
