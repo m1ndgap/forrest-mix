@@ -11,7 +11,6 @@ let waypoint = new Waypoint({
     element: document.querySelector('.slides'),
     handler: function(direction) {
         toggleClass(bookBtn, bookBtnClass);
-
     },
     offset: function() {
         return -this.element.clientHeight
@@ -26,12 +25,26 @@ let waypoint = new Waypoint({
 
 let orderUI = document.querySelector('.order-ui');
 let orderUIs = orderUI.querySelectorAll('.order-ui__wrapper');
+let arrowClass = 'order-ui__dropdown-arrow';
+let arrowActiveClass = 'order-ui__dropdown-arrow--active';
+
 
 orderUIs.forEach(function(element){
-    let arrow = element.querySelector('.order-ui__dropdown-arrow');
-    element.addEventListener('click', function() {
-        arrow.classList.toggle('order-ui__dropdown-arrow--active');
-    })
+    let arrow = element.querySelector('.' + arrowClass);
+    if (arrow) {
+        element.addEventListener('click', function() {
+            arrow.classList.add(arrowActiveClass);
+        })
+    }
+});
+
+document.addEventListener('click', function(evt) {
+    if (!orderUI.contains(evt.target)) {
+        orderUIs.forEach(function (element) {
+            let arrow = element.querySelector('.' + arrowClass);
+            if (arrow) {arrow.classList.remove(arrowActiveClass)}
+        })
+    }
 });
 
 "use strict";
