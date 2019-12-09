@@ -29,7 +29,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "git add --all && git commit -m \"script push\" && git push",
-    "deploy-pages": "git add --all && git commit -m \"pages push\" && git subtree push --prefix dist origin gh-pages"
+    "deploy-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",

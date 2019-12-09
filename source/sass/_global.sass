@@ -19,6 +19,9 @@ body
 .main-content-container
   width: 1171px
   margin: 0 auto
+  @include media("<large")
+    padding: 0 20px
+    width: 100%
 
 .main-section
   position: relative
@@ -57,11 +60,60 @@ body
     right: 0
     background-color: $white
 
-section
+.main-section
   height: 900px
   &:nth-of-type(even)
     background-color: $section-bg
   &:nth-of-type(odd)
     background-color: $white
+  &--last-card
+    padding-bottom: 50px
+
+.content-title
+  @include resetmargin
+  position: relative
+  padding-left: 68px
+  text-transform: uppercase
+  font-size: 1.2rem
+  color: $black
+  letter-spacing: 1px
+  user-select: none
+  &:before
+    content: ""
+    display: block
+    background-color: $black
+    width: 52px
+    height: 1px
+    position: absolute
+    left: 0
+    top: 8px
+
+.title
+  @include resetmargin
+  font-size: 3.6rem
+  font-family: "Yeseva One", serif
+  font-weight: normal
+
+.common-text
+  @include resetmargin
+  font-size: 1.5rem
+  line-height: 28px
+  color: $dark-text
+  a
+    color: $dark-text
+
+.white-text
+  font-family: Open Sans
+  font-style: normal
+  font-weight: 600
+  color: $white
+  letter-spacing: 1.5px
+  text-decoration: none
+  text-transform: uppercase
+  a
+    color: $white
+    text-decoration: none
+
+.content-card
 
 

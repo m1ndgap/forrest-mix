@@ -35,30 +35,35 @@
     width:  100%
     height: calc(100vh - 84px)
 
-.slider-pic
-  img
-    object-fit: cover
-    width: 100%
-    height: calc(100vh - 84px)
+  .slider-pic
+    img
+      object-fit: cover
+      width: 100%
+      height: calc(100vh - 84px)
 
-.swiper-wrapper
-  position: relative
+  .swiper-wrapper
+    position: relative
 
-.main-title
-  position: absolute
-  right: 387px
-  bottom: 268px
-  z-index: 2
-  font-family: "Yeseva One", sans-serif
-  color: $white
-  text-align: right
-  &__title
-    @include resetmargin
-    margin-bottom: 6px
-    font-size: 9.6rem
-    font-weight: normal
 
-  &__subtitle
+  .main-title, .main-subtitle
+    position: absolute
+    z-index: 2
+    font-family: "Yeseva One", sans-serif
+    color: $white
+    text-align: right
+
+  .main-title
+    right: 387px
+    bottom: 268px
+    &__title
+      @include resetmargin
+      margin-bottom: 6px
+      font-size: 9.6rem
+      font-weight: normal
+  .main-subtitle
+    position: absolute
+    right: 387px
+    bottom: 268px
     @include resetmargin
     position: relative
     font-weight: normal
@@ -66,14 +71,14 @@
     line-height: 52px
 
 
-.main-cursive
-  height: 691px
-  width: 150px
-  position: absolute
-  z-index: 2
-  left: 63px
-  bottom: 0px
-  &__slide, &__slide--active
-    width: 205px
-    svg, path
-      fill: $maincolor
+  .main-cursive
+    height: 691px
+    width: 150px
+    position: absolute
+    z-index: 2
+    left: 63px
+    bottom: 0px
+    &__slide, &__slide--active
+      width: 205px
+      svg, path
+        fill: $maincolor

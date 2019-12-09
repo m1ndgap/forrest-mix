@@ -11,7 +11,6 @@ let waypoint = new Waypoint({
     element: document.querySelector('.slides'),
     handler: function(direction) {
         toggleClass(bookBtn, bookBtnClass);
-
     },
     offset: function() {
         return -this.element.clientHeight

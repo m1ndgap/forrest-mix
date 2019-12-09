@@ -1,0 +1,34 @@
+.footer
+  background-color: $black
+
+  &__wrapper
+    padding-top: 69px
+    display: flex
+    flex-flow: row wrap
+  &__logo-block
+    display: flex
+    position: relative
+    flex-basis: 25%
+    a
+      display: block
+  &__logo
+    fill: $white
+  &__logo-title
+    text-align: center
+    font-weight: normal
+
+
+
+
+  &__menu-list
+    @include resetlist
+    flex-basis: 50%
+    columns: 2
+  &__contact-info
+    flex-basis: 25%
+  &__copyright-block
+    display: flex
+    flex-basis: 100%
+  &__copyright-list
+    @include resetlist
+    display: flex
