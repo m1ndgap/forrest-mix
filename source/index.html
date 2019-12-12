@@ -1,76 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/vendors.js"></script>
-</head>
-<body>
-<div style="display: none">
-    <include src="./dist/img/sprite.svg"></include>
-</div>
-<nav class="main-menu">
-    <ul class="main-menu__list text-cap">
-        <li class="main-menu__list-item">
-            <a class="main-menu__link main-menu__link--active" href="">об отеле</a>
-        </li>
-        <li class="main-menu__list-item">
-            <a class="main-menu__link" href="">Номера</a>
-        </li>
-        <li class="main-menu__list-item">
-            <a class="main-menu__link" href="">фитнес и спа</a>
-        </li>
-        <li class="main-menu__list-item">
-            <a class="main-menu__link" href="">рестораны</a>
-        </li>
-        <li class="main-menu__list-item">
-            <a class="main-menu__link" href="">Бизнес услуги</a>
-        </li>
-        <li class="main-menu__list-item">
-            <a class="main-menu__link" href="">специальные предложения</a>
-        </li>
-        <li class="main-menu__list-item">
-            <a class="main-menu__link" href="">контакты</a>
-        </li>
-        <li class="main-menu__list-item main-menu__list-item--phone">
-            <a class="main-menu__link" href="">(812) 414-77-77</a>
-        </li>
+//= ./html-components/header.html
 
-    </ul>
-    <button class="book-btn main-menu__bookbtn text-cap js-bookbtn">
-        <svg width="19" height="19">
-            <use xlink:href="#icon-key"></use>
-        </svg>
-        забронировать
-    </button>
-</nav>
-<aside class="menu-fixed">
-    <nav class="menu-fixed__nav">
-        <a href="" class="menu-fixed__link menu-fixed__link--main">
-            <svg width="40" height="203">
-                <use xlink:href="#ForRestMix-logo"></use>
-            </svg>
-        </a>
-        <div class="menu-fixed__button-wrapper">
-            <button class="menu-fixed__order-call-btn btn">заказать звонок</button>
-        </div>
-        <a href="" class="menu-fixed__link menu-fixed__link--whatsapp">
-            <svg width="20" height="20">
-                <use xlink:href="#icon-whatsapp"></use>
-            </svg>
-        </a>
-        <a href="" class="menu-fixed__link menu-fixed__link--telegram">
-            <svg width="20" height="20">
-                <use xlink:href="#icon-telegram"></use>
-            </svg>
-        </a>
-    </nav>
-
-</aside>
 <section class="slides main-container">
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -158,17 +87,17 @@
     </div>
     <div class="main-cursive">
         <div class="main-cursive__slide main-cursive__slide--active">
-            <svg viewBox="0 0 95 720">
-                <use xlink:href="#beach_vacation"></use>
-            </svg>
+            <p class="main-cursive__slide-text cursive-aside-title">Beach Vacation</p>
         </div>
-        <div class="main-cursive__slide"></div>
+        <div class="main-cursive__slide">
+            <p class="main-cursive__slide-text cursive-aside-title"></p>
+        </div>
     </div>
 
 </section>
 <section class="main-section main-section--rooms">
     <div class="main-content-container">
-        <div class="main-card">
+        <div class="main-card card">
             <h2 class="main-card__main-title content-title">наши номера</h2>
             <h3 class="main-card__subtitle title">Класс "Standard"</h3>
             <div class="main-card__text-wrapper">
@@ -231,15 +160,13 @@
 
         </div>
     </div>
-    <div class="main-card__svg-cursive main-card__svg-cursive--rooms">
-        <svg viewBox="0 0 78 154" width="144" height="279" preserveAspectRatio="xMidYMin">
-            <use xlink:href="#main-card__rooms"></use>
-        </svg>
+    <div class="main-card__cursive-aside main-card__cursive-aside--rooms">
+        <p class="cursive-aside-title">Rooms</p>
     </div>
 </section>
 <section class="main-section main-section--beauty">
     <div class="main-content-container">
-        <div class="main-card">
+        <div class="main-card card">
             <h2 class="main-card__main-title content-title">фитнесс и спа</h2>
             <h3 class="main-card__subtitle title">Массажи</h3>
             <div class="main-card__text-wrapper">
@@ -308,15 +235,13 @@
 
         </div>
     </div>
-    <div class="main-card__svg-cursive main-card__svg-cursive--beauty">
-        <svg viewBox="0 0 118 174" width="214" height="329" preserveAspectRatio="xMidYMin">
-            <use xlink:href="#main-card__beauty"></use>
-        </svg>
+    <div class="main-card__cursive-aside main-card__cursive-aside--beauty">
+        <p class="cursive-aside-title">Beauty</p>
     </div>
 </section>
 <section class="main-section main-section--food-n-drink">
     <div class="main-content-container">
-        <div class="main-card">
+        <div class="main-card card">
             <h2 class="main-card__main-title content-title">рестораны и бары</h2>
             <h3 class="main-card__subtitle title">«KAL'VADOS»</h3>
             <div class="main-card__text-wrapper">
@@ -377,15 +302,13 @@
 
         </div>
     </div>
-    <div class="main-card__svg-cursive main-card__svg-cursive--food">
-        <svg viewBox="0 0 78 324" width="134" height="569" preserveAspectRatio="xMidYMin">
-            <use xlink:href="#main-card__foodndrink"></use>
-        </svg>
+    <div class="main-card__cursive-aside main-card__cursive-aside--food">
+        <p class="cursive-aside-title">Food</p>
     </div>
 </section>
 <section class="main-section main-section--relaxand">
     <div class="main-content-container">
-        <div class="main-card">
+        <div class="main-card card">
             <h2 class="main-card__main-title content-title">специальные предложения</h2>
             <h3 class="main-card__subtitle title">«Свадебный подарок»  </h3>
             <div class="main-card__text-wrapper">
@@ -441,15 +364,13 @@
 
         </div>
     </div>
-    <div class="main-card__svg-cursive main-card__svg-cursive--relax">
-        <svg viewBox="0 0 158 434" width="154" height="429" preserveAspectRatio="xMidYMin">
-            <use xlink:href="#main-card__relaxand"></use>
-        </svg>
+    <div class="main-card__cursive-aside main-card__cursive-aside--relax">
+        <p class="cursive-aside-title">Relax</p>
     </div>
 </section>
 <section class="main-section main-section--relax main-section--last-card">
     <div class="main-content-container">
-        <div class="main-card">
+        <div class="main-card card">
             <h2 class="main-card__main-title content-title">бизнес услуги</h2>
             <h3 class="main-card__subtitle title">Конференц услуги</h3>
             <div class="main-card__text-wrapper">
@@ -509,118 +430,9 @@
 
         </div>
     </div>
-    <div class="main-card__svg-cursive main-card__svg-cursive--relax">
-        <svg viewBox="0 0 158 434" width="154" height="429" preserveAspectRatio="xMidYMin">
-            <use xlink:href="#main-card__relaxand"></use>
-        </svg>
+    <div class="main-card__cursive-aside main-card__cursive-aside--relax">
+        <p class="cursive-aside-title">Relax</p>
     </div>
 </section>
-<section class="callback-form">
-    <div class="main-content-container">
-        <h3 class="callback-form__title title">Заказать обратный звонок</h3>
-        <form action="" class="callback-form__form">
-            <div class="callback-form__input-wrapper">
-                <input class="callback-form__name" type="text" placeholder="Ваше имя">
-            </div>
-            <div class="callback-form__input-wrapper">
-                <input class="callback-form__tel" type="tel" placeholder="Ваш телефон">
-            </div>
-            <div class="callback-form__input-wrapper">
-                <input type="submit" class="btn callback-form__submit" value="Перезвоните мне">
-            </div>
-        </form>
-        <p class="callback-form__disclaimer common-text">
-            Нажимая на кнопку, вы соглашаетесь с условиями обработки
-            <a href="javascript:void(0)">персональных данных</a>
-        </p>
-    </div>
-</section>
-<footer class='footer'>
-    <div class="main-content-container footer__wrapper">
-       <div class="footer__logo-block">
-           <a class="white-text" href="/">
-               <svg class="footer__logo"  width="156" height="23" viewBox="0 0 156 23">
-                   <use xlink:href="#ForRestMix-logo-horizontal"></use>
-               </svg>
-               <h3 class="footer__logo-title white-text">спа отель</h3>
-           </a>
-       </div>
-        <ul class="footer__menu-list white-text">
-            <li class="footer__menu-list-item"></li>
-                <a class="footer__menu-list-link" href="">Номера</a>
-            </li>
-            <li class="footer__menu-list-item">
-                <a class="footer__menu-list-link" href="">Фитнес и СПА</a>
-            </li>
-            <li class="footer__menu-list-item">
-                <a class="footer__menu-list-link" href="">рестораны и бары</a>
-            </li>
-            <li class="footer__menu-list-item">
-                <a class="footer__menu-list-link" href="">бИзнес услуги</a>
-            </li>
-            <li class="footer__menu-list-item">
-                <a class="footer__menu-list-link" href="">Об отеле</a>
-            </li>
-            <li class="footer__menu-list-item">
-                <a class="footer__menu-list-link" href="">акции</a>
-            </li>
-            <li class="footer__menu-list-item">
-                <a class="footer__menu-list-link" href="">Что рядом</a>
-            </li>
-            <li class="footer__menu-list-item">
-                <a class="footer__menu-list-link" href="">Контакты</a>
-            </li>
-        </ul>
-        <div class="footer__contact-info">
-            <p class="footer__phone">+7 (812) 414-77-77</p>
-            <a href="mailto:booking@forrestmix.ru" class="footer__contact-info-link">booking@forrestmix.ru</a>
-            <p class="footer__address">Репино, ул.Луговая 10А</p>
-            <a href="/" class="footer__contact-info-link">Смотреть карту</a>
-            <a href="" class="footer__icon-link">
-                <svg width="20" height="20">
-                    <use xlink:href="#icon-vk"></use>
-                </svg>
-            </a>
-            <a href="" class="footer__icon-link">
-                <svg width="20" height="20">
-                    <use xlink:href="#icon-fb"></use>
-                </svg>
-            </a>
-        </div>
-        <div class="footer__copyright-block">
-            <div class="footer__copyright">
-                <p class="footer__copyright-text text">© 2019 ForRestMix Spa Hotel</p>
-                <a href="" class="footer__icon-link--mobile">
-                    <svg width="20" height="20">
-                        <use xlink:href="#icon-vk"></use>
-                    </svg>
-                </a>
-                <a href="" class="footer__icon-link--mobile">
-                    <svg width="20" height="20">
-                        <use xlink:href="#icon-fb"></use>
-                    </svg>
-                </a>
 
-
-            </div>
-            <ul class="footer__copyright-list">
-                <li class="footer__copyright-list-item">
-                    <a href="" class="common-text">Правила Отеля</a>
-                </li>
-                <li class="footer__copyright-list-item">
-                    <a href="" class="common-text">Конфиденциальность
-                    </a>
-                </li>
-                <li class="footer__copyright-list-item">
-                    <a href="" class="common-text">Реквизиты</a>
-                </li>
-            </ul>
-            <a href="titl.agency" class="footer__made-by-link">Made in TITL</a>
-        </div>
-
-
-    </div>
-</footer>
-<script src="./js/app.js"></script>
-</body>
-</html>
+//= ./html-components/footer.html

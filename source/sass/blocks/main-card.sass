@@ -1,22 +1,41 @@
 .main-card
-
+  z-index: 2
   display: flex
   flex-flow: column wrap
   align-content: space-between
   font-family: 'Open Sans', sans-serif
   padding-top: 146px
   height: 610px
-
+  max-width: 1171px
+  @include media('<large')
+    flex-flow: column nowrap
+    height: auto
+    width: 456px
+    margin: auto
+    padding: 70px 0 70px
+  @include media('<tablet')
+    width: 100%
+  &__main-title
+    order: 0
+    max-width: 45%
   &__subtitle
     margin-top: 36px
+    max-width: 45%
+    @include media('<large')
+      order: 1
+
   &__text-wrapper
     max-width: 45%
     margin-top: 15px
     min-height: 110px
     display: flex
     align-items: center
+    @include media('<large')
+      max-width: 100%
+      order: 2
   &__text
     @include resetmargin
+    z-index: 2
     font-size: 1.5rem
     line-height: 28px
   &__features-title
@@ -24,18 +43,33 @@
     font-family: "Yeseva One", serif
     font-size: 1.8rem
     margin-top: 22px
+    max-width: 45%
+  &__features
+    z-index: 2
+    max-width: 45%
+    @include media('<large')
+      order: 3
   &__features-list
     @include resetlist
+    z-index: 2
     margin-top: 16px
     display: flex
     flex-flow: column wrap
     align-content: space-between
     max-height: 160px
+    @include media('<large')
+      max-height: unset
     &--wide
       flex-flow: column nowrap
       margin-bottom: -20px
       .main-card__features-list-item
         max-width: 100%
+      @include media('<large')
+        margin-bottom: 0
+        max-height: unset
+    @include media('<large')
+      li:nth-child(n+5)
+        display: none
   &__features-list-item
     display: block
     position: relative
@@ -44,6 +78,9 @@
     padding-left: 14px
     color: $dark-text
     max-width: 55%
+
+    @include media('<large')
+      max-width: 100%
     &::before
       position: absolute
       left: 0
@@ -60,10 +97,19 @@
     max-height: 40px
     max-width: 45%
     display: flex
+    @include media('<large')
+      order: 4
+      max-width: 100%
+      margin-top: 30px
+    @include media('<tablet')
+      flex-flow: row wrap
+      max-height: unset
   &__detail
     display: flex
     align-items: center
     margin-right: 20px
+    @include media('<tablet')
+      margin-top: 10px
   &__detail-icon
     height: 36px
     width: 36px
@@ -85,6 +131,8 @@
     font-family: "Yeseva One", serif
     margin-left: 9px
     text-transform: capitalize
+    @include media('<large')
+      font-size: 1.6rem
     sup
       font-size: 1rem
 
@@ -92,10 +140,17 @@
     margin-top: auto
     display: flex
     align-items: center
+    max-width: 45%
+    @include media('<large')
+      margin-top: 30px
+      order: 5
+      flex-flow: row wrap
   &__book-btn
     border: none
     width: 256px
     padding: 20px 20px
+    @include media('<large')
+      flex-basis: 100%
   &__more-info
     margin-left: 48px
     text-transform: uppercase
@@ -103,26 +158,28 @@
     font-size: 1.2rem
     color: $black
     text-decoration: none
-  &__svg-cursive
+    @include media('<large')
+      flex-basis: 100%
+      margin-left: 0
+      margin-top: 20px
+  &__cursive-aside
+    z-index: 1
     position: absolute
-    right: 0
-    bottom: 146px
-    width: 150px
-    svg
-      fill: $maincolor
-      //border: 1px solid red
+    right: 150px
+    bottom: 250px
+    width: 100px
+    height: 300px
+    .cursive-aside-title
+      bottom: 0
+      left: 0
+      width: 10px
+      height: 10px
     &--rooms
-      bottom: 120px
     &--beauty
-      right: 70px
-      bottom: 120px
-      //border: 1px solid blue
+      right: 150px
     &--food
-      height: 510px
     &--relax
-      height: 430px
-      right: 70px
-      //border: 1px solid blue
+
 
 
 
@@ -131,14 +188,30 @@
     width: 456px
     height: 610px
     margin-right: 52px
+    @include media('<large')
+      order: 2
+      margin-top: 35px
+    @include media('<tablet')
+      width: 291px
+      height: 390px
+      margin: 30px auto 30px
+      left: -20px
     &--left-side
       order: -1
       margin-right: 0
       margin-left: 52px
+      @include media('<large')
+        order: 2
+      @include media('<tablet')
+        margin: 30px auto 30px
+        left: 20px
     .swiper-wrapper
     .swiper-slide
       height: 610px
       width: 456px
+      @include media('<tablet')
+        width: 291px
+        height: 390px
       img
         width: 100%
         height: 100%
@@ -151,6 +224,9 @@
       box-sizing: border-box
       width: 52px
       height: 52px
+      @include media('<tablet')
+        width: 44px
+        height: 44px
       &:after
         font-size: 17px
       &:focus, &:active
@@ -161,6 +237,8 @@
         top: auto
         left: -52px
         bottom: 0
+        @include media('<tablet')
+          left: -44px
       &--right
         left: auto
         top: auto
@@ -177,6 +255,8 @@
         top: auto
         right: -52px
         bottom: 0
+        @include media('<tablet')
+          right: -44px
     &-pagination
       max-width: 100px
       transform: rotate(90deg)
@@ -186,11 +266,15 @@
         bottom: auto
         right: -95px
         top: 41px
+        @include media('<tablet')
+          right: -75px
       &--left
         right: auto
         bottom: auto
         left: -95px
         top: 41px
+        @include media('<tablet')
+          left: -75px
     &-pagination-inside
       position: relative
       display: flex

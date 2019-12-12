@@ -1,22 +1,23 @@
 html
   font-size: 62.5%
 
-.text-cap
-  text-transform: uppercase
-
 body
   position: relative
   @include resetmargin()
   padding-left: 84px
   padding-top: 84px
   background-color: $maincolor
-  font-family: 'Open Sans'
+  font-family: 'Open Sans', sans-serif
   font-size: 1rem
+  @include media("<large")
+    padding-left: 0
+    padding-top: 76px
 
 .main-container
   height: calc(100vh - 84px)
 
 .main-content-container
+  box-sizing: border-box
   width: 1171px
   margin: 0 auto
   @include media("<large")
@@ -33,7 +34,7 @@ body
   background-position: 100%
   border: 2px solid $maincolor
   color: $maincolor
-  font-family: 'Open Sans'
+  font-family: 'Open Sans', sans-serif
   font-size: 1.2rem
   line-height: 1.1rem
   letter-spacing: 1px
@@ -47,6 +48,10 @@ body
     outline: none
   &:focus
     outline: 1px solid $maincolor
+  @include media("<large")
+    &:hover
+      background-position: 100%
+      color: $maincolor
 
 .custom-underline
   position: relative
@@ -68,6 +73,9 @@ body
     background-color: $white
   &--last-card
     padding-bottom: 50px
+  @include media('<large')
+    height: auto
+
 
 .content-title
   @include resetmargin
@@ -113,6 +121,21 @@ body
   a
     color: $white
     text-decoration: none
+
+.cursive-aside-title
+  @include resetmargin
+  font-family: 'Northwell', cursive
+  color: $maincolor
+  font-size: 15.2rem
+  position: absolute
+  transform: rotate(-90deg)
+  @include media('<desktop')
+    display: none
+
+
+
+.text-cap
+  text-transform: uppercase
 
 .content-card
 

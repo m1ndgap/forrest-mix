@@ -13,6 +13,7 @@ var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var phinclude = require("posthtml-include");
 var cheerio = require('gulp-cheerio');
+var rigger = require('gulp-rigger');
 
 
 gulp.task("css", function () {
@@ -30,6 +31,7 @@ gulp.task("css", function () {
 
 gulp.task("html", function() {
     return gulp.src("source/*.html")
+        .pipe(rigger())
         .pipe(posthtml([
             phinclude()
         ]))
@@ -78,13 +80,13 @@ gulp.task("server", function () {
     });
 
     gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-    gulp.watch("source/*.html", gulp.series("html"));
+    gulp.watch("source/**/*.html", gulp.series("html"));
     gulp.watch("source/img/*.svg", gulp.series("html"));
     gulp.watch("source/js/*.js", gulp.series("js"));
     gulp.watch("source/img/*.svg", gulp.series("sprite"));
     gulp.watch("source/img/*.{png, jpg, jpeg}", gulp.series("img"));
     gulp.watch("source/js/vendor/*.js", gulp.series("js-vendor"));
-    gulp.watch("source/*.html").on("change", server.reload);
+    gulp.watch("source/**/*.html").on("change", server.reload);
     gulp.watch("source/js/**/*.js").on("change", server.reload);
 });
 

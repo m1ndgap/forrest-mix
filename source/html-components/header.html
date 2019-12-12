@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/vendors.js"></script>
+</head>
+<body>
+<div style="display: none">
+    <include src="./dist/img/sprite.svg"></include>
+</div>
+<nav class="main-menu">
+    <ul class="main-menu__list text-cap">
+        <li class="main-menu__list-item">
+            <a class="main-menu__link main-menu__link--active" href="">об отеле</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="javascript:void(0)">Номера</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="javascript:void(0)">фитнес и спа</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="javascript:void(0)">рестораны</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="javascript:void(0)">Бизнес услуги</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="javascript:void(0)">специальные предложения</a>
+        </li>
+        <li class="main-menu__list-item">
+            <a class="main-menu__link" href="javascript:void(0)">контакты</a>
+        </li>
+        <li class="main-menu__list-item main-menu__list-item--phone">
+            <a class="main-menu__link" href="javascript:void(0)">(812) 414-77-77</a>
+        </li>
+    </ul>
+    <a class="main-menu__mobile-logo" href="/">
+        <svg class="main-menu__mobile-logo-svg"  width="156" height="23" viewBox="0 0 156 23">
+            <use xlink:href="#ForRestMix-logo-horizontal"></use>
+        </svg>
+        <h3 class="main-menu__mobile-logo-text text-cap">спа отель</h3>
+    </a>
+    <div class="main-menu__nav-icon" id="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <button class="book-btn main-menu__bookbtn text-cap js-bookbtn">
+        <svg width="19" height="19">
+            <use xlink:href="#icon-key"></use>
+        </svg>
+        <span class="main-menu__bookbtn-text">забронировать</span>
+    </button>
+</nav>
+<aside class="menu-fixed">
+    <nav class="menu-fixed__nav">
+        <a href="" class="menu-fixed__link menu-fixed__link--main">
+            <svg width="40" height="203">
+                <use xlink:href="#ForRestMix-logo"></use>
+            </svg>
+        </a>
+        <div class="menu-fixed__button-wrapper">
+            <button class="menu-fixed__order-call-btn btn">заказать звонок</button>
+        </div>
+        <a href="" class="menu-fixed__link menu-fixed__link--whatsapp">
+            <svg width="20" height="20">
+                <use xlink:href="#icon-whatsapp"></use>
+            </svg>
+        </a>
+        <a href="" class="menu-fixed__link menu-fixed__link--telegram">
+            <svg width="20" height="20">
+                <use xlink:href="#icon-telegram"></use>
+            </svg>
+        </a>
+    </nav>
+
+</aside>

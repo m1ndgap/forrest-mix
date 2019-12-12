@@ -1,34 +1,215 @@
 .footer
   background-color: $black
+  font-size: 14px
 
   &__wrapper
     padding-top: 69px
     display: flex
     flex-flow: row wrap
+    justify-content: space-between
+    @include media("<large")
+      padding-top: 40px
+      max-width: 500px
+      width: 100%
   &__logo-block
     display: flex
     position: relative
     flex-basis: 25%
     a
       display: block
+    @include media("<large")
+      flex-basis: 100%
+      order: -2
+      padding-bottom: 30px
   &__logo
     fill: $white
   &__logo-title
     text-align: center
     font-weight: normal
-
-
+    font-size: 12px
+    @include media("<large")
+      text-align: left
 
 
   &__menu-list
     @include resetlist
     flex-basis: 50%
     columns: 2
+    @include media("<large")
+      flex-basis: 100%
+      columns: auto
+  &__menu-list-item
+    padding: 0 0 40px 0
+    @include media("<large")
+      padding-bottom: 30px
+  &__menu-list-link
+    position: relative
+    font-size: 1.4rem
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      width: 0
+      height: 1px
+      bottom: -3px
+      background-color: $white
+      transition: width $transition
+    @include media("<large")
+      &::after
+        display: none
+    &:hover
+      &::after
+        width: 100%
+    &--active
+      &::after
+        width: 100%
+
+
   &__contact-info
-    flex-basis: 25%
+    flex-basis: 22%
+    @include media("<large")
+      flex-basis: 100%
+      order: -1
+      display: flex
+      flex-flow: column nowrap
+  &__phone, &__address
+    @include resetmargin
+    margin-bottom: 10px
+    color: $white
+  &__phone
+    a
+      color: $white
+      text-decoration: none
+    @include media("<large")
+      display: flex
+      justify-content: space-between
+      order: 3
+      a
+        border: 1px solid $maincolor
+        padding: 10px
+        padding-bottom: 7px
+        color: $maincolor
+        font-size: 1.2rem
+        margin-right: 15px
+        &:last-child
+          margin-right: 0
+      a[href^="tel:"]
+        flex-basis: 100%
+        margin-right: 15px
+        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-bottom: 10px
+
+  &__address
+    margin-top: 44px
+    @include media("<large")
+      margin-top: 0
+      order: 1
+  &__contact-info-link
+    color: $maincolor
+    text-decoration: none
+    position: relative
+    &:after
+      content: ""
+      display: block
+      position: absolute
+      bottom: -2px
+      width: 100%
+      height: 1px
+      background-color: $maincolor
+    &--map
+      @include media("<large")
+        display: none
+    &--map-mobile
+      display: none
+      @include media("<large")
+        margin-bottom: 18px
+        display: block
+        text-transform: uppercase
+        border: 1px solid $maincolor
+        text-align: center
+        order: 2
+        &:after
+          display: none
+    &--email
+      align-self: flex-start
+      order: 4
+      margin: 30px 0 40px
+
+  &__icons
+    margin-top: 40px
+    @include media("<large")
+      display: none
+    &--mobile
+      display: none
+      @include media("<large")
+        margin: 0 0 0 auto
+        display: flex
+
+  &__icon-link
+    text-decoration: none
+    svg
+      fill: $maincolor
+      transition: fill $transition
+    &:hover
+      svg
+        fill: darken($maincolor, 20%)
+    &--facebook
+      margin-left: 25px
+      position: relative
+      top: -3px
+    &--mobile
+      display: none
+      @include media("<large")
+        margin-left: 15px
+        display: block
+
+
   &__copyright-block
     display: flex
     flex-basis: 100%
+    border-top: 1px solid $dark-text
+    margin-top: 20px
+    padding: 20px 0 30px
+    font-size: 1.2rem
+    color: $dark-text
+    @include media("<large")
+      flex-flow: column nowrap
+      margin-top: 0
+  &__copyright
+    @include media("<large")
+      display: flex
+      order: 2
+      margin-top: 20px
+  &__copyright-text
+    @include resetmargin
   &__copyright-list
     @include resetlist
+    margin-left: 145px
     display: flex
+    @include media("<large")
+      flex-flow: column nowrap
+      margin: 0
+      padding-bottom: 9px
+      border-bottom: 1px solid $dark-text
+  &__copyright-list-item
+    a
+      color: $dark-text
+      text-decoration: none
+    @include media("<large")
+      margin-bottom: 15px
+  &__copyright-list-item + &__copyright-list-item
+    margin-left: 48px
+    @include media("<large")
+      margin-left: 0
+  &__made-by-link
+    color: $maincolor
+    text-decoration: none
+    margin-left: 229px
+    letter-spacing: 1px
+    @include media("<large")
+      margin-left: 0
+      margin-top: 10px
+      order: 3

@@ -77,8 +77,14 @@
     position: absolute
     z-index: 2
     left: 63px
-    bottom: 0px
+    bottom: 0
+    @include media("<large")
+      display: none
     &__slide, &__slide--active
       width: 205px
-      svg, path
-        fill: $maincolor
+    &__slide-text
+      top: -31px
+      left: -250%
+      width: 1022px
+
+

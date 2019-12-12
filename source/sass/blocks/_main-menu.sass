@@ -1,3 +1,14 @@
+#nav-icon
+  display: none
+  @include media("<large")
+    display: block
+    margin-left: auto
+    margin-right: 24px
+    z-index: 5
+  @include media("<phone")
+    margin-right: 12px
+
+
 .main-menu
   background-color: $white
   height: 84px
@@ -10,6 +21,11 @@
   top: 0
   z-index: 1111
   user-select: none
+  @include media("<large")
+    left: 0
+    width: 100%
+    height: 76px
+
 
 
   &__list
@@ -20,16 +36,39 @@
     @include media("<xl")
       margin-left: 5%
       justify-content: space-around
+    @include media("<large")
+      box-sizing: border-box
+      position: absolute
+      display: block
+      height: 100vh
+      width: 400px
+      right: 0
+      top: 0
+      z-index: 1
+      padding: 63px 28px 28px
+      background: $white
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0)
+      transform: translate(100%, 0)
+      transition: transform $transition cubic-bezier(0.77,0.2,0.05,1.0)
+    @include media("<desktop")
+      width: 80%
+
     &-item
       margin-right: 46px
       @include media("<xl")
         margin-right: 20px
+      @include media("<large")
+        margin-bottom: 30px
       &--phone
         margin-left: auto
         a
           letter-spacing: 0
           &::after
             display: none
+    &--active
+      transform: none
+      transition: transform $transition cubic-bezier(0.77,0.2,0.05,1.0)
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5)
 
   &__link
     position: relative
@@ -50,6 +89,10 @@
       bottom: -3px
       background-color: $maincolor
       transition: width $transition
+    @include media("<large")
+      &:hover
+        &::after
+          display: none
     &:hover
       &::after
         width: 100%
@@ -74,14 +117,42 @@
     align-items: center
     padding: 15px 36px
     transition: 1000ms
+    @include media("<large")
+      height: 76px
+      width: 76px
+      padding: 15px 20px
     svg
       margin-right: 8px
       fill: $black
-      transition: 1000ms
+      transition: $transition
+      @include media("<large")
+        margin: auto
+
     &--active
       background-position: 0 0
       color: $white
       cursor: pointer
       svg
         fill: $white
+  &__bookbtn-text
+    @include media("<large")
+      display: none
+
+
+  &__mobile-logo
+    display: none
+    @include media("<large")
+      padding: 20px
+      display: block
+      text-decoration: none
+    svg
+      @include media("<phone")
+        width: 120px !important
+  &__mobile-logo-text
+    @include resetmargin
+    margin-top: 5px
+    color: $black
+    text-decoration: none
+    letter-spacing: 1.5px
+    text-align: center
 
