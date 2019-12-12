@@ -6,7 +6,7 @@
   font-family: 'Open Sans', sans-serif
   padding-top: 146px
   height: 610px
-  max-width: 1171px
+  width: 1171px
   @include media('<large')
     flex-flow: column nowrap
     height: auto
@@ -17,7 +17,6 @@
     width: 100%
   &__main-title
     order: 0
-    max-width: 45%
   &__subtitle
     margin-top: 36px
     max-width: 45%
@@ -25,7 +24,7 @@
       order: 1
 
   &__text-wrapper
-    max-width: 45%
+    max-width: 526px
     margin-top: 15px
     min-height: 110px
     display: flex
@@ -46,7 +45,6 @@
     max-width: 45%
   &__features
     z-index: 2
-    max-width: 45%
     @include media('<large')
       order: 3
   &__features-list
@@ -57,6 +55,7 @@
     flex-flow: column wrap
     align-content: space-between
     max-height: 160px
+    width: 526px
     @include media('<large')
       max-height: unset
     &--wide
@@ -93,9 +92,9 @@
       border-radius: 50%
       background: none
   &__details
-    margin-top: 74px
+    margin-top: auto
+    margin-bottom: 30px
     max-height: 40px
-    max-width: 45%
     display: flex
     @include media('<large')
       order: 4
@@ -137,10 +136,8 @@
       font-size: 1rem
 
   &__interaction
-    margin-top: auto
     display: flex
     align-items: center
-    max-width: 45%
     @include media('<large')
       margin-top: 30px
       order: 5
@@ -188,9 +185,11 @@
     width: 456px
     height: 610px
     margin-right: 52px
+    margin-left: auto
     @include media('<large')
       order: 2
       margin-top: 35px
+      margin-left: 0
     @include media('<tablet')
       width: 291px
       height: 390px
