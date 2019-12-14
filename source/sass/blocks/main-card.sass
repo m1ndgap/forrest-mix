@@ -19,7 +19,7 @@
     order: 0
   &__subtitle
     margin-top: 36px
-    max-width: 45%
+    max-width: 50%
     @include media('<large')
       order: 1
 
@@ -32,17 +32,26 @@
     @include media('<large')
       max-width: 100%
       order: 2
+    &--multiparagraph
+      max-width: 546px
+      .main-card__text
+        width: 100%
+        margin-top: 15px
   &__text
     @include resetmargin
     z-index: 2
     font-size: 1.5rem
     line-height: 28px
-  &__features-title
+  &__contact-info
+    margin-top: 15px
+  &__features-title, &__contact-info-title
     @include resetmargin
     font-family: "Yeseva One", serif
     font-size: 1.8rem
     margin-top: 22px
     max-width: 45%
+  &__contact-info-title
+    margin-bottom: 10px
   &__features
     z-index: 2
     @include media('<large')
@@ -166,11 +175,13 @@
     bottom: 250px
     width: 100px
     height: 300px
+    user-select: none
     .cursive-aside-title
       bottom: 0
       left: 0
       width: 10px
       height: 10px
+      white-space: nowrap
     &--rooms
     &--beauty
       right: 150px
@@ -286,5 +297,37 @@
       height: 1px
       background-color: $black
 
+.restaurant-card, .service-card, .spa-card, .rooms-card
+  .title
+    margin-top: 0
 
+.rooms-card
+  .main-card__features
+    margin-top: 25px
 
+.restaurant-card
+  .main-card__text-wrapper
+    margin-top: 30px
+  .main-card__features
+    margin-top: 25px
+  .main-card__features-list--wide
+    margin-bottom: 0
+
+.service-card
+  .main-card__text-wrapper
+    display: block
+  .main-card__interaction
+    margin-top: auto
+
+.detailed-card
+  .main-card__slider
+    width: 508px
+    .swiper-slide
+      width: 508px
+  .breadcrumbs
+    margin-top: 0
+  .title
+    font-size: 5.0rem
+  .main-card__text-wrapper
+    margin-top: 50px
+    max-width: 515px

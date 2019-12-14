@@ -4,18 +4,6 @@ function toggleClass(element, cls) {
     element.classList.toggle(cls);
 }
 
-let bookBtn = document.querySelector('.js-bookbtn');
-let bookBtnClass = 'main-menu__bookbtn--active';
-let waypoint = new Waypoint({
-    element: document.querySelector('.slides'),
-    handler: function(direction) {
-        bookBtn.classList.toggle(bookBtnClass);
-    },
-    offset: function() {
-        return -this.element.clientHeight
-    }
-});
-
 let mainMenu = document.querySelector('.main-menu__list');
 let navicon = document.querySelector('#nav-icon');
 let naviconCls = 'open';

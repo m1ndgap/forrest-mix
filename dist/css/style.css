@@ -3267,6 +3267,12 @@ body {
     .main-section {
       height: auto; } }
 
+.detailed-section:nth-of-type(even) {
+  background-color: #FFFFFF; }
+
+.detailed-section:nth-of-type(odd) {
+  background-color: #f4f5f5; }
+
 .content-title {
   margin: 0;
   padding: 0;
@@ -3305,6 +3311,17 @@ body {
   color: #65696C; }
   .common-text a {
     color: #65696C; }
+  .common-text--black {
+    color: #1A1A1A;
+    font-weight: 500; }
+
+.inline-link {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 28px;
+  color: #DCD0BF;
+  text-decoration: none; }
 
 .white-text {
   font-family: Open Sans;
@@ -3326,7 +3343,11 @@ body {
   font-size: 15.2rem;
   position: absolute;
   -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg); }
+          transform: rotate(-90deg);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   @media (max-width: 1023px) {
     .cursive-aside-title {
       display: none; } }
@@ -3405,6 +3426,61 @@ body {
   .callback-form__disclaimer {
     font-size: 1.4rem;
     margin-top: 20px; }
+
+.breadcrumbs {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-top: 21px; }
+  .breadcrumbs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 52px;
+    height: 1px;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    background-color: #FFFFFF; }
+  .breadcrumbs--dark {
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    padding-left: 70px; }
+    .breadcrumbs--dark .breadcrumbs__link {
+      color: #1A1A1A; }
+    .breadcrumbs--dark::before {
+      top: 8px;
+      left: 0;
+      width: 52px;
+      height: 1px;
+      -webkit-transform: translate(0);
+              transform: translate(0);
+      background-color: #1A1A1A; }
+    .breadcrumbs--dark .breadcrumbs__item + .breadcrumbs__item::before {
+      color: #1A1A1A; }
+  .breadcrumbs__item {
+    position: relative; }
+  .breadcrumbs__item + .breadcrumbs__item {
+    padding-left: 17px; }
+    .breadcrumbs__item + .breadcrumbs__item::before {
+      font-size: 1.2rem;
+      content: "/";
+      display: block;
+      position: absolute;
+      left: 3px;
+      color: #FFFFFF; }
+  .breadcrumbs__link {
+    text-decoration: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px; }
 
 .order-ui {
   box-sizing: border-box;
@@ -3535,7 +3611,7 @@ body {
         transition: -webkit-transform 700ms cubic-bezier(0.77, 0.2, 0.05, 1);
         transition: transform 700ms cubic-bezier(0.77, 0.2, 0.05, 1);
         transition: transform 700ms cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 700ms cubic-bezier(0.77, 0.2, 0.05, 1); } }
-    @media (max-width: 1023px) {
+    @media (max-width: 767px) {
       .main-menu__list {
         width: 80%; } }
     .main-menu__list-item {
@@ -3784,7 +3860,7 @@ body {
             order: 0; }
   .main-card__subtitle {
     margin-top: 36px;
-    max-width: 45%; }
+    max-width: 50%; }
     @media (max-width: 1279px) {
       .main-card__subtitle {
         -webkit-box-ordinal-group: 2;
@@ -3802,19 +3878,28 @@ body {
         max-width: 100%;
         -webkit-box-ordinal-group: 3;
                 order: 2; } }
+    .main-card__text-wrapper--multiparagraph {
+      max-width: 546px; }
+      .main-card__text-wrapper--multiparagraph .main-card__text {
+        width: 100%;
+        margin-top: 15px; }
   .main-card__text {
     margin: 0;
     padding: 0;
     z-index: 2;
     font-size: 1.5rem;
     line-height: 28px; }
-  .main-card__features-title {
+  .main-card__contact-info {
+    margin-top: 15px; }
+  .main-card__features-title, .main-card__contact-info-title {
     margin: 0;
     padding: 0;
     font-family: "Yeseva One", serif;
     font-size: 1.8rem;
     margin-top: 22px;
     max-width: 45%; }
+  .main-card__contact-info-title {
+    margin-bottom: 10px; }
   .main-card__features {
     z-index: 2; }
     @media (max-width: 1279px) {
@@ -3966,12 +4051,17 @@ body {
     right: 150px;
     bottom: 250px;
     width: 100px;
-    height: 300px; }
+    height: 300px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
     .main-card__cursive-aside .cursive-aside-title {
       bottom: 0;
       left: 0;
       width: 10px;
-      height: 10px; }
+      height: 10px;
+      white-space: nowrap; }
     .main-card__cursive-aside--beauty {
       right: 150px; }
   .main-card__slider {
@@ -4097,11 +4187,41 @@ body {
       height: 1px;
       background-color: #1A1A1A; }
 
-.restaurant-card .title {
+.restaurant-card .title, .service-card .title, .spa-card .title, .rooms-card .title {
   margin-top: 0; }
+
+.rooms-card .main-card__features {
+  margin-top: 25px; }
+
+.restaurant-card .main-card__text-wrapper {
+  margin-top: 30px; }
+
+.restaurant-card .main-card__features {
+  margin-top: 25px; }
 
 .restaurant-card .main-card__features-list--wide {
   margin-bottom: 0; }
+
+.service-card .main-card__text-wrapper {
+  display: block; }
+
+.service-card .main-card__interaction {
+  margin-top: auto; }
+
+.detailed-card .main-card__slider {
+  width: 508px; }
+  .detailed-card .main-card__slider .swiper-slide {
+    width: 508px; }
+
+.detailed-card .breadcrumbs {
+  margin-top: 0; }
+
+.detailed-card .title {
+  font-size: 5.0rem; }
+
+.detailed-card .main-card__text-wrapper {
+  margin-top: 50px;
+  max-width: 515px; }
 
 .slides {
   background-color: #DCD0BF;
@@ -4453,5 +4573,76 @@ body {
         margin-top: 10px;
         -webkit-box-ordinal-group: 4;
                 order: 3; } }
+
+.collection-header {
+  padding: 160px 15px 165px;
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF;
+  background-color: #65696C; }
+  .collection-header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0.3;
+    -webkit-filter: brightness(75%);
+            filter: brightness(75%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-size: cover; }
+  @media (max-width: 1279px) {
+    .collection-header {
+      padding: 120px 15px 125px; } }
+  @media (max-width: 767px) {
+    .collection-header {
+      padding: 80px 15px 85px; } }
+  .collection-header--restaurants::after {
+    background-image: url("../img/restaurants-bg-img.png"); }
+  .collection-header--spa::after {
+    background-image: url("../img/spa-bg-img.png"); }
+  .collection-header--services::after {
+    background-image: url("../img/services-bg-img.png"); }
+  .collection-header--rooms::after {
+    background-image: url("../img/rooms-bg-img.png"); }
+  .collection-header__wrapper {
+    max-width: 680px;
+    margin: auto; }
+    @media (max-width: 1279px) {
+      .collection-header__wrapper {
+        max-width: 456px; } }
+    @media (max-width: 767px) {
+      .collection-header__wrapper {
+        max-width: 95%; } }
+  .collection-header__title {
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    font-size: 5.4rem;
+    font-family: "Yeseva One", serif;
+    font-weight: normal;
+    text-align: center; }
+    @media (max-width: 1279px) {
+      .collection-header__title {
+        font-size: 4.8rem; } }
+    @media (max-width: 767px) {
+      .collection-header__title {
+        font-size: 3.6rem; } }
+  .collection-header__text {
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.8rem;
+    line-height: 156%;
+    text-align: center; }
+    @media (max-width: 1279px) {
+      .collection-header__text {
+        font-size: 1.6rem; } }
+    @media (max-width: 767px) {
+      .collection-header__text {
+        font-size: 1.4rem; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -76,6 +76,11 @@ body
   @include media('<large')
     height: auto
 
+.detailed-section
+  &:nth-of-type(even)
+    background-color: $white
+  &:nth-of-type(odd)
+    background-color: $section-bg
 
 .content-title
   @include resetmargin
@@ -109,6 +114,16 @@ body
   color: $dark-text
   a
     color: $dark-text
+  &--black
+    color: $black
+    font-weight: 500
+
+.inline-link
+  @include resetmargin
+  font-size: 1.5rem
+  line-height: 28px
+  color: $maincolor
+  text-decoration: none
 
 .white-text
   font-family: Open Sans
@@ -129,6 +144,7 @@ body
   font-size: 15.2rem
   position: absolute
   transform: rotate(-90deg)
+  user-select: none
   @include media('<desktop')
     display: none
 

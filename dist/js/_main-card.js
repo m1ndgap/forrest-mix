@@ -24,6 +24,5 @@ swipers.forEach(function(element){
             nextEl: next,
             prevEl: prev,
         },
-    })
-
+    });
 });

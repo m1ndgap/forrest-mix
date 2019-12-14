@@ -1,0 +1,53 @@
+.breadcrumbs
+  @include resetlist
+  display: flex
+  position: relative
+  justify-content: center
+  margin-top: 21px
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    top: -20px
+    left: 50%
+    width: 52px
+    height: 1px
+    transform: translate(-50%)
+    background-color: $white
+  &--dark
+    justify-content: flex-start
+    padding-left: 70px
+    .breadcrumbs__link
+      color: $black
+    &::before
+      top: 8px
+      left: 0
+      width: 52px
+      height: 1px
+      transform: translate(0)
+      background-color: $black
+    .breadcrumbs__item + .breadcrumbs__item
+      &::before
+        color: $black
+
+  &__item
+    position: relative
+
+  &__item + &__item
+    padding-left: 17px
+    &::before
+      font-size: 1.2rem
+      content: "/"
+      display: block
+      position: absolute
+      left: 3px
+      color: $white
+
+  &__link
+    text-decoration: none
+    color: $white
+    text-transform: uppercase
+    font-size: 1.2rem
+    letter-spacing: 1.5px
+
+

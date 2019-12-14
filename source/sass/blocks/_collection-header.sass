@@ -1,0 +1,71 @@
+.collection-header
+  padding: 160px 15px 165px
+  position: relative
+  z-index: 1
+  color: $white
+  background-color: $dark-text
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    opacity: 0.3
+    filter: brightness(75%)
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: -1
+    background-size: cover
+  @include media('<large')
+      padding: 120px 15px 125px
+  @include media('<tablet')
+    padding: 80px 15px 85px
+
+
+  &--restaurants
+    &::after
+      background-image: url('../img/restaurants-bg-img.png')
+  &--spa
+    &::after
+      background-image: url('../img/spa-bg-img.png')
+  &--services
+    &::after
+      background-image: url('../img/services-bg-img.png')
+  &--rooms
+    &::after
+      background-image: url('../img/rooms-bg-img.png')
+
+  &__wrapper
+    max-width: 680px
+    margin: auto
+    @include media('<large')
+      max-width: 456px
+    @include media('<tablet')
+      max-width: 95%
+
+
+  &__title
+    @include resetmargin
+    margin-top: 30px
+    font-size: 5.4rem
+    font-family: "Yeseva One", serif
+    font-weight: normal
+    text-align: center
+    @include media('<large')
+      font-size: 4.8rem
+    @include media('<tablet')
+      font-size: 3.6rem
+
+
+  &__text
+    @include resetmargin
+    margin-top: 30px
+    font-family: "Open Sans", sans-serif
+    font-size: 1.8rem
+    line-height: 156%
+    text-align: center
+    @include media('<large')
+      font-size: 1.6rem
+    @include media('<tablet')
+      font-size: 1.4rem
+
