@@ -1,0 +1,77 @@
+.accordion
+  margin-top: 46px
+  &__wrapper
+    padding: 145px 0 195px
+  &__main-title
+    font-size: 3.0rem
+  &__item
+    border-top: 1px solid $accordion-borders
+    transition: $transition
+    &:last-of-type
+      border-bottom: 1px solid $accordion-borders
+  &__item-title
+    @include resetmargin
+    padding: 25px 0 25px
+    font-family: "Yeseva One", serif
+    font-size: 2.0rem
+    color: $black
+    font-weight: normal
+    display: flex
+    align-items: center
+    cursor: pointer
+    span
+      margin-left: 23px
+    &_button
+      width: 36px
+      height: 36px
+      margin-left: auto
+      border: 1px solid $maincolor
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      svg
+        transition: $transition
+      &:hover
+        background-color: $maincolor
+      &--active
+        svg
+          transform: scaleY(-1)
+  &__list
+    @include resetlist
+    padding-left: 52px
+    opacity: 0
+    max-height: 0
+    transition: opacity 0ms
+    pointer-events: none
+    &--active
+      pointer-events: all
+      opacity: 1
+      padding-bottom: 36px
+      max-height: 9999px
+      transition: max-height $transition, opacity 1000ms
+  &__list-item
+    font-size: 1.6rem
+    font-family: "Open Sans", sans-serif
+    color: $dark-text
+    display: flex
+  &__list-item + &__list-item
+    margin-top: 12px
+  &__list-item-content
+    line-height: 28px
+    &--dots
+      margin: 0 10px 7px 10px
+      flex-grow: 1
+      border-bottom: 1px dotted $dark-text
+    &--price
+      color: $black
+      font-weight: 500
+      padding-right: 15px
+      position: relative
+      &::after
+        position: absolute
+        display: block
+        content: "\20BD"
+        right: 0
+        top: 0
+

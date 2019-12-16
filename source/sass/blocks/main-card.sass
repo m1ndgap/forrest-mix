@@ -67,6 +67,10 @@
     width: 526px
     @include media('<large')
       max-height: unset
+      li:nth-child(n+5)
+        display: none
+    @include media('<tablet')
+      width: 100%
     &--wide
       flex-flow: column nowrap
       margin-bottom: -20px
@@ -75,21 +79,18 @@
       @include media('<large')
         margin-bottom: 0
         max-height: unset
-    @include media('<large')
-      li:nth-child(n+5)
-        display: none
   &__features-list-item
     display: block
     position: relative
     font-size: 1.5rem
     line-height: 28px
-    padding-left: 14px
+    //padding-left: 14px
     color: $dark-text
     max-width: 55%
 
     @include media('<large')
       max-width: 100%
-    &::before
+    //&::before
       position: absolute
       left: 0
       top: 12px
@@ -172,7 +173,7 @@
     z-index: 1
     position: absolute
     right: 150px
-    bottom: 250px
+    bottom: 160px
     width: 100px
     height: 300px
     user-select: none
