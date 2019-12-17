@@ -82,7 +82,7 @@ body
   &:nth-of-type(odd)
     background-color: $section-bg
 
-.accordion-section
+.accordion-section, .similar-items-section, .height-unset
   height: unset
 
 .content-title
@@ -144,6 +144,9 @@ body
   li
     position: relative
     padding-left: 14px
+    font-size: 1.5rem
+    line-height: 28px
+    color: $dark-text
     &::before
       position: absolute
       left: 0
@@ -164,10 +167,10 @@ body
   position: absolute
   transform: rotate(-90deg)
   user-select: none
+  pointer-events: none
+  z-index: -1
   @include media('<desktop')
     display: none
-
-
 
 .text-cap
   text-transform: uppercase

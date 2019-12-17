@@ -1,0 +1,352 @@
+//= ./html-components/header.html
+
+<section class="main-section detailed-section">
+    <div class="main-content-container">
+        <div class="main-card detailed-card detailed-card--room">
+            <ul class="breadcrumbs breadcrumbs--dark">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="/">главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="/rooms.html">номера</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="/room.html">«Standard»</a>
+                </li>
+            </ul>
+            <h3 class="main-card__subtitle title">«Standard»</h3>
+            <div class="main-card__text-wrapper main-card__text-wrapper--multiparagraph">
+                <p class="main-card__text  common-text">Клуб располагает 38 гостевыми номерами данной категории, а также  2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями.</p>
+                <p class="main-card__text  common-text">Номера расположены на 1, 2 и 3 этажах.</p>
+                <p class="main-card__text  common-text">Обращаем Ваше внимание, в нашем Клубе разрешено размещение с домашними питомцами. Просим Вас предупреждать о Вашем визите заранее. Вес Вашего питомца не должен превышать 3-х килограмм. </p>
+            </div>
+            <div class="main-card__contact-info">
+                <p class="main-card__contact-info-title">Служба приема и размещения</p>
+                <p class="common-text common-text--black">+7 (812) 414 77 77</p>
+                <a href="mailto:spa@forrestmix.ru" class="inline-link">reception@forrestmix.ru</a>
+            </div>
+
+            <div class="details details--multiline">
+                <div class="details__detail">
+                    <div class="details__detail-icon details__detail-icon--ruble"></div>
+                    <p class="details__detail-text">От — 8000</p>
+                </div>
+                <div class="details__detail">
+                    <div class="details__detail-icon details__detail-icon--square-m"></div>
+                    <p class="details__detail-text">От — 14 м</p>
+                </div>
+                <div class="details__detail">
+                    <div class="details__detail-icon details__detail-icon--adults"></div>
+                    <p class="main-card__detail-text">до 3 взрослых</p>
+                </div>
+                <div class="details__detail">
+                    <div class="details__detail-icon details__detail-icon--kids"></div>
+                    <p class="details__detail-text">до 2 детей</p>
+                </div>
+            </div>
+
+            <div class="main-card__slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/rooms-slide-1.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/rooms-slide-2.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/rooms-slide-3.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/rooms-slide-4.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--right">
+                </div>
+                <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--right">
+                </div>
+                <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--right">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="main-card__cursive-aside">
+        <p class="cursive-aside-title">Standard</p>
+    </div>
+</section>
+<div class="book-form">
+    <div class="main-content-container">
+        <h3 class="book-form__title title">Забронировать Номер «Standard»</h3>
+        <form action="" class="book-form__form">
+            <div class="book-form__wrapper">
+                <label for="order-ui-arrival" class="book-form__label">
+                    <p class="book-form__label-text">заезд</p>
+                    <input type="text" readonly class="book-form__input book-form__input--arrival" id="order-ui-arrival" value="25/09/2019">
+                </label>
+                <div class="book-form__dropdown-arrow">
+                    <svg viewBox="0 0 12 6" width="15" height="10">
+                        <use xlink:href="#icon-input-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="book-form__wrapper">
+                <label for="order-ui-leave" class="book-form__label">
+                    <p class="book-form__label-text">выезд</p>
+                    <input type="text"  readonly class="book-form__input book-form__input--leave " id="order-ui-leave" value="25/09/2019">
+                </label>
+                <div class="book-form__dropdown-arrow">
+                    <svg viewBox="0 0 12 6" width="15" height="10">
+                        <use xlink:href="#icon-input-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="book-form__wrapper">
+                <label for="order-ui-people" class="book-form__label">
+                    <p class="book-form__label-text">персоны</p>
+                    <input type="text" readonly class="book-form__input book-form__input--people" id="order-ui-people" value="1 взрослый">
+                </label>
+                <div class="book-form__dropdown-arrow">
+                    <svg viewBox="0 0 12 6" width="15" height="10">
+                        <use xlink:href="#icon-input-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="book-form__input-wrapper">
+                <input type="submit" class="btn book-form__submit" value="Найти">
+            </div>
+        </form>
+<!--        <p class="book-form__disclaimer common-text">-->
+<!--            Нажимая на кнопку, вы соглашаетесь с условиями обработки-->
+<!--            <a href="javascript:void(0)">персональных данных</a>-->
+<!--        </p>-->
+    </div>
+</div>
+<section class="main-section detailed-section height-unset">
+    <div class="main-content-container">
+        <div class="collapsable__wrapper">
+            <div class="room-info collapsable">
+                <div class="collapsable__list-wrapper">
+                    <h3 class="title collapsable__title">Комплектация номера</h3>
+                    <ul class="collapsable__list dotted-list">
+                        <li class="collapsable__list-item">
+                            Размещение в номере выбранной категории
+                        </li>
+                        <li class="collapsable__list-item">
+                            Eжедневная уборка номера со сменой постельного белья
+                        </li>
+                        <li class="collapsable__list-item">
+                            Cкоростное подключение к wi-fi на всей территории комплекса
+                        </li>
+                        <li class="collapsable__list-item">
+                            Cвежая пресса и настольные игры в холле
+                        </li>
+                        <li class="collapsable__list-item">
+                            Cейф для хранения ценных вещей в номере
+                        </li>
+                        <li class="collapsable__list-item collapsable__list-item--collapsable">
+                            Размещение в номере выбранной категории
+                        </li>
+                        <li class="collapsable__list-item collapsable__list-item--collapsable">
+                            Eжедневная уборка номера со сменой постельного белья
+                        </li>
+                        <li class="collapsable__list-item collapsable__list-item--collapsable">
+                            Cкоростное подключение к wi-fi на всей территории комплекса
+                        </li>
+                        <li class="collapsable__list-item collapsable__list-item--collapsable">
+                            Cкоростное подключение к wi-fi на всей территории комплекса
+                        </li>
+                        <li class="collapsable__list-item collapsable__list-item--collapsable">
+                            Cвежая пресса и настольные игры в холле
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapsable__list-wrapper">
+                    <h3 class="title collapsable__title">В стоимость входит</h3>
+                    <ul class="collapsable__list dotted-list">
+                        <li class="collapsable__list-item">
+                            Cейф для хранения ценных вещей в номере
+                        </li>
+                        <li class="collapsable__list-item">
+                            Просмотр фильмов в кинотеатре в часы, указанные в расписании
+                        </li>
+                        <li class="collapsable__list-item">
+                            Посещение тренажерного зала и групповых тренировок
+                        </li>
+                        <li class="collapsable__list-item">
+                            Пользование крытым и открытым бассейнами
+                        </li>
+                        <li class="collapsable__list-item">
+                            Посещение всех общедоступных зон и территории комплекса
+                        </li>
+                        <li class="collapsable__list-item collapsable__list-item--collapsable">
+                            Cейф для хранения ценных вещей в номере
+                        </li>
+                        <li class="collapsable__list-item collapsable__list-item--collapsable">
+                            Просмотр фильмов в кинотеатре в часы, указанные в расписании
+                        </li>
+                        <li class="collapsable__list-item collapsable__list-item--collapsable">
+                            Посещение тренажерного зала и групповых тренировок
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="collapsable__button">
+                <span>развернуть</span>
+                <svg viewBox="0 0 12 6" width="15" height="10">
+                    <use xlink:href="#icon-input-arrow"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="main-card__cursive-aside">
+        <p class="cursive-aside-title">Info</p>
+    </div>
+</section>
+
+<section class="main-section detailed-section similar-items-section">
+    <div class="main-content-container">
+        <div class="similar-items__wrapper">
+            <ul class="breadcrumbs breadcrumbs--dark">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="/rooms.html">другие номера</a>
+                </li>
+            </ul>
+            <div class="similar-items">
+                <div class="similar-items__item">
+                    <a class="similar-items__cover" href="/room.html">
+                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__img">
+                        <h4 class="similar-items__title">«Superior»</h4>
+                    </a>
+                    <p class="similar-items__text">Клуб располагает 16 гостевыми номерами данной категории, расположеными на 1 и 3 этажах. Номера оснащены дополнительным раскладным диваном.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover" href="/room.html">
+                        <img src="./img/rooms-slide-2.png" alt="" class="similar-items__img">
+                        <h4 class="similar-items__title">«Junior»</h4>
+                    </a>
+                    <p class="similar-items__text">Номера дополнительно укомплектованы  раскладными креслами. В номерах данной категории  предоставляется возможность позднего выезда до 18:00 без дополнительной оплаты.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover" href="/room.html">
+                        <img src="./img/rooms-slide-3.png" alt="" class="similar-items__img">
+                        <h4 class="similar-items__title">«Family»</h4>
+                    </a>
+                    <p class="similar-items__text">Клуб располагает 6 гостевыми номерами данной категории. Номер двухкомнатный, состоит из гостиной и спальной. Предназначен для более комфортного проживания семей с детьми.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover" href="/room.html">
+                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__img">
+                        <h4 class="similar-items__title">«Junior»</h4>
+                    </a>
+                    <p class="similar-items__text">Клуб располагает 16 гостевыми номерами данной категории, расположеными на 1 и 3 этажах. Номера оснащены дополнительным раскладным   диваном.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover" href="/room.html">
+                        <img src="./img/rooms-slide-2.png" alt="" class="similar-items__img">
+                        <h4 class="similar-items__title">«Superior»</h4>
+                    </a>
+                    <p class="similar-items__text">Номера дополнительно укомплектованы  раскладными креслами. В номерах данной категории  предоставляется возможность позднего выезда до 18:00 без дополнительной оплаты.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="similar-items__item">
+                    <a class="similar-items__cover" href="/room.html">
+                        <img src="./img/rooms-slide-3.png" alt="" class="similar-items__img">
+                        <h4 class="similar-items__title">«Family»</h4>
+                    </a>
+                    <p class="similar-items__text">Клуб располагает 6 гостевыми номерами данной категории. Номер двухкомнатный, состоит из гостиной и спальной. Предназначен для более комфортного проживания семей с детьми.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="similar-items__item">
+                    <a class="similar-items__cover" href="/room.html">
+                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__img">
+                        <h4 class="similar-items__title">«De Luxe»</h4>
+                    </a>
+                    <p class="similar-items__text">Клуб располагает 6 гостевыми номерами данной категории. Номер двухкомнатный, состоит из гостиной и спальной. Предназначен для более комфортного проживания семей с детьми.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-card__cursive-aside">
+        <p class="cursive-aside-title">Other rooms</p>
+    </div>
+</section>
+//= ./html-components/callback-form.html
+
+<script src="./js/_main-card.js"></script>
+<script src="./js/accordion.js"></script>
+<script src="./js/collapsable.js"></script>
+
+//= ./html-components/footer.html

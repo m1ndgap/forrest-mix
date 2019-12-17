@@ -1,0 +1,57 @@
+.details
+  margin-top: auto
+  margin-bottom: 30px
+  max-height: 40px
+  max-width: 520px
+  display: flex
+  &--multiline
+    flex-flow: row wrap
+    max-height: 95px
+    .details__detail
+      margin-top: 15px
+      min-width: 200px
+  @include media('<large')
+    order: 4
+    max-width: 100%
+    margin-top: 30px
+  @include media('<tablet')
+    flex-flow: row wrap
+    max-height: unset
+  &__detail
+    display: flex
+    align-items: center
+    margin-right: 20px
+    @include media('<tablet')
+      margin-top: 10px
+  &__detail-icon
+    height: 36px
+    width: 36px
+    flex-shrink: 0
+    background-color: $maincolor
+    background-repeat: no-repeat
+    background-position: 13px 13px
+    border-radius: 50%
+    &--ruble
+      background-image: url("../img/icon-ruble.svg")
+    &--square-m
+      background-image: url("../img/icon-square-m.svg")
+      background-position: 9px 12px
+    &--clock
+      background-image: url("../img/icon-clock.svg")
+      background-position: 9px 9px
+    &--adults
+      background-image: url("../img/icon-adults.svg")
+      background-position: 50%
+    &--kids
+      background-image: url("../img/icon-kids.svg")
+      background-position: 50%
+  &__detail-text
+    @include resetmargin
+    font-size: 1.8rem
+    font-family: "Yeseva One", serif
+    margin-left: 9px
+    text-transform: capitalize
+    @include media('<large')
+      font-size: 1.6rem
+    sup
+      font-size: 1rem

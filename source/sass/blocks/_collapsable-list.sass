@@ -1,0 +1,45 @@
+.collapsable
+  display: flex
+  justify-content: space-between
+  @include media('<large')
+    flex-flow: row wrap
+  &__wrapper
+    padding: 146px 0 116px
+    @include media('<large')
+      padding: 70px 0 70px
+      width: 100%
+      max-width: 500px
+      margin: auto
+
+
+  &__list-wrapper
+    flex-basis: 47%
+    @include media('<large')
+      flex-basis: 100%
+  &__list-wrapper + &__list-wrapper
+    @include media('<large')
+      margin-top: 50px
+  &__list
+    @include resetlist
+    margin-top: 36px
+  &__button
+    @include resetinteractive
+    margin-top: 52px
+    text-transform: uppercase
+    letter-spacing: 1.5px
+    color: $dark-text
+    font-size: 1.1rem
+    &:active, &:focus
+      outline: 1px dotted $maincolor
+    svg
+      transition: $transition
+    &--active
+      svg
+        transform: scaleY(-1)
+  &__list-item
+    max-height: 50px
+    transition: $transition
+    &--hidden
+      max-height: 0
+      overflow: hidden
+

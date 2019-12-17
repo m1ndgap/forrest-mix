@@ -21,6 +21,8 @@
     cursor: pointer
     span
       margin-left: 23px
+    @include media("<tablet")
+      padding: 15px 0 15px
     &_button
       width: 36px
       height: 36px
@@ -30,6 +32,8 @@
       display: flex
       justify-content: center
       align-items: center
+      transition: $transition
+      flex-shrink: 0
       svg
         transition: $transition
       &:hover
@@ -37,19 +41,24 @@
       &--active
         svg
           transform: scaleY(-1)
+  &__content
+    max-height: 0
+    overflow: hidden
+    pointer-events: none
+    transition: max-height 500ms
+    &--active
+      pointer-events: all
+      max-height: 1500px
+      transition: max-height 2000ms
+
   &__list
     @include resetlist
     padding-left: 52px
-    opacity: 0
-    max-height: 0
-    transition: opacity 0ms
+    padding-bottom: 36px
     pointer-events: none
-    &--active
-      pointer-events: all
-      opacity: 1
-      padding-bottom: 36px
-      max-height: 9999px
-      transition: max-height $transition, opacity 1000ms
+    @include media("<tablet")
+      padding-left: 0
+      padding-bottom: 16px
   &__list-item
     font-size: 1.6rem
     font-family: "Open Sans", sans-serif
@@ -57,12 +66,18 @@
     display: flex
   &__list-item + &__list-item
     margin-top: 12px
+    @include media("<tablet")
+      margin-top: 5px
   &__list-item-content
     line-height: 28px
+    @include media("<tablet")
+      padding-right: 10px
     &--dots
       margin: 0 10px 7px 10px
       flex-grow: 1
       border-bottom: 1px dotted $dark-text
+      @include media("<tablet")
+        display: none
     &--price
       color: $black
       font-weight: 500
@@ -74,4 +89,6 @@
         content: "\20BD"
         right: 0
         top: 0
+      @include media("<tablet")
+        margin-left: auto
 

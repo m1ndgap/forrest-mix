@@ -1,0 +1,70 @@
+.book-form
+  padding: 67px 0 60px
+  @include media("<large")
+    max-width: 500px
+    margin: auto
+    padding: 50px 0
+  &__title
+    margin-bottom: 35px
+    font-size: 3.0rem
+    @include media("<large")
+      font-size: 2.4rem
+  &__form
+    display: flex
+    flex-flow: row wrap
+    width: 100%
+    justify-content: space-between
+  &__submit
+    color: $white
+    background-image: linear-gradient(to right, #303030 50%, $black 50%)
+    &:hover
+      color: $white
+  &__wrapper, &__input-wrapper
+    position: relative
+    flex-basis: 22%
+    @include media("<large")
+      flex-basis: 100%
+      margin-top: 15px
+  &__input, &__submit
+    height: 55px
+
+  &__input
+    padding-left: 12px
+    padding-top: 16px
+    font-family: "Open Sans", sans-serif
+    font-size: 1.6rem
+    width: 100%
+    border: 1px solid $maincolor
+    box-sizing: border-box
+    user-select: none
+
+  &__submit
+    border: none
+    width: 100%
+    letter-spacing: 2px
+
+  &__label
+    position: relative
+    display: block
+
+  &__label-text
+    font-family: "Open Sans", sans-serif
+    @include resetmargin
+    position: absolute
+    top: 6px
+    left: 13px
+    text-transform: uppercase
+    color: $dark-text
+    z-index: 2
+    font-size: 1.2rem
+    user-select: none
+
+
+  &__dropdown-arrow
+    position: absolute
+    right: 11px
+    bottom: 22px
+    transition: transform $transition
+    &--active
+      transform: rotate(90deg)
+
