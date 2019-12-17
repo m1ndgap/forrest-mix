@@ -24,6 +24,14 @@ body
     padding: 0 20px
     width: 100%
 
+.side-content-container
+  box-sizing: border-box
+  max-width: 760px
+  margin-left: auto
+  @include media("<large")
+    width: 100%
+
+
 .main-section
   position: relative
 
@@ -82,8 +90,25 @@ body
   &:nth-of-type(odd)
     background-color: $section-bg
 
+.colored-section
+  background-color: $section-bg !important
+
 .accordion-section, .similar-items-section, .height-unset
   height: unset
+
+.aside-section
+  padding: 188px 0 196px
+  @include media('<large')
+    padding: 80px 0 80px
+  .main-content-container
+    display: flex
+    @include media('<large')
+      max-width: 760px
+      margin: auto
+      flex-flow: column nowrap
+  .side-content-container
+    @include media('<large')
+      margin: auto
 
 .content-title
   @include resetmargin
@@ -109,6 +134,8 @@ body
   font-size: 3.6rem
   font-family: "Yeseva One", serif
   font-weight: normal
+  @include media("<tablet")
+    font-size: 2.4rem
 
 .common-text
   @include resetmargin

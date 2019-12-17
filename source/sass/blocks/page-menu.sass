@@ -1,0 +1,45 @@
+.page-menu
+  box-sizing: border-box
+  flex-grow: 0
+  width: 305px
+  padding: 48px 54px 83px
+  background-color: $white
+  margin: 21px auto 0 0
+  align-self: flex-start
+  @include media("<large")
+    margin: 0 auto 50px 0
+  @include media("<tablet")
+    width: 100%
+  &__list
+    @include resetlist
+  &__list-item
+  &__list-item + &__list-item
+    margin-top: 22px
+  &__list-link
+    @include resetinteractive
+    font-size: 1.6rem
+    position: relative
+    color: $dark-text
+    text-decoration: none
+    white-space: nowrap
+    @include media("<xl")
+      letter-spacing: 1px
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      width: 0
+      height: 1px
+      bottom: 0px
+      background-color: $maincolor
+      transition: width $transition
+    @include media("<large")
+      &:hover
+        &::after
+          display: none
+    &:hover
+      &::after
+        width: 100%
+    &--active
+      &::after
+        width: 100%
