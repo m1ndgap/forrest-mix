@@ -152,8 +152,28 @@ body
   @include resetmargin
   font-size: 1.5rem
   line-height: 28px
-  color: $maincolor
+  color: $inline-link
   text-decoration: none
+  position: relative
+  &::after
+    content: ""
+    display: block
+    position: absolute
+    width: 0
+    height: 1px
+    bottom: -3px
+    background-color: $inline-link
+    transition: width $transition
+  @include media("<large")
+    &:hover
+      &::after
+        display: none
+  &:hover
+    &::after
+      width: 100%
+  &--active
+    &::after
+      width: 100%
 
 .white-text
   font-family: Open Sans

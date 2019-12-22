@@ -62,7 +62,7 @@
       &--phone
         margin-left: auto
         a
-          letter-spacing: 0
+          letter-spacing: 0.3px
           &::after
             display: none
     &--active
@@ -117,6 +117,7 @@
     align-items: center
     padding: 15px 36px
     transition: 1000ms
+    cursor: pointer
     @include media("<large")
       height: 76px
       width: 76px
@@ -127,14 +128,16 @@
       transition: $transition
       @include media("<large")
         margin: auto
-
+    &:hover
+      color: $maincolor
     &--active
       background-position: 0 0
-      color: $white
-      cursor: pointer
+      color: $maincolor
+
       svg
-        fill: $white
+        fill: $maincolor
   &__bookbtn-text
+
     @include media("<large")
       display: none
 

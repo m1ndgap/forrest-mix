@@ -22,9 +22,11 @@
     height: 356px
     display: flex
     position: relative
+    overflow: hidden
     &:hover
       .similar-items__img
         filter: brightness(50%)
+        transform: scale(1.05)
     @include media('<tablet')
       width: 320px
       height: 315px
@@ -33,7 +35,7 @@
     object-fit: cover
     width: 100%
     filter: brightness(75%)
-    transition: filter $transition
+    transition: filter $transition, transform $transition
   &__title
     @include resetmargin
     position: absolute
@@ -62,5 +64,7 @@
       width: 27px
       height: 27px
       background-position: 50% 50%
+    .details__detail-icon--square-m
+      background-size: 50%
     .details__detail-text
       font-size: 1.3rem
