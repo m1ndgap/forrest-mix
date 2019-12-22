@@ -375,12 +375,22 @@
   h1
     font-size: 5.5rem
     margin-top: 27px
+    @include media("<tablet")
+      font-size: 3.2rem
   h2
     margin-top: 109px
+    @include media("<tablet")
+      margin-top: 20px
   .main-card__text-wrapper
     width: 100%
     max-width: 710px
     max-height: unset
+  .fin-info
+    max-width: 100%
+    p
+      font-size: 1.6rem
+    p + p
+      margin-top: 30px
   .main-card__subtitle
     max-width: 100%
   .main-card__text

@@ -13,4 +13,6 @@
 * [Карточка услуги](https://m1ndgap.github.io/forrest-mix/service.html)
 ---
 * [Об отеле](https://m1ndgap.github.io/forrest-mix/about-us.html)
+* [Что рядом](https://m1ndgap.github.io/forrest-mix/nearby.html)
+* [Реквезиты](https://m1ndgap.github.io/forrest-mix/details.html)
 * [Контактная информация](https://m1ndgap.github.io/forrest-mix/contact-info.html)
