@@ -5,9 +5,12 @@ swipers.forEach(function(element){
     let pagination = element.parentElement.querySelector('.swiper-pagination');
     let next =  element.parentElement.querySelector('.swiper-button-next');
     let prev =  element.parentElement.querySelector('.swiper-button-prev');
+
     new Swiper (element, {
         speed: 1000,
         loop: true,
+        preventInteractionOnTransition: true,
+        simulateTouch: false,
         pagination: {
             el: pagination,
             type: 'custom',
@@ -25,4 +28,28 @@ swipers.forEach(function(element){
             prevEl: prev,
         },
     });
+});
+
+let textSliders = document.querySelectorAll('.main-card-text-slider');
+textSliders.forEach(function(element){
+    console.log(element);
+    let next =  element.parentElement.querySelector('.swiper-button-next');
+    let prev =  element.parentElement.querySelector('.swiper-button-prev');
+
+    new Swiper (element, {
+        speed: 1000,
+        loop: true,
+        spaceBetween: 110,
+        preventInteractionOnTransition: true,
+        simulateTouch: false,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        navigation: {
+            nextEl: next,
+            prevEl: prev,
+        },
+    })
+
 });

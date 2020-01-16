@@ -12,6 +12,8 @@ const swiperAnimation = new SwiperAnimation();
 var mySwiper4 = new Swiper('.slides .swiper-container', {
     loop: true,
     speed: 3000,
+    preventInteractionOnTransition: 'true',
+    simulateTouch: false,
     autoplay: {
         delay: slideDelay,
         disableOnInteraction: false,
