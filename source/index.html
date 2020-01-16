@@ -1,5 +1,39 @@
 //= ./html-components/header.html
+<style>
+    #block-search {
+        background: #fff;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 245px;
+    }
 
+    .tl-container {
+        padding: 0 36px;
+    }
+</style>
+<script type='text/javascript'>
+    (function(w) {
+        var q = [
+            ['setContext', 'TL-INT-forrestmix-new', 'ru'],
+            ['embed', 'search-form', {
+                container: 'tl-search-form'
+            }]
+        ];
+        var t = w.travelline = (w.travelline || {}),
+            ti = t.integration = (t.integration || {});
+        ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+        if (!ti.__loader) {
+            ti.__loader = true;
+            var d = w.document,
+                p = d.location.protocol,
+                s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js';
+            (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+        }
+    })(window);
+</script>
 <section class="slides main-container">
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -38,46 +72,51 @@
         </div>
         <div class="swiper-pagination"></div>
     </div>
-    <div class="order-ui">
-        <form action="" class="order-ui__form">
-            <div class="order-ui__wrapper">
-                <label for="order-ui-arrival" class="order-ui__label">
-                    <p class="order-ui__label-text">заезд</p>
-                    <input type="text" readonly class="order-ui__input order-ui__input--arrival" id="order-ui-arrival" value="25/09/2019">
-                </label>
-                <div class="order-ui__dropdown-arrow">
-                    <svg viewBox="0 0 12 6" width="15" height="10">
-                        <use xlink:href="#icon-input-arrow"></use>
-                    </svg>
-                </div>
-            </div>
-            <div class="order-ui__wrapper">
-                <label for="order-ui-leave" class="order-ui__label">
-                    <p class="order-ui__label-text">выезд</p>
-                    <input type="text"  readonly class="order-ui__input order-ui__input--leave " id="order-ui-leave" value="25/09/2019">
-                </label>
-                <div class="order-ui__dropdown-arrow">
-                    <svg viewBox="0 0 12 6" width="15" height="10">
-                        <use xlink:href="#icon-input-arrow"></use>
-                    </svg>
-                </div>
-            </div>
-            <div class="order-ui__wrapper">
-                <label for="order-ui-people" class="order-ui__label">
-                    <p class="order-ui__label-text">персоны</p>
-                    <input type="text" readonly class="order-ui__input order-ui__input--people" id="order-ui-people" value="1 взрослый">
-                </label>
-                <div class="order-ui__dropdown-arrow">
-                    <svg viewBox="0 0 12 6" width="15" height="10">
-                        <use xlink:href="#icon-input-arrow"></use>
-                    </svg>
-                </div>
-            </div>
-            <div class="order-ui__wrapper">
-                <input type="submit" class="order-ui__submit btn" id="order-ui-submit" value="ИСКАТЬ">
-            </div>
-        </form>
+    <div id='block-search-main'>
+        <div id='tl-search-form' class='tl-container'>
+            <noindex><a href='http://www.travelline.ru/products/tl-hotel' rel='nofollow'>система онлайн-бронирования</a></noindex>
+        </div>
     </div>
+<!--    <div class="order-ui">-->
+<!--        <form action="" class="order-ui__form">-->
+<!--            <div class="order-ui__wrapper">-->
+<!--                <label for="order-ui-arrival" class="order-ui__label">-->
+<!--                    <p class="order-ui__label-text">заезд</p>-->
+<!--                    <input type="text" readonly class="order-ui__input order-ui__input&#45;&#45;arrival" id="order-ui-arrival" value="25/09/2019">-->
+<!--                </label>-->
+<!--                <div class="order-ui__dropdown-arrow">-->
+<!--                    <svg viewBox="0 0 12 6" width="15" height="10">-->
+<!--                        <use xlink:href="#icon-input-arrow"></use>-->
+<!--                    </svg>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="order-ui__wrapper">-->
+<!--                <label for="order-ui-leave" class="order-ui__label">-->
+<!--                    <p class="order-ui__label-text">выезд</p>-->
+<!--                    <input type="text"  readonly class="order-ui__input order-ui__input&#45;&#45;leave " id="order-ui-leave" value="25/09/2019">-->
+<!--                </label>-->
+<!--                <div class="order-ui__dropdown-arrow">-->
+<!--                    <svg viewBox="0 0 12 6" width="15" height="10">-->
+<!--                        <use xlink:href="#icon-input-arrow"></use>-->
+<!--                    </svg>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="order-ui__wrapper">-->
+<!--                <label for="order-ui-people" class="order-ui__label">-->
+<!--                    <p class="order-ui__label-text">персоны</p>-->
+<!--                    <input type="text" readonly class="order-ui__input order-ui__input&#45;&#45;people" id="order-ui-people" value="1 взрослый">-->
+<!--                </label>-->
+<!--                <div class="order-ui__dropdown-arrow">-->
+<!--                    <svg viewBox="0 0 12 6" width="15" height="10">-->
+<!--                        <use xlink:href="#icon-input-arrow"></use>-->
+<!--                    </svg>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="order-ui__wrapper">-->
+<!--                <input type="submit" class="order-ui__submit btn" id="order-ui-submit" value="ИСКАТЬ">-->
+<!--            </div>-->
+<!--        </form>-->
+<!--    </div>-->
     <div class="main-title">
         <h1 class="main-title__title">SPA Oтель</h1>
     </div>
@@ -93,41 +132,109 @@
             <p class="main-cursive__slide-text cursive-aside-title"></p>
         </div>
     </div>
-
 </section>
+
+
 <section class="main-section main-section--rooms">
     <div class="main-content-container">
-        <div class="main-card card">
+        <div class="main-card main-card--with-text-slider card">
             <h2 class="main-card__main-title content-title">
                 <a href="./rooms.html" class="main-card__index-link">наши номера</a>
             </h2>
-            <h3 class="main-card__subtitle title">Класс "Standard"</h3>
-            <div class="main-card__text-wrapper">
-                <p class="main-card__text common-text">Клуб располагает 38 гостевыми номерами данной категории, а также  2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями. </p>
-            </div>
-            <div class="main-card__features">
-                <p class="main-card__features-title">Комплектация Номера</p>
-                <ul class="main-card__features-list dotted-list">
-                    <li class="main-card__features-list-item">Wi-Fi</li>
-                    <li class="main-card__features-list-item">Спутниковое телевидение</li>
-                    <li class="main-card__features-list-item">Кондиционер</li>
-                    <li class="main-card__features-list-item">Ванная комната</li>
-                    <li class="main-card__features-list-item">Сейф</li>
-                    <li class="main-card__features-list-item">Холодильник</li>
-                    <li class="main-card__features-list-item">Кровать «King size»</li>
-                    <li class="main-card__features-list-item">Обслуживание номеров</li>
-                    <li class="main-card__features-list-item">Завтрак "Шведский стол"</li>
-                    <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
-                </ul>
-            </div>
-            <div class="main-card__details">
-                <div class="main-card__detail">
-                    <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                    <p class="main-card__detail-text">От — 8000</p>
-                </div>
-                <div class="main-card__detail">
-                    <div class="main-card__detail-icon main-card__detail-icon--square-m"></div>
-                    <p class="main-card__detail-text">От — 14 м<sup>2</sup></p>
+            <div class="main-card-text-slider swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <h3 class="main-card__subtitle title">Класс "Standard"</h3>
+                        <div class="main-card__text-wrapper">
+                            <p class="main-card__text common-text">Клуб располагает 38 гостевыми номерами данной категории, а также  2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями. </p>
+                        </div>
+                        <div class="main-card__features">
+                            <p class="main-card__features-title">Комплектация Номера</p>
+                            <ul class="main-card__features-list dotted-list">
+                                <li class="main-card__features-list-item">Wi-Fi</li>
+                                <li class="main-card__features-list-item">Спутниковое телевидение</li>
+                                <li class="main-card__features-list-item">Кондиционер</li>
+                                <li class="main-card__features-list-item">Ванная комната</li>
+                                <li class="main-card__features-list-item">Сейф</li>
+                                <li class="main-card__features-list-item">Холодильник</li>
+                                <li class="main-card__features-list-item">Кровать «King size»</li>
+                                <li class="main-card__features-list-item">Обслуживание номеров</li>
+                                <li class="main-card__features-list-item">Завтрак "Шведский стол"</li>
+                                <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
+                            </ul>
+                        </div>
+                        <div class="main-card__details">
+                            <div class="main-card__detail">
+                                <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
+                                <p class="main-card__detail-text">От — 8000</p>
+                            </div>
+                            <div class="main-card__detail">
+                                <div class="main-card__detail-icon main-card__detail-icon--square-m"></div>
+                                <p class="main-card__detail-text">От — 14 м<sup>2</sup></p>
+                            </div>
+                        </div></div>
+                    <div class="swiper-slide">
+                        <h3 class="main-card__subtitle title">Класс "asdasdasd"</h3>
+                        <div class="main-card__text-wrapper">
+                            <p class="main-card__text common-text">Клуб располагает 38 гостевыми номерами данной категории, а также  2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями. </p>
+                        </div>
+                        <div class="main-card__features">
+                            <p class="main-card__features-title">Комплектация Номера</p>
+                            <ul class="main-card__features-list dotted-list">
+                                <li class="main-card__features-list-item">Wi-Fi</li>
+                                <li class="main-card__features-list-item">Спутниковое телевидение</li>
+                                <li class="main-card__features-list-item">Кондиционер</li>
+                                <li class="main-card__features-list-item">Ванная комната</li>
+                                <li class="main-card__features-list-item">Сейф</li>
+                                <li class="main-card__features-list-item">Холодильник</li>
+                                <li class="main-card__features-list-item">Кровать «King size»</li>
+                                <li class="main-card__features-list-item">Обслуживание номеров</li>
+                                <li class="main-card__features-list-item">Завтрак "Шведский стол"</li>
+                                <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
+                            </ul>
+                        </div>
+                        <div class="main-card__details">
+                            <div class="main-card__detail">
+                                <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
+                                <p class="main-card__detail-text">От — 8000</p>
+                            </div>
+                            <div class="main-card__detail">
+                                <div class="main-card__detail-icon main-card__detail-icon--square-m"></div>
+                                <p class="main-card__detail-text">От — 14 м<sup>2</sup></p>
+                            </div>
+                        </div></div>
+                    <div class="swiper-slide">
+                        <h3 class="main-card__subtitle title">Класс "Standard"</h3>
+                        <div class="main-card__text-wrapper">
+                            <p class="main-card__text common-text">Клуб располагает 38 гостевыми номерами данной категории, а также  2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями. </p>
+                        </div>
+                        <div class="main-card__features">
+                            <p class="main-card__features-title">Комплектация Номера</p>
+                            <ul class="main-card__features-list dotted-list">
+                                <li class="main-card__features-list-item">Wi-Fi</li>
+                                <li class="main-card__features-list-item">Спутниковое телевидение</li>
+                                <li class="main-card__features-list-item">Кондиционер</li>
+                                <li class="main-card__features-list-item">Ванная комната</li>
+                                <li class="main-card__features-list-item">Сейф</li>
+                                <li class="main-card__features-list-item">Холодильник</li>
+                                <li class="main-card__features-list-item">Кровать «King size»</li>
+                                <li class="main-card__features-list-item">Обслуживание номеров</li>
+                                <li class="main-card__features-list-item">Завтрак "Шведский стол"</li>
+                                <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
+                            </ul>
+                        </div>
+                        <div class="main-card__details">
+                            <div class="main-card__detail">
+                                <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
+                                <p class="main-card__detail-text">От — 8000</p>
+                            </div>
+                            <div class="main-card__detail">
+                                <div class="main-card__detail-icon main-card__detail-icon--square-m"></div>
+                                <p class="main-card__detail-text">От — 14 м<sup>2</sup></p>
+                            </div>
+                        </div></div>
                 </div>
             </div>
             <div class="main-card__interaction">

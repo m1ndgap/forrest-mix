@@ -4830,6 +4830,33 @@ body {
     .contact-info__map {
       width: 100%; } }
 
+.main-card-text-slider {
+  width: 526px; }
+  .main-card-text-slider .main-card__subtitle {
+    max-width: unset; }
+  @media (max-width: 1279px) {
+    .main-card-text-slider .main-card__text-wrapper {
+      margin-bottom: 670px; } }
+  @media (max-width: 767px) {
+    .main-card-text-slider .main-card__text-wrapper {
+      margin-bottom: 440px; } }
+  .main-card-text-slider .main-card__details {
+    margin-top: 40px; }
+
+.main-card--with-text-slider .main-card__interaction {
+  margin-top: auto; }
+
+@media (max-width: 1279px) {
+  .main-card--with-text-slider .main-card__slider {
+    position: absolute;
+    top: 280px; } }
+
+@media (max-width: 767px) {
+  .main-card--with-text-slider .main-card__slider {
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); } }
+
 .page-menu {
   box-sizing: border-box;
   -webkit-box-flex: 0;
@@ -4964,6 +4991,16 @@ body {
       top: -31px;
       left: -250%;
       width: 1022px; }
+
+#block-search-main {
+  position: absolute;
+  right: 84px;
+  bottom: 76px;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 245px;
+  z-index: 1; }
 
 .rooms {
   background-color: red;

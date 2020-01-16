@@ -446,4 +446,27 @@
     @include media("<large")
       width: 100%
 
+.main-card-text-slider
+  width: 526px
+  .swiper-slide
+  .main-card__subtitle
+    max-width: unset
+  .main-card__text-wrapper
+    @include media("<large")
+      margin-bottom: 670px
+    @include media("<tablet")
+      margin-bottom: 440px
+  .main-card__details
+    margin-top: 40px
+
+.main-card--with-text-slider
+  .main-card__interaction
+    margin-top: auto
+  .main-card__slider
+    @include media("<large")
+      position: absolute
+      top: 280px
+    @include media("<tablet")
+      left: 50%
+      transform: translate(-50%,0)
 
