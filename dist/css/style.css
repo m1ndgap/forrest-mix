@@ -4380,6 +4380,10 @@ body {
       .main-card__text-wrapper--multiparagraph .main-card__text {
         width: 100%;
         margin-top: 7px; }
+      .main-card__text-wrapper--multiparagraph--no-class p {
+        font-size: 1.5rem;
+        line-height: 28px;
+        color: #65696C; }
   .main-card__text {
     margin: 0;
     padding: 0;
