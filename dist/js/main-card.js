@@ -32,7 +32,6 @@ swipers.forEach(function(element){
 
 let textSliders = document.querySelectorAll('.main-card-text-slider');
 textSliders.forEach(function(element){
-    console.log(element);
     let next =  element.parentElement.querySelector('.swiper-button-next');
     let prev =  element.parentElement.querySelector('.swiper-button-prev');
 
