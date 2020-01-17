@@ -4344,6 +4344,13 @@ body {
   @media (max-width: 767px) {
     .main-card {
       width: 100%; } }
+  .main-card--no-list {
+    -webkit-box-pack: center;
+            justify-content: center; }
+    .main-card--no-list .main-card__features {
+      display: none; }
+    .main-card--no-list .main-card__details {
+      margin-top: 30px; }
   .main-card__main-title {
     -webkit-box-ordinal-group: 1;
             order: 0; }
