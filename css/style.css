@@ -4864,6 +4864,14 @@ body {
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0); } }
 
+.main-card--with-text-slider--no-list {
+  -webkit-box-pack: center;
+          justify-content: center; }
+  .main-card--with-text-slider--no-list .main-card__features {
+    display: none; }
+  .main-card--with-text-slider--no-list .main-card__interaction {
+    margin-top: 30px; }
+
 .page-menu {
   box-sizing: border-box;
   -webkit-box-flex: 0;
