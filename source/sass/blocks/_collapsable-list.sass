@@ -16,12 +16,15 @@
     flex-basis: 47%
     @include media('<large')
       flex-basis: 100%
+    ul
+      @include resetlist
+      margin-top: 36px
+      li
+        max-height: 50px
+        transition: $transition
   &__list-wrapper + &__list-wrapper
     @include media('<large')
       margin-top: 50px
-  &__list
-    @include resetlist
-    margin-top: 36px
   &__button
     @include resetinteractive
     margin-top: 52px
@@ -36,9 +39,7 @@
     &--active
       svg
         transform: scaleY(-1)
-  &__list-item
-    max-height: 50px
-    transition: $transition
+  .collapsable__list-item--collapsable
     &--hidden
       max-height: 0
       overflow: hidden

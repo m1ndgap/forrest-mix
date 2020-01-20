@@ -12,11 +12,11 @@ collapsable.forEach(function (el) {
     let arrow = button.querySelector('svg');
     console.log(button);
     listItems.forEach(function(elem){
-        elem.classList.toggle(listItemClass + '--hidden');
+        elem.classList.toggle(collapsableItemClass + '--hidden');
     });
     button.addEventListener('click', function(){
         listItems.forEach(function(elem){
-            elem.classList.toggle(listItemClass + '--hidden');
+            elem.classList.toggle(collapsableItemClass + '--hidden');
         });
         button.classList.toggle(collapsableButton + '--active');
     }, false)

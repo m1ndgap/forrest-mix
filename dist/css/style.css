@@ -3865,14 +3865,18 @@ body {
     @media (max-width: 1279px) {
       .collapsable__list-wrapper {
         flex-basis: 100%; } }
+    .collapsable__list-wrapper ul {
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+      margin-top: 36px; }
+      .collapsable__list-wrapper ul li {
+        max-height: 50px;
+        -webkit-transition: 700ms;
+        transition: 700ms; }
   @media (max-width: 1279px) {
     .collapsable__list-wrapper + .collapsable__list-wrapper {
       margin-top: 50px; } }
-  .collapsable__list {
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
-    margin-top: 36px; }
   .collapsable__button {
     text-decoration: none;
     background: none;
@@ -3890,13 +3894,9 @@ body {
     .collapsable__button--active svg {
       -webkit-transform: scaleY(-1);
               transform: scaleY(-1); }
-  .collapsable__list-item {
-    max-height: 50px;
-    -webkit-transition: 700ms;
-    transition: 700ms; }
-    .collapsable__list-item--hidden {
-      max-height: 0;
-      overflow: hidden; }
+  .collapsable .collapsable__list-item--collapsable--hidden {
+    max-height: 0;
+    overflow: hidden; }
 
 .details {
   margin-top: auto;
