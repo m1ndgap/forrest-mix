@@ -12,6 +12,11 @@ const swiperAnimation = new SwiperAnimation();
 var mySwiper4 = new Swiper('.slides .swiper-container', {
     loop: true,
     speed: 3000,
+    preloadImages: false,
+    lazy: {
+        loadPrevNext: true,
+        loadPrevNextAmount: 10,
+    },
     preventInteractionOnTransition: 'true',
     simulateTouch: false,
     autoplay: {
@@ -61,6 +66,6 @@ mySwiper4.on('transitionEnd', function() {
     bar.animate(1.0, function () {
         bar.destroy();
     });
-})
+});
 
 
