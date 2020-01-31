@@ -1,4 +1,7 @@
 .page-menu
+  position: sticky
+  left: 0
+  top: 0
   box-sizing: border-box
   flex-grow: 0
   width: 305px
@@ -6,10 +9,21 @@
   background-color: $white
   margin: 21px auto 0 0
   align-self: flex-start
+  transition: max-height $transition
   @include media("<large")
+    position: static
     margin: 0 auto 50px 0
   @include media("<tablet")
+    position: static
     width: 100%
+  &--fixed
+    position: sticky
+    top: 184px
+    @include media("<large")
+      top: 0
+      padding: 0
+      max-height: 0
+      overflow: hidden
   &__list
     @include resetlist
   &__list-item

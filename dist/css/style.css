@@ -3204,6 +3204,7 @@ body {
   height: calc(100vh - 84px); }
 
 .main-content-container {
+  position: relative;
   box-sizing: border-box;
   width: 1171px;
   margin: 0 auto; }
@@ -4877,6 +4878,10 @@ body {
     margin-top: 30px; }
 
 .page-menu {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
   box-sizing: border-box;
   -webkit-box-flex: 0;
           flex-grow: 0;
@@ -4884,13 +4889,27 @@ body {
   padding: 48px 54px 83px;
   background-color: #FFFFFF;
   margin: 21px auto 0 0;
-  align-self: flex-start; }
+  align-self: flex-start;
+  -webkit-transition: max-height 700ms;
+  transition: max-height 700ms; }
   @media (max-width: 1279px) {
     .page-menu {
+      position: static;
       margin: 0 auto 50px 0; } }
   @media (max-width: 767px) {
     .page-menu {
+      position: static;
       width: 100%; } }
+  .page-menu--fixed {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 184px; }
+    @media (max-width: 1279px) {
+      .page-menu--fixed {
+        top: 0;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden; } }
   .page-menu__list {
     padding-left: 0;
     margin: 0;
@@ -4944,6 +4963,8 @@ body {
       position: relative;
       height: 26px;
       width: 26px; }
+      .slides .swiper-pagination-bullets .swiper-pagination-bullet:focus {
+        outline: none; }
     .slides .swiper-pagination-bullets .swiper-inside-bullet {
       position: absolute;
       display: block;
@@ -4956,9 +4977,12 @@ body {
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       mix-blend-mode: difference; }
+  .slides .swiper-lazy-preloader {
+    position: absolute; }
   .slides .swiper-slide {
     -webkit-filter: brightness(75%);
-            filter: brightness(75%); }
+            filter: brightness(75%);
+    position: relative; }
   .slides .swiper-container {
     width: 100%;
     height: calc(100vh - 84px); }
@@ -4985,12 +5009,11 @@ body {
       font-size: 9.6rem;
       font-weight: normal; }
   .slides .main-subtitle {
-    position: absolute;
+    position: relative;
     right: 387px;
     bottom: 268px;
     margin: 0;
     padding: 0;
-    position: relative;
     font-weight: normal;
     font-size: 3.6rem;
     line-height: 52px; }

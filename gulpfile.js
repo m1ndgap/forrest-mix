@@ -26,6 +26,7 @@ gulp.task("css", function () {
         ]))
         .pipe(sourcemap.write("."))
         .pipe(gulp.dest("dist/css"))
+        .pipe(gulp.dest("../forrest-mix-python/hotel/static/css"))
         .pipe(server.stream());
 });
 
