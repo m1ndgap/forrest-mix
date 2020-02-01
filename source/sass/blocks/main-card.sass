@@ -28,6 +28,7 @@
     max-width: 50%
     @include media('<large')
       order: 1
+      max-width: 100%
 
   &__text-wrapper
     max-width: 526px
@@ -35,6 +36,13 @@
     min-height: 110px
     display: flex
     align-items: center
+    font-size: 1.5rem
+    line-height: 28px
+    color: $dark-text
+    p
+      font-size: 1.5rem
+      line-height: 28px
+      color: $dark-text
     @include media('<large')
       max-width: 100%
       order: 2
@@ -361,6 +369,8 @@
     width: 508px
     .swiper-slide
       width: 508px
+    @include media("<large")
+      width: 100%
     @include media("<tablet")
       width: 86%
       .swiper-slide
@@ -459,6 +469,8 @@
 
 .main-card-text-slider
   width: 526px
+  @include media("<tablet")
+    width: 100%
   .swiper-slide
   .main-card__subtitle
     max-width: unset
@@ -466,7 +478,10 @@
     @include media("<large")
       margin-bottom: 670px
     @include media("<tablet")
-      margin-bottom: 440px
+      margin-bottom: 470px
+      p
+        font-size: 1.4rem
+        line-height: 20px
   .main-card__details
     margin-top: 40px
 
@@ -478,8 +493,8 @@
       position: absolute
       top: 280px
     @include media("<tablet")
-      left: 50%
-      transform: translate(-50%,0)
+      left: 0
+      right: 0
   &--no-list
     justify-content: center
     .main-card__features

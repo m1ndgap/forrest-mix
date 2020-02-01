@@ -35,7 +35,7 @@
 <div style="display: none">
     <include src="./dist/img/sprite.svg"></include>
 </div>
-<nav class="main-menu">
+<nav class="main-menu" id="#main-menu">
     <ul class="main-menu__list text-cap">
         <li class="main-menu__list-item">
             <a class="main-menu__link main-menu__link--active" href="./about-us.html">об отеле</a>
@@ -62,7 +62,7 @@
             <a class="main-menu__link" href="tel:+78124147777">(812) 414-77-77</a>
         </li>
     </ul>
-    <a class="main-menu__mobile-logo" href="/">
+    <a class="main-menu__mobile-logo" href="./">
         <svg class="main-menu__mobile-logo-svg"  width="156" height="23" viewBox="0 0 156 23">
             <use xlink:href="#ForRestMix-logo-horizontal"></use>
         </svg>
@@ -74,12 +74,12 @@
         <span></span>
         <span></span>
     </div>
-    <button class="book-btn main-menu__bookbtn main-menu__bookbtn--active text-cap js-bookbtn">
+    <a href="./booking.html" class="book-btn main-menu__bookbtn main-menu__bookbtn--active text-cap js-bookbtn">
         <svg width="19" height="19">
             <use xlink:href="#icon-key"></use>
         </svg>
         <span class="main-menu__bookbtn-text">забронировать</span>
-    </button>
+    </a>
 </nav>
 <aside class="menu-fixed">
     <nav class="menu-fixed__nav">

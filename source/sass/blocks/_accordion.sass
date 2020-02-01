@@ -23,8 +23,11 @@
       min-width: 40px
     span
       margin-left: 23px
+      @include media("<tablet")
+        margin-left: 0
     @include media("<tablet")
       padding: 15px 0 15px
+      font-size: 1.6rem
     &_button
       width: 36px
       height: 36px
@@ -43,6 +46,9 @@
       &--active
         svg
           transform: scaleY(-1)
+  &__title-svg-icon
+    @include media("<tablet")
+      display: none
   &__content
     max-height: 0
     overflow: hidden

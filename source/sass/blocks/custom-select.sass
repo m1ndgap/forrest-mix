@@ -1,0 +1,66 @@
+.cselect
+
+  &__wrap
+    padding: 22px 13px 14px
+    @include media("<tablet")
+      padding: 27px 13px 11px
+  &__hidden
+    display: none
+    visibility: hidden
+    padding-right: 20px
+  &__styled
+    font-size: 1.6rem
+    color: $black
+    position: relative
+    user-select: none
+    cursor: pointer
+    &:after
+      display: block
+      content: ""
+      position: absolute
+      right: 5px
+      top: 30%
+      width: 7px
+      height: 7px
+      border-right: 1px solid $dark-text
+      border-bottom: 1px solid $dark-text
+      transform: translate(0, -70%) rotate(45deg)
+      transition: $transition
+    &--active
+      &:after
+        transform: translate(0, -20%) rotate(225deg)
+  &__options
+    position: absolute
+    top: 100%
+    left: -1px
+    width: 100%
+    list-style: none
+    padding: 0
+    margin: 0
+    max-height: 200px
+    overflow-y: scroll
+    overflow: -moz-scrollbars-none
+    transition: max-height $transition ease 0ms
+    background-color: $white
+    border: 1px solid $maincolor
+    z-index: 2
+    &::-webkit-scrollbar
+      display: none
+      -ms-overflow-style: none
+    &--hidden
+      max-height: 0
+      overflow: hidden
+      top: 102%
+      border: 1px solid transparent
+      border-top: none
+      transition: max-height $transition 250ms, border 0ms $transition, opacity 0ms $transition*2
+  &__list-item
+    padding: 10px
+    font-size: 1.5rem
+    color: $black
+    cursor: pointer
+    transition: background-color $transition/3
+    &:hover
+      background-color: lighten($dark-text, 55%)
+    &:active
+      background-color: lighten($dark-text, 45%)
