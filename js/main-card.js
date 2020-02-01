@@ -35,6 +35,7 @@ let textSliders = document.querySelectorAll('.main-card-text-slider');
 textSliders.forEach(function(element){
     let next =  element.parentElement.querySelector('.swiper-button-next');
     let prev =  element.parentElement.querySelector('.swiper-button-prev');
+    let btnLink = element.parentElement.querySelector('.main-card__more-info');
 
     new Swiper (element, {
         speed: 1000,
@@ -50,6 +51,13 @@ textSliders.forEach(function(element){
         navigation: {
             nextEl: next,
             prevEl: prev,
+        },
+        on: {
+            slideChange: function () {
+                let activeSlide = this.slides[this.activeIndex];
+                let currentLink = activeSlide.querySelector('.main-card__subtitle').dataset.href;
+                btnLink.setAttribute("href", currentLink);
+            }
         },
     })
 
