@@ -11,6 +11,7 @@ swipers.forEach(function(element){
         loop: true,
         preventInteractionOnTransition: true,
         simulateTouch: false,
+        allowTouchMove: false,
         pagination: {
             el: pagination,
             type: 'custom',
@@ -41,6 +42,7 @@ textSliders.forEach(function(element){
         spaceBetween: 110,
         preventInteractionOnTransition: true,
         simulateTouch: false,
+        allowTouchMove: false,
         effect: 'fade',
         fadeEffect: {
             crossFade: true
