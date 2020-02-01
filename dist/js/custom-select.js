@@ -76,7 +76,6 @@ function drawCustomSelect() {
 
 modalButtons.forEach(function (mbutton) {
     let selectOpt = mbutton.dataset.modalopt;
-    console.log(selectOpt);
     mbutton.addEventListener('click', function(){
         updateSelect(select, selectOpt);
         drawCustomSelect();
