@@ -3890,7 +3890,23 @@ body {
       .collapsable__list-wrapper ul li {
         max-height: 50px;
         -webkit-transition: 700ms;
-        transition: 700ms; }
+        transition: 700ms;
+        position: relative;
+        padding-left: 14px;
+        font-size: 1.5rem;
+        line-height: 28px;
+        color: #65696C; }
+        .collapsable__list-wrapper ul li::before {
+          position: absolute;
+          left: 0;
+          top: 12px;
+          content: "";
+          display: block;
+          width: 5px;
+          height: 5px;
+          border: 1px solid #65696C;
+          border-radius: 50%;
+          background: none; }
   @media (max-width: 1279px) {
     .collapsable__list-wrapper + .collapsable__list-wrapper {
       margin-top: 50px; } }
