@@ -36,6 +36,7 @@ textSliders.forEach(function(element){
     let next =  element.parentElement.querySelector('.swiper-button-next');
     let prev =  element.parentElement.querySelector('.swiper-button-prev');
     let btnLink = element.parentElement.querySelector('.main-card__more-info');
+    let mainBtnLink = element.parentElement.querySelector('.main-card__book-btn');
 
     new Swiper (element, {
         speed: 1000,
@@ -55,8 +56,13 @@ textSliders.forEach(function(element){
         on: {
             slideChange: function () {
                 let activeSlide = this.slides[this.activeIndex];
+                let roomCurrentLink = activeSlide.querySelector('.main-card__subtitle').dataset.roomhref;
                 let currentLink = activeSlide.querySelector('.main-card__subtitle').dataset.href;
-                btnLink.setAttribute("href", currentLink);
+                if (typeof roomCurrentLink !== 'undefined') {
+                    btnLink.setAttribute("href", roomCurrentLink);
+                } else if (typeof currentLink !== 'undefined') {
+                    mainBtnLink.setAttribute("href", currentLink);
+                }
             }
         },
     })

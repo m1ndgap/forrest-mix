@@ -10,8 +10,6 @@
       width: 100%
       max-width: 500px
       margin: auto
-
-
   &__list-wrapper
     flex-basis: 47%
     @include media('<large')
@@ -22,6 +20,22 @@
       li
         max-height: 50px
         transition: $transition
+        position: relative
+        padding-left: 14px
+        font-size: 1.5rem
+        line-height: 28px
+        color: $dark-text
+        &::before
+          position: absolute
+          left: 0
+          top: 12px
+          content: ""
+          display: block
+          width: 5px
+          height: 5px
+          border: 1px solid $dark-text
+          border-radius: 50%
+          background: none
   &__list-wrapper + &__list-wrapper
     @include media('<large')
       margin-top: 50px
