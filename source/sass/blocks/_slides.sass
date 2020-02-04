@@ -4,6 +4,64 @@
   width: 100%
   position: relative
 
+  .main-title, .main-subtitle
+    position: absolute
+    z-index: 2
+    font-family: "Yeseva One", sans-serif
+    color: $white
+    text-align: right
+
+  .main-title
+    right: 387px
+    bottom: 268px
+    &__title
+      @include resetmargin
+      margin-bottom: 6px
+      font-size: 9.6rem
+      font-weight: normal
+
+  .main-subtitle__promotion-link
+    text-decoration: none
+    color: $white
+    right: 387px
+    opacity: 0
+    pointer-events: none
+    transition: opacity $transition
+    &--activate
+      opacity: 1
+      pointer-events: all
+      transition: opacity $transition 1900ms
+
+  .main-subtitle
+    position: relative
+    right: 0
+    bottom: 268px
+    @include resetmargin
+    font-weight: normal
+    font-size: 3.6rem
+    line-height: 52px
+
+  .main-cursive
+    height: 691px
+    width: 150px
+    position: absolute
+    z-index: 2
+    left: 63px
+    bottom: 0
+    @include media("<large")
+      display: none
+    &__slide
+      width: 205px
+    &__slide-text
+      top: -30px
+      left: -250%
+      width: 1022px
+      @include media("<huge")
+        top: 50px
+        font-size: 11rem
+        left: -280%
+
+.master-slider
   .swiper-pagination-bullets
     width: auto
     right: 373px
@@ -35,61 +93,25 @@
   .swiper-slide
     filter: brightness(75%)
     position: relative
-
+    transform: scale(1)
+    transition: transform 5000ms
   .swiper-container
     width:  100%
     height: calc(100vh - 84px)
-
   .slider-pic
     img
       object-fit: cover
       width: 100%
       height: calc(100vh - 84px)
-
   .swiper-wrapper
     position: relative
 
-
-  .main-title, .main-subtitle
-    position: absolute
-    z-index: 2
-    font-family: "Yeseva One", sans-serif
-    color: $white
-    text-align: right
-
-  .main-title
-    right: 387px
-    bottom: 268px
-    &__title
-      @include resetmargin
-      margin-bottom: 6px
-      font-size: 9.6rem
-      font-weight: normal
-  .main-subtitle
-    position: relative
-    right: 387px
-    bottom: 268px
-    @include resetmargin
-    font-weight: normal
-    font-size: 3.6rem
-    line-height: 52px
+  .slide-zoom
+    transform: scale(1.1)
 
 
-  .main-cursive
-    height: 691px
-    width: 150px
-    position: absolute
-    z-index: 2
-    left: 63px
-    bottom: 0
-    @include media("<large")
-      display: none
-    &__slide, &__slide--active
-      width: 205px
-    &__slide-text
-      top: -31px
-      left: -250%
-      width: 1022px
+
+
 
 #block-search-main
   position: absolute
@@ -99,4 +121,5 @@
   border-radius: 5px
   width: 100%
   max-width: 245px
-  z-index: 1
+  z-index: 5
+

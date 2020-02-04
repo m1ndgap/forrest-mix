@@ -2,6 +2,7 @@ let select = document.querySelectorAll('.cselect__wrap select');
 let customText = '';
 let extraDom = '';
 let modalButtons = document.querySelectorAll("[href='#book-modal']");
+let phoneLink = document.querySelector('.js-modal-phone');
 
 let optionsCls = 'cselect__options';
 let optionsItem = 'cselect__list-item';
@@ -15,6 +16,11 @@ function updateSelect(select, value) {
     let options = Array.from(select[0].querySelectorAll("option"));
     let option = options.filter(opt => opt.getAttribute("value") == value);
     option[0].setAttribute("selected", '');
+}
+
+function updateTel(telEl, tel) {
+    telEl.innerText = tel;
+    telEl.setAttribute('href', 'tel:' + tel);
 }
 
 function drawCustomSelect() {
@@ -76,8 +82,10 @@ function drawCustomSelect() {
 
 modalButtons.forEach(function (mbutton) {
     let selectOpt = mbutton.dataset.modalopt || 'rest';
+    let selectTel = mbutton.dataset.modaltel;
     mbutton.addEventListener('click', function(){
         updateSelect(select, selectOpt);
+        updateTel(phoneLink, selectTel);
         drawCustomSelect();
     })
 });
