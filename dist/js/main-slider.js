@@ -14,7 +14,7 @@ let clearZoom = function(slides) {};
 
 var promoSlider = new Swiper ('.js-main-subtitle',{
     loop: true,
-    speed: 3001,
+    speed: 1500,
     preventInteractionOnTransition: 'true',
     simulateTouch: false,
     autoplay: false,
