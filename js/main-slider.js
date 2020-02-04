@@ -9,16 +9,47 @@
 
 let slideDelay = 3000;
 const swiperAnimation = new SwiperAnimation();
-var mySwiper4 = new Swiper('.slides .swiper-container', {
+
+let clearZoom = function(slides) {};
+
+var promoSlider = new Swiper ('.js-main-subtitle',{
+    loop: true,
+    speed: 3001,
+    preventInteractionOnTransition: 'true',
+    simulateTouch: false,
+    autoplay: false,
+    on: {
+        slideChange: function () {
+            let actSlide = this.slides[this.activeIndex],
+                prevSlide = this.slides[this.previousIndex];
+            actSlide.classList.add('main-subtitle__promotion-link--activate');
+            prevSlide.classList.remove('main-subtitle__promotion-link--activate');
+        }
+    },
+});
+
+var cursiveSlider = new Swiper ('.js-main-cursive' ,{
+    speed: 3001,
+    loop: true,
+    preventInteractionOnTransition: true,
+    simulateTouch: false,
+    allowTouchMove: false,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+});
+
+var mySwiper4 = new Swiper('.slides .master-slider', {
     loop: true,
     speed: 3000,
     preloadImages: false,
+    preventInteractionOnTransition: 'true',
+    simulateTouch: false,
     lazy: {
         loadPrevNext: true,
         loadPrevNextAmount: 10,
     },
-    preventInteractionOnTransition: 'true',
-    simulateTouch: false,
     autoplay: {
         delay: slideDelay,
         disableOnInteraction: false,
@@ -32,12 +63,22 @@ var mySwiper4 = new Swiper('.slides .swiper-container', {
         },
     },
     on: {
-        init: function () {
+        slideChangeTransitionStart: function () {
+            let picSlide = this.activeIndex;
+            promoSlider.slideTo(picSlide);
+            cursiveSlider.slideTo(picSlide);
         },
-        transitionEnd: function () {
-
+        slideChangeTransitionEnd: function () {
+            let activeSlide = this.slides[this.activeIndex],
+                prevSlide = this.slides[this.previousIndex],
+                slides = Array.from(this.slides);
+            console.log(slides);
+            slides.forEach(function (el) {
+                el.classList.remove('slide-zoom');
+            });
+            activeSlide.classList.add('slide-zoom');
         }
-    }
+    },
 });
 
 let strokeWidth = 2;
@@ -67,5 +108,7 @@ mySwiper4.on('transitionEnd', function() {
         bar.destroy();
     });
 });
+
+
 
 

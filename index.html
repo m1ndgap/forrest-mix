@@ -186,7 +186,7 @@
     })(window);
 </script>
 <section class="slides main-container">
-    <div class="swiper-container">
+    <div class="swiper-container master-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <picture class="slider-pic">
@@ -229,64 +229,48 @@
             <noindex><a href="http://www.travelline.ru/products/tl-hotel" rel="nofollow">система онлайн-бронирования</a></noindex>
         </div>
     </div>
-<!--    <div class="order-ui">-->
-<!--        <form action="" class="order-ui__form">-->
-<!--            <div class="order-ui__wrapper">-->
-<!--                <label for="order-ui-arrival" class="order-ui__label">-->
-<!--                    <p class="order-ui__label-text">заезд</p>-->
-<!--                    <input type="text" readonly class="order-ui__input order-ui__input&#45;&#45;arrival" id="order-ui-arrival" value="25/09/2019">-->
-<!--                </label>-->
-<!--                <div class="order-ui__dropdown-arrow">-->
-<!--                    <svg viewBox="0 0 12 6" width="15" height="10">-->
-<!--                        <use xlink:href="#icon-input-arrow"></use>-->
-<!--                    </svg>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="order-ui__wrapper">-->
-<!--                <label for="order-ui-leave" class="order-ui__label">-->
-<!--                    <p class="order-ui__label-text">выезд</p>-->
-<!--                    <input type="text"  readonly class="order-ui__input order-ui__input&#45;&#45;leave " id="order-ui-leave" value="25/09/2019">-->
-<!--                </label>-->
-<!--                <div class="order-ui__dropdown-arrow">-->
-<!--                    <svg viewBox="0 0 12 6" width="15" height="10">-->
-<!--                        <use xlink:href="#icon-input-arrow"></use>-->
-<!--                    </svg>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="order-ui__wrapper">-->
-<!--                <label for="order-ui-people" class="order-ui__label">-->
-<!--                    <p class="order-ui__label-text">персоны</p>-->
-<!--                    <input type="text" readonly class="order-ui__input order-ui__input&#45;&#45;people" id="order-ui-people" value="1 взрослый">-->
-<!--                </label>-->
-<!--                <div class="order-ui__dropdown-arrow">-->
-<!--                    <svg viewBox="0 0 12 6" width="15" height="10">-->
-<!--                        <use xlink:href="#icon-input-arrow"></use>-->
-<!--                    </svg>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="order-ui__wrapper">-->
-<!--                <input type="submit" class="order-ui__submit btn" id="order-ui-submit" value="ИСКАТЬ">-->
-<!--            </div>-->
-<!--        </form>-->
-<!--    </div>-->
     <div class="main-title">
         <h1 class="main-title__title">SPA Oтель</h1>
     </div>
-    <div class="main-subtitle">
-        <span class="custom-underline">Санкт-Петербург, Репино,</span> <br>
-        <span class="custom-underline">ул. Луговая, дом 10 А</span>
+    <div class="main-subtitle js-main-subtitle swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <a class=" swiper-slide main-subtitle__promotion-link" href="./special-3.html">
+                    <span class="custom-underline">Санкт-Петербург, Репино,</span><br>
+                    <span class="custom-underline">ул. Луговая, дом 10 А</span>
+                </a>
+                <a class=" swiper-slide main-subtitle__promotion-link" href="./special-2.html">
+                    <span class="custom-underline">Рядом побережье</span><br>
+                    <span class="custom-underline">Финского залива</span>
+                </a>
+                <a class=" swiper-slide main-subtitle__promotion-link" href="./special-4.html">
+                    <span class="custom-underline">Несколько изысканных</span><br>
+                    <span class="custom-underline">ресторанов и баров</span>
+                </a>
+                <a class=" swiper-slide main-subtitle__promotion-link" href="./special-4.html">
+                    <span class="custom-underline">Фитнесс и спа</span><br>
+                    <span class="custom-underline">высочайшего уровня</span>
+                </a>
+            </div>
     </div>
-    <div class="main-cursive">
-        <div class="main-cursive__slide main-cursive__slide--active">
-            <p class="main-cursive__slide-text cursive-aside-title">Beach Vacation</p>
-        </div>
-        <div class="main-cursive__slide">
-            <p class="main-cursive__slide-text cursive-aside-title"></p>
+    <div class="main-cursive js-main-cursive">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Pine Nature</p>
+            </div>
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Beach Vacation</p>
+            </div>
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Food And Drink</p>
+            </div>
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Relax And Sport</p>
+            </div>
         </div>
     </div>
 </section>
-
-
 <section class="main-section main-section--rooms">
     <div class="main-content-container">
         <div class="main-card main-card--with-text-slider card">
@@ -388,7 +372,7 @@
                 </div>
             </div>
             <div class="main-card__interaction">
-                <a href="#book-modal" data-modalopt="banquets" class="main-card__book-btn btn">Забронировать</a>
+                <a href="#book-modal" data-modalopt="banquet" data-modaltel="+7 (812) 777-77-77" class="main-card__book-btn btn">Забронировать</a>
                 <a href="./room.html" class="main-card__more-info">подробнее о номере</a>
             </div>
             <div class="main-card__slider">
@@ -788,13 +772,16 @@
                 <div class="book-modal__form-input-wrap book-modal__form-input-wrap--select cselect__wrap">
                     <label for="book-modal-select" class="book-modal__select-label">выберите услугу</label>
                     <select name="" id="book-modal-select" class="book-modal__select">
+                        <option value="fitness">Аква и фитнес (заказать абонемент)</option>
+                        <option value="massage">Запись на массаж</option>
+                        <option value="aecosm">Запись на услуги эстетической косметологии</option>
+                        <option value="medcosm">Запись на услуги медицинской косметологии</option>
+                        <option value="beauty">Запись на услуги мастерской красоты</option>
                         <option value="conference">Аренда конференц зала</option>
-                        <option value="banquets">Банкеты</option>
-                        <option value="corp-retreat">Корпоративный отдых</option>
-                        <option value="fun">Развлечения</option>
-                        <option value="banquet">Банкет</option>
-                        <option value="emotional-support">Тренинг</option>
-                        <option value="rest">Отдых</option>
+                        <option value="corporate">Проведение корпоратива</option>
+                        <option value="banquet">Заказать банкет</option>
+                        <option value="restaurant">Бронирование столика в ресторане</option>
+                        <option value="promo">Заказать услугу по акции</option>
                     </select>
                 </div>
                 <div class="book-modal__form-input-wrap book-modal__form-input-wrap--tel">
@@ -807,7 +794,7 @@
         </div>
         <div class="book-modal__call-us">
             <span class="book-modal__call-us-text common-text">Или звоните нам по номеру:</span>
-            <a href="tel:+78124167512" class="book-modal__call-us-link">+7 (812) 416 75 12</a>
+            <a href="tel:+78124167512" class="book-modal__call-us-link js-modal-phone">+7 (812) 416 75 12</a>
         </div>
         <a href="#main-menu" class="book-modal__close">
             <svg viewBox="0 0 15 15" width="15" height="15">
