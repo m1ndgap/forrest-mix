@@ -1,0 +1,86 @@
+.special-info
+  &__title
+    font-size: 1.8rem
+  &__wrapper
+    display: flex
+    padding: 146px 0 116px
+    justify-content: space-between
+    @include media('<large')
+      flex-flow: row wrap
+      padding: 70px 0 70px
+      width: 100%
+      max-width: 500px
+      margin: auto
+  &__list-wrapper
+    flex-basis: 47%
+    @include media('<large')
+      flex-basis: 100%
+    ul
+      @include resetlist
+      margin-top: 36px
+      li
+        max-height: 50px
+        transition: $transition
+        position: relative
+        padding-left: 14px
+        font-size: 1.5rem
+        line-height: 28px
+        color: $dark-text
+        &::before
+          position: absolute
+          left: 0
+          top: 12px
+          content: ""
+          display: block
+          width: 5px
+          height: 5px
+          border: 1px solid $dark-text
+          border-radius: 50%
+          background: none
+    &--prices
+      flex-basis: 37%
+      @include media('<large')
+        flex-basis: 100%
+  &__list-wrapper + &__list-wrapper
+    @include media('<large')
+      margin-top: 50px
+  &__list
+    @include resetlist
+    padding-left: 52px
+    padding-bottom: 36px
+    pointer-events: none
+    @include media("<tablet")
+      padding-left: 0
+      padding-bottom: 16px
+  &__list-item
+    font-size: 1.6rem
+    font-family: "Open Sans", sans-serif
+    color: $dark-text
+    display: flex
+  &__list-item + &__list-item
+    margin-top: 12px
+    @include media("<tablet")
+      margin-top: 5px
+  &__list-item-content
+    line-height: 28px
+    @include media("<tablet")
+      padding-right: 10px
+    &--dots
+      margin: 0 10px 7px 10px
+      flex-grow: 1
+      border-bottom: 1px dotted $dark-text
+      @include media("<tablet")
+        display: none
+    &--price
+      color: $black
+      font-weight: 500
+      padding-right: 15px
+      position: relative
+      &::after
+        position: absolute
+        display: block
+        content: "\20BD"
+        right: 0
+        top: 0
+      @include media("<tablet")
+        margin-left: auto

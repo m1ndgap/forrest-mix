@@ -1,0 +1,48 @@
+
+<div class="book-form">
+    <div class="main-content-container">
+        <h3 class="book-form__title title">Забронировать Номер «{{ room.name }}»</h3>
+        <form action="" class="book-form__form">
+            <div class="book-form__wrapper">
+                <label for="order-ui-arrival" class="book-form__label">
+                    <p class="book-form__label-text">заезд</p>
+                    <input type="text" readonly="" class="book-form__input book-form__input--arrival" id="order-ui-arrival" value="25/09/2019">
+                </label>
+                <div class="book-form__dropdown-arrow">
+                    <svg viewBox="0 0 12 6" width="15" height="10">
+                        <use xlink:href="#icon-input-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="book-form__wrapper">
+                <label for="order-ui-leave" class="book-form__label">
+                    <p class="book-form__label-text">выезд</p>
+                    <input type="text" readonly="" class="book-form__input book-form__input--leave " id="order-ui-leave" value="25/09/2019">
+                </label>
+                <div class="book-form__dropdown-arrow">
+                    <svg viewBox="0 0 12 6" width="15" height="10">
+                        <use xlink:href="#icon-input-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="book-form__wrapper">
+                <label for="order-ui-people" class="book-form__label">
+                    <p class="book-form__label-text">персоны</p>
+                    <input type="text" readonly="" class="book-form__input book-form__input--people" id="order-ui-people" value="1 взрослый">
+                </label>
+                <div class="book-form__dropdown-arrow">
+                    <svg viewBox="0 0 12 6" width="15" height="10">
+                        <use xlink:href="#icon-input-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="book-form__input-wrapper">
+                <input type="submit" class="btn book-form__submit" value="Найти">
+            </div>
+        </form>
+        <!--        <p class="book-form__disclaimer common-text">-->
+        <!--            Нажимая на кнопку, вы соглашаетесь с условиями обработки-->
+        <!--            <a href="javascript:void(0)">персональных данных</a>-->
+        <!--        </p>-->
+    </div>
+</div>

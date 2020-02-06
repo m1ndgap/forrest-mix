@@ -63,6 +63,9 @@ var mySwiper4 = new Swiper('.slides .master-slider', {
         },
     },
     on: {
+        autoplay: function() {
+            console.log("autoplay!");
+        },
         slideChangeTransitionStart: function () {
             let picSlide = this.activeIndex;
             promoSlider.slideTo(picSlide);

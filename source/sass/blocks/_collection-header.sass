@@ -17,7 +17,7 @@
     z-index: -1
     background-size: cover
   @include media('<large')
-      padding: 120px 15px 125px
+    padding: 120px 15px 125px
   @include media('<tablet')
     padding: 80px 15px 85px
 
@@ -34,6 +34,9 @@
   &--rooms
     &::after
       background-image: url('../img/rooms-bg-img.png')
+  &--specials
+    &::after
+      background-image: url('../img/specials-bg-img.png')
 
   &__wrapper
     max-width: 680px

@@ -46,6 +46,27 @@
       font-size: 1.5rem
       line-height: 28px
       color: $dark-text
+    ul
+      @include resetlist
+      width: 100%
+      margin-top: 5px
+      li
+        position: relative
+        padding-left: 14px
+        font-size: 1.5rem
+        line-height: 28px
+        color: $dark-text
+        &::before
+          position: absolute
+          left: 0
+          top: 12px
+          content: ""
+          display: block
+          width: 5px
+          height: 5px
+          border: 1px solid $dark-text
+          border-radius: 50%
+          background: none
     @include media('<large')
       max-width: 100%
       order: 2
@@ -77,33 +98,57 @@
     margin-top: 22px
   &__contact-info-title
     margin-bottom: 10px
-  &__features
+  &__features, &__features--two-col
     z-index: 2
     @include media('<large')
       order: 3
-  &__features-list
-    @include resetlist
-    z-index: 2
-    margin-top: 16px
-    display: flex
-    flex-flow: column wrap
-    align-content: space-between
-    max-height: 160px
-    width: 526px
-    @include media('<large')
-      max-height: unset
-      li:nth-child(n+5)
-        display: none
-    @include media('<tablet')
-      width: 100%
-    &--wide
+    ul
+      @include resetlist
       flex-flow: column nowrap
       margin-bottom: -20px
+      z-index: 2
+      margin-top: 16px
       .main-card__features-list-item
         max-width: 100%
       @include media('<large')
         margin-bottom: 0
         max-height: unset
+      li
+        position: relative
+        padding-left: 14px
+        font-size: 1.5rem
+        line-height: 28px
+        color: $dark-text
+        &::before
+          position: absolute
+          left: 0
+          top: 12px
+          content: ""
+          display: block
+          width: 5px
+          height: 5px
+          border: 1px solid $dark-text
+          border-radius: 50%
+          background: none
+  &__features--two-col
+    ul
+      @include resetlist
+      z-index: 2
+      margin-top: 16px
+      display: flex
+      flex-flow: column wrap
+      align-content: space-between
+      max-height: 160px
+      width: 526px
+      @include media('<large')
+        max-height: unset
+        li:nth-child(n+5)
+          display: none
+      @include media('<tablet')
+        width: 100%
+
+
+
   &__features-list-item
     display: block
     position: relative
@@ -505,3 +550,27 @@
     .main-card__interaction
       margin-top: 30px
 
+.long-text-card
+  height: unset
+  min-height: 610px
+  padding-bottom: 150px
+  position: relative
+  @include media('<large')
+    padding-bottom: 50px
+  .main-card__text-wrapper
+    margin-top: 30px
+  .main-card__slider
+    position: absolute
+    top: 146px
+    right: 0
+    @include media('<large')
+      position: relative
+      top: unset
+  .main-card__details + .main-card__interaction
+    margin-top: 20px
+    @include media('<large')
+      margin-top: 10px
+  .main-card__contact-info
+    margin-bottom: 30px
+    @include media('<large')
+      margin-bottom: 0

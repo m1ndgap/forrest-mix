@@ -78,7 +78,7 @@ body
     background-color: $white
 
 .main-section
-  height: 900px
+  min-height: 900px
   &:nth-of-type(even)
     background-color: $section-bg
   &:nth-of-type(odd)
@@ -94,11 +94,13 @@ body
   &:nth-of-type(odd)
     background-color: $section-bg
 
+
 .colored-section
   background-color: $section-bg !important
 
 .accordion-section, .similar-items-section, .height-unset
   height: unset
+  min-height: unset
 
 .aside-section
   padding: 188px 0 196px
@@ -180,7 +182,7 @@ body
       width: 100%
 
 .white-text
-  font-family: Open Sans
+  font-family: 'Open Sans', sans-serif
   font-style: normal
   font-weight: 600
   color: $white
@@ -231,3 +233,19 @@ body
 .room-book-block
   padding: 64px 0 64px
 
+.not-found
+  padding: 210px 10px 170px
+  background-color: $section-bg
+  span
+    display: block
+    text-align: center
+    font-family: "Open Sans", sans-serif
+    color: $black
+  &__404
+    font-size: 20rem
+    font-weight: 500
+  &__sub-title
+    font-size: 5rem
+  &__text
+    margin-top: 15px
+    font-size: 2.0rem
