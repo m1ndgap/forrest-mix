@@ -5842,8 +5842,7 @@ body {
     .book-modal__success-text {
       margin-top: 18px; }
     .book-modal__success--active {
-      opacity: 1;
-      pointer-events: all; }
+      opacity: 1; }
   .book-modal__loading {
     position: absolute;
     top: 0;
