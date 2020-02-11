@@ -1,16 +1,9 @@
-// function slideBackup(slideObj) {
-//     let currentSlide = slideObj.el.querySelector(".swiper-slide-active");
-//     console.log(currentSlide);
-//     let backUpImg = document.querySelector(".js-backup-img");
-//     let img = currentSlide.querySelector('picture img');
-//     backUpImg.querySelector('img').src = img.src;
-//     console.log(img.src);
-// };
+let slideDelay = 7000;
 
-let slideDelay = 3000;
-const swiperAnimation = new SwiperAnimation();
-
-let clearZoom = function(slides) {};
+// progress bar options
+let strokeWidth = 2;
+let trailColor = 'transparent';
+let mainColor = "#FFFFFF";
 
 var promoSlider = new Swiper ('.js-main-subtitle',{
     loop: true,
@@ -59,34 +52,48 @@ var mySwiper4 = new Swiper('.slides .master-slider', {
         type: 'bullets',
         clickable: true,
         renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + '<span class="swiper-inside-bullet"></span>' + '</span>';
+            return '<span data-slide="' + index + '" class="' + className + '">' + '<span class="swiper-inside-bullet"></span>' + '</span>';
         },
     },
     on: {
+        paginationRender: function(){
+            let bullets = Array.from(this.pagination.bullets);
+            bullets.forEach(function(el) {
+                el.addEventListener('click', function(){
+                    let picSlide = +el.dataset.slide + 1;
+                    promoSlider.slideTo(picSlide);
+                    cursiveSlider.slideTo(picSlide);
+                });
+            })
+        },
         autoplay: function() {
-            console.log("autoplay!");
+            //console.log("autoplay!");
+            promoSlider.slideNext();
+            cursiveSlider.slideNext()
+            prgbar.animate(1.0)
         },
         slideChangeTransitionStart: function () {
-            let picSlide = this.activeIndex;
-            promoSlider.slideTo(picSlide);
-            cursiveSlider.slideTo(picSlide);
+            // let picSlide = this.activeIndex,
+            //     realPicSlide = this.realIndex,
+            //     prevSlide = this.previousIndex;
+            // console.log("active index: " + picSlide + "\nreal index: " + realPicSlide + "\nprev index: " + prevSlide)
+            // promoSlider.slideToLoop(realPicSlide);
+            // cursiveSlider.slideToLoop(realPicSlide);
         },
         slideChangeTransitionEnd: function () {
             let activeSlide = this.slides[this.activeIndex],
                 prevSlide = this.slides[this.previousIndex],
                 slides = Array.from(this.slides);
-            console.log(slides);
             slides.forEach(function (el) {
                 el.classList.remove('slide-zoom');
             });
+            prevSlide.classList.remove('slide-zoom');
             activeSlide.classList.add('slide-zoom');
         }
     },
 });
 
-let strokeWidth = 2;
-let trailColor = 'transparent';
-let mainColor = "#FFFFFF";
+
 let prgbar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
     strokeWidth: strokeWidth,
     duration: slideDelay,
@@ -95,10 +102,15 @@ let prgbar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
     trailWidth: strokeWidth,
     svgStyle: null
 });
-prgbar.animate(1.0, function () {
-    prgbar.destroy();
-});
+prgbar.animate(1.0);
 mySwiper4.on('transitionEnd', function() {
+    let bullets = Array.from(mySwiper4.pagination.bullets);
+    bullets.forEach(function(el) {
+        let svg = el.querySelector('svg');
+        if (svg) {
+            svg.remove();
+        }
+    });
     let bar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
         strokeWidth: strokeWidth,
         duration: slideDelay,
@@ -107,10 +119,18 @@ mySwiper4.on('transitionEnd', function() {
         trailWidth: strokeWidth,
         svgStyle: null
     });
-    bar.animate(1.0, function () {
-        bar.destroy();
+    bar.animate(1.0);
+});
+mySwiper4.on('transitionStart', function() {
+    let bullets = Array.from(mySwiper4.pagination.bullets);
+    bullets.forEach(function(el) {
+        let svg = el.querySelector('svg');
+        if (svg) {
+            svg.remove();
+        }
     });
 });
+
 
 
 
