@@ -9,23 +9,24 @@
                 <div class="book-modal__form-input-wrap book-modal__form-input-wrap--select cselect__wrap">
                     <label for="book-modal-select" class="book-modal__select-label">выберите услугу</label>
                     <select name="" id="book-modal-select" class="book-modal__select">
-                        <option value="fitness">Аква и фитнес (заказать абонемент)</option>
-                        <option value="massage">Запись на массаж</option>
-                        <option value="aecosm">Запись на услуги эстетической косметологии</option>
-                        <option value="medcosm">Запись на услуги медицинской косметологии</option>
-                        <option value="beauty">Запись на услуги мастерской красоты</option>
-                        <option value="conference">Аренда конференц зала</option>
-                        <option value="corporate">Проведение корпоратива</option>
-                        <option value="banquet">Заказать банкет</option>
-                        <option value="restaurant">Бронирование столика в ресторане</option>
-                        <option value="promo">Заказать услугу по акции</option>
+                        <option value="aqua" data-tel="+00000000" data-email="harin@forrestmix.ru">Аква и фитнес (заказать абонемент)</option>
+                        <option value="massage" data-tel="+333333212" data-email="321@forrestmix.ru">Запись на массаж</option>
+                        <option value="estet" data-tel="+222222222" data-email="55555@forrestmix.ru">Запись на услуги эстетической косметологии</option>
+                        <option value="medic" data-tel="+11222223231" data-email="66666@forrestmix.ru">Запись на услуги медицинской косметологии</option>
+                        <option value="master" data-tel="+000000002" data-email="77777@forrestmix.ru">Запись на услуги мастерской красоты</option>
+                        <option value="conf" data-tel="+8778786656" data-email="999999@forrestmix.ru">Аренда конференц зала</option>
+                        <option value="corpo" data-tel="+6666666666" data-email="1111111@forrestmix.ru">Проведение корпоратива</option>
+                        <option value="banquet"  data-tel="55555552" data-email="1313131313@forrestmix.ru">Заказать банкет</option>
+                        <option value="table" data-tel="+31231451412" data-email="151515151515@forrestmix.ru">Бронирование столика в ресторане</option>
+                        <option value="action"  data-tel="+111111111" data-email="21212121@forrestmix.ru">Заказать услугу по акции</option>
                     </select>
                 </div>
                 <div class="book-modal__form-input-wrap book-modal__form-input-wrap--tel">
                     <input type="tel" class="book-modal__input-tel" placeholder="ваш телефон">
                 </div>
+                <input type="email" class="book-modal__input-email js-modal-email" style="display: none" placeholder="ваш телефон" value="harin@forrestmix.ru">
                 <div class="book-modal__form-input-wrap book-modal__form-input-wrap--submit">
-                    <input type="submit" value="ОТПРАВИТЬ ЗАПРОС" class="btn book-modal__submit">
+                    <input type="submit" value="ОТПРАВИТЬ ЗАПРОС" class="btn book-modal__submit js-book-modal-submit">
                 </div>
             </form>
         </div>
@@ -38,5 +39,17 @@
                 <use xlink:href="#icon-close"></use>
             </svg>
         </a>
+        <div class="book-modal__success">
+            <span class="book-modal__success-icon">
+                <svg viewBox="0 0 46 46" width="46" height="46">
+                    <use xlink:href="#icon-paperplane"></use>
+                </svg>
+            </span>
+            <span class="book-modal__title">Ваш запрос успешно отправлен.</span>
+            <span class="book-modal__success-text common-text">В ближайшее время менеджер отеля свяжется с Вами для уточнения деталей. Спасибо, что пользуетесь нашими услугами.</span>
+        </div>
+        <div class="book-modal__loading">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
     </div>
 </div>

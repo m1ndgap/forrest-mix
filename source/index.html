@@ -38,37 +38,23 @@
     <div class="swiper-container master-slider">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <picture class="slider-pic">
-<!--                        <source srcset="/wp-includes/img/landing-sm.jpg" media="(max-width: 768px)">-->
-<!--                        <source srcset="/wp-includes/img/landing-md.jpg" media="(max-width: 991px)">-->
-<!--                        <source srcset="/wp-includes/img/landing-lg.jpg" media="(max-width: 1400px)">-->
-                    <img data-src="./img/slide-1.jpg" class="swiper-lazy">
-                </picture>
+               <img data-src="./img/slide-1.jpg"
+                    data-srcset="./img/slide-1-sm.jpg 768w,
+                                 ./img/slide-1-md.jpg 1200w,
+                                 ./img/slide-1.jpg 1920w"
+                    sizes="(max-width: 768px) 760px,
+                           (max-width: 1280px) 1200px,
+                            1920px"
+                    class="swiper-lazy">
             </div>
             <div class="swiper-slide">
-                <picture class="slider-pic">
-<!--                        <source srcset="/wp-includes/img/landing-sm.jpg" media="(max-width: 768px)">-->
-                    <!--                        <source srcset="/wp-includes/img/landing-md.jpg" media="(max-width: 991px)">-->
-                    <!--                        <source srcset="/wp-includes/img/landing-lg.jpg" media="(max-width: 1400px)">-->
-<!--                    <img src="./img/slide-2.jpg" alt="second slide">-->
-                    <img data-src="./img/slide-2.jpg" class="swiper-lazy">
-                </picture>
+                <img data-src="./img/slide-2.jpg" class="swiper-lazy">
             </div>
             <div class="swiper-slide">
-                <picture  class="slider-pic">
-<!--                    <source srcset="/wp-includes/img/landing-sm.jpg" media="(max-width: 768px)">-->
-                    <!--                        <source srcset="/wp-includes/img/landing-md.jpg" media="(max-width: 991px)">-->
-                    <!--                        <source srcset="/wp-includes/img/landing-lg.jpg" media="(max-width: 1400px)">-->
-                    <img data-src="./img/slide-3.jpg" class="swiper-lazy">
-                </picture>
+                <img data-src="./img/slide-3.jpg" class="swiper-lazy">
             </div>
             <div class="swiper-slide">
-                <picture class="slider-pic">
-<!--                    <source srcset="/wp-includes/img/landing-sm.jpg" media="(max-width: 768px)">-->
-                    <!--                        <source srcset="/wp-includes/img/landing-md.jpg" media="(max-width: 991px)">-->
-                    <!--                        <source srcset="/wp-includes/img/landing-lg.jpg" media="(max-width: 1400px)">-->
-                    <img data-src="./img/slide-4.jpg" class="swiper-lazy">
-                </picture>
+                <img data-src="./img/slide-4.jpg" class="swiper-lazy">
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -134,10 +120,6 @@
                         <h3 class="main-card__subtitle title" data-roomhref="./room.html">Класс "Standard"</h3>
                         <div class="main-card__text-wrapper">
                             <p>Клуб располагает 38 гостевыми номерами данной категории, а также  2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями.</p>
-                            <ul>
-                                <li>Крутые штуки</li>
-                                <li>Отличные вещи</li>
-                            </ul>
                         </div>
                         <div class="main-card__features main-card__features--two-col">
                             <p class="main-card__features-title">Комплектация Номера</p>
@@ -531,7 +513,7 @@
             <div class="main-card__text-wrapper">
                 <p class="main-card__text common-text">Клуб предлагает типовой набор бизнес-услуг: Интернет (Wi-Fi), отправка корреспонденции, копировальные услуги, факс и залы для деловых переговоров и встреч.</p>
             </div>
-            <div class="main-card__features">
+            <div class="main-card__features main-card__features--two-col">
                 <p class="main-card__features-title">Некоторые услуги</p>
                 <ul class="main-card__features-list dotted-list">
                     <li class="main-card__features-list-item">Wi-Fi</li>
@@ -596,6 +578,6 @@
 <script src="./js/main-slider.js"></script>
 <script src="./js/main-card.js"></script>
 <script src="./js/index.js"></script>
-<script src="./js/custom-select.js"></script>
+<script src="./js/book-modal.js"></script>
 
 //= ./html-components/footer.html

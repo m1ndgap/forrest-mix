@@ -37,7 +37,7 @@
     display: flex
     flex-flow: column nowrap
     justify-content: center
-    align-items: center
+    align-items: stretch
     font-size: 1.5rem
     line-height: 28px
     color: $dark-text
@@ -266,6 +266,7 @@
     width: 100px
     height: 300px
     user-select: none
+    pointer-events: none
     @include media('<desktop')
       display: none
     .cursive-aside-title
@@ -274,6 +275,7 @@
       width: 10px
       height: 10px
       white-space: nowrap
+      pointer-events: none
     &--rooms
     &--beauty
       right: 150px
@@ -301,6 +303,8 @@
       height: 390px
       margin: 30px auto 30px
       left: -20px
+    @include media('<tiny')
+      width: 250px
     &--left-side
       order: -1
       margin-right: 0

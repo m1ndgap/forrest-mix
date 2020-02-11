@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -156,166 +155,108 @@
     </nav>
 
 </aside>
-<section class="main-section aside-section colored-section height-unset">
-    <div class="main-content-container">
-        <aside class="about-us__menu page-menu">
-            <ul class="page-menu__list common-text">
-                <li class="page-menu__list-item">
-                    <a class="page-menu__list-link" href="./about-us.html">
-                        Об отеле
-                    </a>
-                </li>
-                <li class="page-menu__list-item">
-                    <a class="page-menu__list-link" href="">
-                        Размещение
-                    </a>
-                </li>
-                <li class="page-menu__list-item">
-                    <a class="page-menu__list-link" href="#about-us">
-                        Правила бронирования
-                    </a>
-                </li>
-                <li class="page-menu__list-item">
-                    <a class="page-menu__list-link" href="#about-us">
-                        Этикет и правила отеля
-                    </a>
-                </li>
-                <li class="page-menu__list-item">
-                    <a class="page-menu__list-link" href="#about-us">
-                        Программа лояльности
-                    </a>
-                </li>
-                <li class="page-menu__list-item">
-                    <a class="page-menu__list-link page-menu__list-link--active" href="./nearby.html">
-                        Что рядом
-                    </a>
-                </li>
-                <li class="page-menu__list-item">
-                    <a class="page-menu__list-link" href="#about-us">
-                        Конфиденциальность
-                    </a>
-                </li>
-                <li class="page-menu__list-item">
-                    <a class="page-menu__list-link" href="./details.html">
-                        Реквизиты
-                    </a>
-                </li>
-            </ul>
-        </aside>
-        <div class="side-content-container">
-            <ul class="breadcrumbs breadcrumbs--dark">
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="./">главная</a>
-                </li>
-                <li class="breadcrumbs__item">
-                    <a class="breadcrumbs__link" href="./nearby.html">что рядом</a>
-                </li>
-            </ul>
-            <div class="main-card about-us-card card wide-card">
-                <h1 class="main-card__subtitle title">Что Рядом</h1>
-                <div class="main-card__text-wrapper">
-                    <p class="main-card__text common-text">
-                        Теплая атмосфера гостеприимства ожидает вас в комфортабельных номерах, оборудованным всем необходимым для приятного отдыха и работы. Качественное обслуживание, уютная и благоприятная обстановка произведут на вас незабываемое впечатление.
-                    </p>
-                </div>
+<style>
+    #block-search {
+        background: #fff;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 245px;
+    }
+
+    .tl-container {
+        padding: 0 36px;
+    }
+</style>
+<script type="text/javascript">
+    (function(w) {
+        var q = [
+            ['setContext', 'TL-INT-forrestmix-new', 'ru'],
+            ['embed', 'search-form', {
+                container: 'tl-search-form'
+            }]
+        ];
+        var t = w.travelline = (w.travelline || {}),
+            ti = t.integration = (t.integration || {});
+        ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+        if (!ti.__loader) {
+            ti.__loader = true;
+            var d = w.document,
+                p = d.location.protocol,
+                s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js';
+            (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+        }
+    })(window);
+</script>
+<section class="slides main-container">
+    <div class="swiper-container master-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./img/slide-1.jpg" srcset="./img/slide-1-sm.jpg 768w,
+                                 ./img/slide-1-md.jpg 1200w,
+                                 ./img/slide-1.jpg 1920w" sizes="(max-width: 768px) 760px,
+                           (max-width: 1280px) 1200px,
+                            1920px" class="swiper-lazy">
             </div>
-            <div class="main-card about-us-card card wide-card">
-                <h2 class="main-card__subtitle title">Сосновые леса и парки</h2>
-                <div class="main-card__text-wrapper">
-                    <p class="main-card__text common-text">
-                        forRestMix Club предлагает для размещения 107 просторных гостевых номеров различных категорий. Интерьер Клуба выполнен в загородном скандинавском стиле, с панорамными окнами и террасами. Декор номеров воплощает простую эстетику современного комфорта и экологичности.
-                    </p>
-                </div>
-                <div class="main-card__slider">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="./img/nearby-slide-1.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./img/nearby-slide-2.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./img/nearby-slide-3.png" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--right">
-                    </div>
-                    <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--right">
-                    </div>
-                    <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--right">
-                    </div>
-                </div>
-
+            <div class="swiper-slide">
+                <img src="./img/slide-2.jpg" class="swiper-lazy">
             </div>
-            <div class="main-card about-us-card card wide-card">
-                <h2 class="main-card__subtitle title">Побережье финского залива</h2>
-                <div class="main-card__text-wrapper">
-                    <p class="main-card__text common-text">
-                        forRestMix Club предлагает для размещения 107 просторных гостевых номеров различных категорий. Интерьер Клуба выполнен в загородном скандинавском стиле, с панорамными окнами и террасами. Декор номеров воплощает простую эстетику современного комфорта и экологичности.
-                    </p>
-                </div>
-                <div class="main-card__slider">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="./img/nearby-slide-2.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./img/nearby-slide-1.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./img/nearby-slide-3.png" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--right">
-                    </div>
-                    <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--right">
-                    </div>
-                    <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--right">
-                    </div>
-                </div>
-
+            <div class="swiper-slide">
+                <img src="./img/slide-3.jpg" class="swiper-lazy">
             </div>
-            <div class="main-card about-us-card card wide-card">
-                <h2 class="main-card__subtitle title">Веревочный парк "Тритутри"</h2>
-                <div class="main-card__text-wrapper">
-                    <p class="main-card__text common-text">
-                        forRestMix Club предлагает для размещения 107 просторных гостевых номеров различных категорий. Интерьер Клуба выполнен в загородном скандинавском стиле, с панорамными окнами и террасами. Декор номеров воплощает простую эстетику современного комфорта и экологичности.
-                    </p>
-                </div>
-                <div class="main-card__slider">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="./img/nearby-slide-3.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./img/nearby-slide-2.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="./img/nearby-slide-1.png" alt="">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--right">
-                    </div>
-                    <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--right">
-                    </div>
-                    <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--right">
-                    </div>
-                </div>
-
+            <div class="swiper-slide">
+                <img src="./img/slide-4.jpg" class="swiper-lazy">
             </div>
-        <div class="main-card__cursive-aside main-card__cursive-aside--rooms">
-            <p class="cursive-aside-title">Things to do nearby</p>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id="block-search-main">
+        <div id="tl-search-form" class="tl-container">
+            <noindex><a href="http://www.travelline.ru/products/tl-hotel" rel="nofollow">система онлайн-бронирования</a></noindex>
         </div>
     </div>
+    <div class="main-title">
+        <h1 class="main-title__title">SPA Oтель</h1>
+    </div>
+    <div class="main-subtitle js-main-subtitle swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <a class=" swiper-slide main-subtitle__promotion-link" href="./special-3.html">
+                <span class="custom-underline">Санкт-Петербург, Репино,</span><br>
+                <span class="custom-underline">ул. Луговая, дом 10 А</span>
+            </a>
+            <a class=" swiper-slide main-subtitle__promotion-link" href="./special-2.html">
+                <span class="custom-underline">Рядом побережье</span><br>
+                <span class="custom-underline">Финского залива</span>
+            </a>
+            <a class=" swiper-slide main-subtitle__promotion-link" href="./special-4.html">
+                <span class="custom-underline">Несколько изысканных</span><br>
+                <span class="custom-underline">ресторанов и баров</span>
+            </a>
+            <a class=" swiper-slide main-subtitle__promotion-link" href="./special-4.html">
+                <span class="custom-underline">Фитнесс и спа</span><br>
+                <span class="custom-underline">высочайшего уровня</span>
+            </a>
+        </div>
+    </div>
+    <div class="main-cursive js-main-cursive">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Pine Nature</p>
+            </div>
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Beach Vacation</p>
+            </div>
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Food And Drink</p>
+            </div>
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Relax And Sport</p>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -343,9 +284,66 @@
         </p>
     </div>
 </section>
+<div class="book-modal" id="book-modal">
+    <div class="book-modal__window">
+        <div class="book-modal__title-block">
+            <h3 class="book-modal__title">Заказать Услугу</h3>
+            <span class="book-modal__subtitle common-text">Отправьте запрос и мы перезвоним Вам.</span>
+        </div>
+        <div class="book-modal__form-wrapper">
+            <form action="" class="book-modal__form">
+                <div class="book-modal__form-input-wrap book-modal__form-input-wrap--select cselect__wrap">
+                    <label for="book-modal-select" class="book-modal__select-label">выберите услугу</label>
+                    <select name="" id="book-modal-select" class="book-modal__select">
+                        <option value="aqua" data-tel="+00000000" data-email="harin@forrestmix.ru">Аква и фитнес (заказать абонемент)</option>
+                        <option value="massage" data-tel="+333333212" data-email="321@forrestmix.ru">Запись на массаж</option>
+                        <option value="estet" data-tel="+222222222" data-email="55555@forrestmix.ru">Запись на услуги эстетической косметологии</option>
+                        <option value="medic" data-tel="+11222223231" data-email="66666@forrestmix.ru">Запись на услуги медицинской косметологии</option>
+                        <option value="master" data-tel="+000000002" data-email="77777@forrestmix.ru">Запись на услуги мастерской красоты</option>
+                        <option value="conf" data-tel="+8778786656" data-email="999999@forrestmix.ru">Аренда конференц зала</option>
+                        <option value="corpo" data-tel="+6666666666" data-email="1111111@forrestmix.ru">Проведение корпоратива</option>
+                        <option value="banquet" data-tel="55555552" data-email="1313131313@forrestmix.ru">Заказать банкет</option>
+                        <option value="table" data-tel="+31231451412" data-email="151515151515@forrestmix.ru">Бронирование столика в ресторане</option>
+                        <option value="action" data-tel="+111111111" data-email="21212121@forrestmix.ru">Заказать услугу по акции</option>
+                    </select>
+                </div>
+                <div class="book-modal__form-input-wrap book-modal__form-input-wrap--tel">
+                    <input type="tel" class="book-modal__input-tel" placeholder="ваш телефон">
+                </div>
+                <input type="email" class="book-modal__input-email js-modal-email" style="display: none" placeholder="ваш телефон" value="harin@forrestmix.ru">
+                <div class="book-modal__form-input-wrap book-modal__form-input-wrap--submit">
+                    <input type="submit" value="ОТПРАВИТЬ ЗАПРОС" class="btn book-modal__submit js-book-modal-submit">
+                </div>
+            </form>
+        </div>
+        <div class="book-modal__call-us">
+            <span class="book-modal__call-us-text common-text">Или звоните нам по номеру:</span>
+            <a href="tel:+78124167512" class="book-modal__call-us-link js-modal-phone">+7 (812) 416 75 12</a>
+        </div>
+        <a href="#main-menu" class="book-modal__close">
+            <svg viewBox="0 0 15 15" width="15" height="15">
+                <use xlink:href="#icon-close"></use>
+            </svg>
+        </a>
+        <div class="book-modal__success">
+            <span class="book-modal__success-icon">
+                <svg viewBox="0 0 46 46" width="46" height="46">
+                    <use xlink:href="#icon-paperplane"></use>
+                </svg>
+            </span>
+            <span class="book-modal__title">Ваш запрос успешно отправлен.</span>
+            <span class="book-modal__success-text common-text">В ближайшее время менеджер отеля свяжется с Вами для уточнения деталей. Спасибо, что пользуетесь нашими услугами.</span>
+        </div>
+        <div class="book-modal__loading">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+</div>
 
+<script src="./js/main-slider-2.js"></script>
 <script src="./js/main-card.js"></script>
-<script src="./js/page-menu.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/book-modal.js"></script>
 
 
 <footer class="footer">

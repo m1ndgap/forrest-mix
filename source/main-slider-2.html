@@ -1,0 +1,118 @@
+//= ./html-components/header.html
+<style>
+    #block-search {
+        background: #fff;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 245px;
+    }
+
+    .tl-container {
+        padding: 0 36px;
+    }
+</style>
+<script type='text/javascript'>
+    (function(w) {
+        var q = [
+            ['setContext', 'TL-INT-forrestmix-new', 'ru'],
+            ['embed', 'search-form', {
+                container: 'tl-search-form'
+            }]
+        ];
+        var t = w.travelline = (w.travelline || {}),
+            ti = t.integration = (t.integration || {});
+        ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
+        if (!ti.__loader) {
+            ti.__loader = true;
+            var d = w.document,
+                p = d.location.protocol,
+                s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js';
+            (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+        }
+    })(window);
+</script>
+<section class="slides main-container">
+    <div class="swiper-container master-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./img/slide-1.jpg"
+                     srcset="./img/slide-1-sm.jpg 768w,
+                                 ./img/slide-1-md.jpg 1200w,
+                                 ./img/slide-1.jpg 1920w"
+                     sizes="(max-width: 768px) 760px,
+                           (max-width: 1280px) 1200px,
+                            1920px"
+                     class="swiper-lazy">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/slide-2.jpg" class="swiper-lazy">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/slide-3.jpg" class="swiper-lazy">
+            </div>
+            <div class="swiper-slide">
+                <img src="./img/slide-4.jpg" class="swiper-lazy">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id='block-search-main'>
+        <div id='tl-search-form' class='tl-container'>
+            <noindex><a href='http://www.travelline.ru/products/tl-hotel' rel='nofollow'>система онлайн-бронирования</a></noindex>
+        </div>
+    </div>
+    <div class="main-title">
+        <h1 class="main-title__title">SPA Oтель</h1>
+    </div>
+    <div class="main-subtitle js-main-subtitle swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <a class=" swiper-slide main-subtitle__promotion-link" href="./special-3.html">
+                <span class="custom-underline">Санкт-Петербург, Репино,</span><br>
+                <span class="custom-underline">ул. Луговая, дом 10 А</span>
+            </a>
+            <a class=" swiper-slide main-subtitle__promotion-link" href="./special-2.html">
+                <span class="custom-underline">Рядом побережье</span><br>
+                <span class="custom-underline">Финского залива</span>
+            </a>
+            <a class=" swiper-slide main-subtitle__promotion-link" href="./special-4.html">
+                <span class="custom-underline">Несколько изысканных</span><br>
+                <span class="custom-underline">ресторанов и баров</span>
+            </a>
+            <a class=" swiper-slide main-subtitle__promotion-link" href="./special-4.html">
+                <span class="custom-underline">Фитнесс и спа</span><br>
+                <span class="custom-underline">высочайшего уровня</span>
+            </a>
+        </div>
+    </div>
+    <div class="main-cursive js-main-cursive">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Pine Nature</p>
+            </div>
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Beach Vacation</p>
+            </div>
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Food And Drink</p>
+            </div>
+            <div class="swiper-slide main-cursive__slide">
+                <p class="main-cursive__slide-text cursive-aside-title">Relax And Sport</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+//= ./html-components/callback-form.html
+//= ./html-components/book-modal.html
+
+<script src="./js/main-slider-2.js"></script>
+<script src="./js/main-card.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/book-modal.js"></script>
+
+//= ./html-components/footer.html
