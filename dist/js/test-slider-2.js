@@ -35,7 +35,7 @@ let mainSliderOptions = {
     loop: true,
     speed:3000,
     autoplay:{
-        delay:3000
+        delay:7000
     },
     loopAdditionalSlides: 10,
     grabCursor: true,
