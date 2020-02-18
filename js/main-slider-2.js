@@ -33,16 +33,15 @@ var cursiveSlider = new Swiper ('.js-main-cursive' ,{
     },
 });
 
-var mySwiper4 = new Swiper('.slides .master-slider', {
-    speed: 300,
+var mySwiper4 = new Swiper('.slides .master-slider-2', {
+    speed: 3000,
     loop: true,
+    effect: 'fade',
     preloadImages: false,
     simulateTouch: false,
     autoplay: {
-        delay: 500,
-        disableOnInteraction: false,
+        delay: slideDelay,
     },
-    effect: 'fade',
     // lazy: {
     //     loadPrevNext: true,
     //     loadPrevNextAmount: 10,
@@ -66,71 +65,59 @@ var mySwiper4 = new Swiper('.slides .master-slider', {
         //         });
         //     })
         // },
-        // autoplay: function() {
-        //     //console.log("autoplay!");
-        //     promoSlider.slideNext();
-        //     cursiveSlider.slideNext();
-        // },
-        //slideChangeTransitionStart: function () {
-            // let picSlide = this.activeIndex,
-            //     realPicSlide = this.realIndex,
-            //     prevSlide = this.previousIndex;
-            // console.log("active index: " + picSlide + "\nreal index: " + realPicSlide + "\nprev index: " + prevSlide)
-            // promoSlider.slideToLoop(realPicSlide);
-            // cursiveSlider.slideToLoop(realPicSlide);
-        //},
-        // slideChangeTransitionEnd: function () {
-        //     // let activeSlide = this.slides[this.activeIndex],
-        //     //     prevSlide = this.slides[this.previousIndex],
-        //     //     slides = Array.from(this.slides);
-        //     // slides.forEach(function (el) {
-        //     //     el.classList.remove('slide-zoom');
-        //     // });
-        //     // prevSlide.classList.remove('slide-zoom');
-        //     // activeSlide.classList.add('slide-zoom');
-        // }
+        autoplay: function() {
+            console.log("autoplay!");
+            promoSlider.slideNext();
+            cursiveSlider.slideNext();
+        },
+        slideChangeTransitionStart: function () {
+            console.log("Transition start");
+        },
+        slideChangeTransitionEnd: function () {
+            console.log("Transition end");
+        }
     },
 });
 
 
-// let prgbar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
-//     strokeWidth: strokeWidth,
-//     duration: slideDelay,
-//     color: mainColor,
-//     trailColor: trailColor,
-//     trailWidth: strokeWidth,
-//     svgStyle: null
-// });
-console.log(1111);
-// mySwiper4.on('transitionEnd', function() {
-//     let bullets = Array.from(mySwiper4.pagination.bullets);
-//     bullets.forEach(function(el) {
-//         let svg = el.querySelector('svg');
-//         if (svg) {
-//             svg.remove();
-//         }
-//     });
-//     console.log(3333);
-//     let bar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
-//         strokeWidth: strokeWidth,
-//         duration: slideDelay,
-//         color: mainColor,
-//         trailColor: trailColor,
-//         trailWidth: strokeWidth,
-//         svgStyle: null
-//     });
-//
-// });
-// mySwiper4.on('transitionStart', function() {
-//     let bullets = Array.from(mySwiper4.pagination.bullets);
-//     bullets.forEach(function(el) {
-//         let svg = el.querySelector('svg');
-//         if (svg) {
-//             svg.remove();
-//         }
-//     });
-//     console.log(2222)
-// });
+let prgbar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
+    strokeWidth: strokeWidth,
+    duration: slideDelay,
+    color: mainColor,
+    trailColor: trailColor,
+    trailWidth: strokeWidth,
+    svgStyle: null
+});
+prgbar.animate(1.0);
+mySwiper4.on('transitionEnd', function() {
+    let bullets = Array.from(mySwiper4.pagination.bullets);
+    bullets.forEach(function(el) {
+        let svg = el.querySelector('svg');
+        if (svg) {
+            svg.remove();
+        }
+    });
+    console.log(3333);
+    let bar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
+        strokeWidth: strokeWidth,
+        duration: slideDelay,
+        color: mainColor,
+        trailColor: trailColor,
+        trailWidth: strokeWidth,
+        svgStyle: null
+    });
+    bar.animate(1.0);
+});
+mySwiper4.on('transitionStart', function() {
+    let bullets = Array.from(mySwiper4.pagination.bullets);
+    bullets.forEach(function(el) {
+        let svg = el.querySelector('svg');
+        if (svg) {
+            svg.remove();
+        }
+    });
+    console.log(2222)
+});
 
 
 
