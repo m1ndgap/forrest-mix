@@ -49,6 +49,14 @@ let mainSliderOptions = {
             this.autoplay.start();
         },
         slideChangeTransitionEnd: function(){
+            let activeSlide = this.slides[this.activeIndex],
+                prevSlide = this.slides[this.previousIndex],
+                slides = Array.from(this.slides);
+            slides.forEach(function (el) {
+                el.classList.remove('slide-zoom');
+            });
+            prevSlide.classList.remove('slide-zoom');
+            activeSlide.classList.add('slide-zoom');
         },
         autoplay: function() {
             promoSlider.slideNext();

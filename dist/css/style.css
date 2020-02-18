@@ -5392,6 +5392,7 @@ body {
 
 .main-slider-parallax {
   width: 100%;
+  margin: -2px;
   height: calc(100vh - 84px);
   transition: opacity .6s ease, -webkit-transform .3s ease;
   -webkit-transition: opacity .6s ease, -webkit-transform .3s ease;
@@ -5442,6 +5443,21 @@ body {
       .main-slider-parallax .swiper-slide .slide-fig img {
         -o-object-fit: cover;
            object-fit: cover; }
+  .main-slider-parallax .slide-zoom {
+    -webkit-animation-name: slide-zoom;
+            animation-name: slide-zoom;
+    -webkit-animation-duration: 7000ms;
+            animation-duration: 7000ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+
+@keyframes slide-zoom {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  to {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); } }
 
 #block-search-main {
   position: absolute;
@@ -6456,12 +6472,9 @@ body {
   0% {
     -webkit-transform: scale(1);
             transform: scale(1); }
-  70% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05); }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); } }
 
 @-webkit-keyframes slide-unzoom {
   from {

@@ -75,6 +75,13 @@ var mySwiper4 = new Swiper('.slides .master-slider-2', {
         },
         slideChangeTransitionEnd: function () {
             console.log("Transition end");
+            let activeSlide = this.slides[this.activeIndex],
+                prevSlide = this.slides[this.previousIndex],
+                slides = Array.from(this.slides);
+            slides.forEach(function (el) {
+                el.querySelector('img').classList.remove('slide-zoom');
+            });
+            activeSlide.querySelector('img').classList.add('slide-zoom');
         }
     },
 });
