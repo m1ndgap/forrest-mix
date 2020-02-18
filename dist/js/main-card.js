@@ -12,6 +12,7 @@ swipers.forEach(function(element){
         preventInteractionOnTransition: true,
         simulateTouch: false,
         allowTouchMove: false,
+        effect: "fade",
         pagination: {
             el: pagination,
             type: 'custom',

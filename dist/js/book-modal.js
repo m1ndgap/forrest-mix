@@ -60,16 +60,16 @@ function validatePhone(phoneEl) {
     }
 }
 
-function toggleSuccess(el, str = 'on') {
-    if (str === 'on') {
+function toggleSuccess(el, bool = true) {
+    if (bool) {
         el.classList.add(successClass + '--active')
     } else {
         el.classList.remove(successClass + '--active')
     }
 }
 
-function toggleLoading(el, str = 'on') {
-    if (str === 'on') {
+function toggleLoading(el, bool = true) {
+    if (bool) {
         el.classList.add(loadingClass + '--active')
     } else {
         el.classList.remove(loadingClass + '--active')
@@ -162,8 +162,8 @@ modalButtons.forEach(function (mbutton) {
         updateEmail(emailInput, info.email);
         xhr.open("POST", xmlhttpUrl, true);
         xhr.setRequestHeader("Content-Type", "application/json");
-        toggleLoading(loadingDOM, 'off');
-        toggleSuccess(successDOM, 'off');
+        toggleLoading(loadingDOM, false);
+        toggleSuccess(successDOM, false);
         drawCustomSelect();
     })
 });
@@ -178,22 +178,24 @@ modalSubmit.addEventListener('click', function (evt) {
             phone: phone
         };
         console.log(data);
-        xhr.send(JSON.stringify(data));
+        console.log(xhr);
+        xhr.send(JSON.stringify(data+123123));
     }
 });
 
 xhr.onreadystatechange = function() {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
         console.log("DONE");
-        let timeOut = setTimeout(function() {
-            toggleLoading(loadingDOM, 'off');
+        let timeOut = window.setTimeout(function() {
+            toggleLoading(loadingDOM, false);
             toggleSuccess(successDOM);
         }, 500);
 
-    } else if (this.readyState === XMLHttpRequest.LOADING) {
+    } else if (this.readyState !== XMLHttpRequest.DONE) {
+        if ((this.status !== 200))
         console.log("LOADING " + this.status)
         toggleLoading(loadingDOM)
-    } else if ( this.status === 500) {
+    } else if (this.status === 500) {
         console.log(this.readyState)
     }
 };
