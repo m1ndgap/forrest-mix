@@ -3872,6 +3872,8 @@ body {
   -webkit-transition: opacity .6s ease, -webkit-transform .3s ease;
   transition: opacity .6s ease, transform .3s ease;
   transition: opacity .6s ease, transform .3s ease, -webkit-transform .3s ease; }
+  .similar-items--slides-3 .swiper-container {
+    width: 100%; }
   .similar-items--slides-3 .swiper-toggle-area {
     position: absolute;
     height: 100%;

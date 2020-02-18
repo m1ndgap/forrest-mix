@@ -29,7 +29,6 @@ SIslider1.forEach(function(element) {
 let SIslider3 = document.querySelectorAll('.similar-items--slides-3 .swiper-container');
 SIslider3.forEach(function(element) {
     let toggles = element.parentNode.querySelectorAll('.swiper-toggle-area');
-    console.log(toggles);
     var swiper = new Swiper(element, {
         speed: 500,
         preventInteractionOnTransition: true,

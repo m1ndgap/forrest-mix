@@ -51,7 +51,6 @@ let mainSliderOptions = {
         slideChangeTransitionEnd: function(){
         },
         autoplay: function() {
-            console.log("autoplay!");
             promoSlider.slideNext();
             cursiveSlider.slideNext();
         },
