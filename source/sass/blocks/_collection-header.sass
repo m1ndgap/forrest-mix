@@ -37,7 +37,37 @@
   &--specials
     &::after
       background-image: url('../img/specials-bg-img.png')
-
+  &--index
+    background-color: $section-bg
+    color: $black
+    overflow: hidden
+    .collection-header__title
+      font-size: 3.6rem
+    .collection-header__text
+      color: $dark-text
+    .btn
+      padding: 20px
+      border: none
+      display: block
+      width: 357px
+      margin: 45px auto 10px
+      color: $white
+      &:hover
+        color: $black
+  &__index-cursive
+    font-size: 18rem
+    font-family: 'Northwell', cursive
+    line-height: 100%
+    color: $maincolor
+    position: absolute
+    bottom: -85px
+    width: 100%
+    text-align: center
+    @include media('<large')
+      font-size: 13rem
+      bottom: -45px
+    @include media('<desktop')
+      display: none
   &__wrapper
     max-width: 680px
     margin: auto

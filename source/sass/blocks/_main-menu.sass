@@ -21,10 +21,14 @@
   top: 0
   z-index: 11
   user-select: none
+  @include media("<huge")
+    height: 74px
+    width: calc(100% - 74px)
+    left: 74px
   @include media("<large")
     left: 0
     width: 100%
-    height: 76px
+    height: 74px
 
 
 
@@ -102,7 +106,7 @@
   &__bookbtn
     box-sizing: border-box
     text-decoration: none
-    height: 84px
+    height: 100%
     border: none
     background-size: 300% 100%
     background-image: linear-gradient(to right, $maincolor 33.3%, $black 33.3% 66.6%, $white 66.6% 100%)
@@ -116,12 +120,14 @@
     padding: 15px 36px
     transition: 1000ms
     cursor: pointer
+    @include media("<huge")
+      padding: 14px 20px
     @include media("<large")
-      height: 76px
-      width: 76px
-      padding: 15px 20px
+      height: 74px
+      width: 74px
     svg
-      margin-right: 8px
+      margin-right: 12px
+      margin-bottom: 4px
       fill: $black
       transition: $transition
       @include media("<large")

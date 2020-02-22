@@ -1,7 +1,9 @@
 "use strict";
+let interleaveOffsetMC = 0.5;
 
-let swipers = document.querySelectorAll('.main-card__slider .swiper-container');
-swipers.forEach(function(element){
+
+let swipers2 = document.querySelectorAll('.main-card__slider .swiper-container');
+swipers2.forEach(function(element){
     let pagination = element.parentElement.querySelector('.swiper-pagination');
     let next =  element.parentElement.querySelector('.swiper-button-next');
     let prev =  element.parentElement.querySelector('.swiper-button-prev');
@@ -12,7 +14,7 @@ swipers.forEach(function(element){
         preventInteractionOnTransition: true,
         simulateTouch: false,
         allowTouchMove: false,
-        effect: "fade",
+        watchSlidesProgress: true,
         pagination: {
             el: pagination,
             type: 'custom',
@@ -20,7 +22,7 @@ swipers.forEach(function(element){
             renderCustom: function (swiper, current, total) {
                 return ('<div class="main-card__slider-pagination-inside">0'
                     + current +
-                    '<div class="main-card__slider-pagination-separator"></div>  0'
+                    '<div class="main-card__slider-pagination-separator"></div> 0'
                     + total +
                     '</div>');
             }
@@ -29,43 +31,25 @@ swipers.forEach(function(element){
             nextEl: next,
             prevEl: prev,
         },
-    });
-});
-
-let textSliders = document.querySelectorAll('.main-card-text-slider');
-textSliders.forEach(function(element){
-    let next =  element.parentElement.querySelector('.swiper-button-next');
-    let prev =  element.parentElement.querySelector('.swiper-button-prev');
-    let btnLink = element.parentElement.querySelector('.main-card__more-info');
-    let mainBtnLink = element.parentElement.querySelector('.main-card__book-btn');
-
-    new Swiper (element, {
-        speed: 1000,
-        loop: true,
-        spaceBetween: 110,
-        preventInteractionOnTransition: true,
-        simulateTouch: false,
-        allowTouchMove: false,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        navigation: {
-            nextEl: next,
-            prevEl: prev,
-        },
         on: {
-            slideChange: function () {
-                let activeSlide = this.slides[this.activeIndex];
-                let roomCurrentLink = activeSlide.querySelector('.main-card__subtitle').dataset.roomhref;
-                let currentLink = activeSlide.querySelector('.main-card__subtitle').dataset.href;
-                if (typeof roomCurrentLink !== 'undefined') {
-                    btnLink.setAttribute("href", roomCurrentLink);
-                } else if (typeof currentLink !== 'undefined') {
-                    mainBtnLink.setAttribute("href", currentLink);
+            progress: function(){
+                let swiper = this;
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    let slideProgress = swiper.slides[i].progress,
+                        innerOffset = swiper.width * interleaveOffsetMC,
+                        innerTranslate = slideProgress * innerOffset;
+                    swiper.slides[i].querySelector(".slide-fig").style.transform =
+                        "translate3d(" + innerTranslate + "px, 0, 0)";
+                }
+            },
+            setTransition: function(speed) {
+                let swiper = this;
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    swiper.slides[i].querySelector(".slide-fig").style.transition =
+                        speed + "ms";
                 }
             }
-        },
-    })
-
+        }
+    });
 });

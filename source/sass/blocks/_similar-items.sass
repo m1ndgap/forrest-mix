@@ -2,6 +2,8 @@
   display: flex
   flex-flow: row wrap
   padding-top: 46px
+  @include media('<desktop')
+    justify-content: space-around
   &__wrapper
     padding: 146px 0 154px
     @include media('<tablet')
@@ -14,9 +16,20 @@
     &:nth-child(3n)
       margin-right: 0
     @include media('<large')
+      flex-basis: 30%
+      max-width: 30%
       margin-bottom: 15px
-      &:nth-child(3n)
+      margin-right: 5%
+      //&:nth-child(3n)
         margin-right: 3.5%
+    @include media('<desktop')
+      flex-basis: 50%
+      max-width: 45%
+      margin-right: unset
+      &:nth-child(3n)
+        margin-right: unset
+    @include media('<tablet')
+      max-width: 100%
   &__cover
     width: 361px
     height: 356px
@@ -27,6 +40,9 @@
       .similar-items__img
         filter: brightness(50%)
         transform: scale(1.05)
+    @include media('<large')
+      width: 100%
+      height: 300px
     @include media('<tablet')
       width: 320px
       height: 315px
@@ -58,6 +74,10 @@
     min-height: 100px
     display: flex
     align-items: center
+    @include media('<large')
+      min-height: 150px
+    @include media('<tablet')
+      min-height: 100px
   &__details
     margin-top: 18px
     .details__detail-icon
@@ -68,6 +88,8 @@
       background-size: 50%
     .details__detail-text
       font-size: 1.3rem
+    @include media('<tablet')
+      margin-top: 5px
 
 .similar-items--slides-1
   filter: brightness(87%)
@@ -136,7 +158,7 @@
       ~ .sii3
         opacity: 1
 
-.similar-items--slides-3
+.similar-items--slides
   filter: brightness(87%)
   position: relative
   transition: opacity .6s ease, -webkit-transform .3s ease
@@ -164,6 +186,7 @@
     filter: brightness(75%)
     transform: scale(1)
     .slide-fig
+      display: flex
       margin: 0
       padding: 0
       position: absolute
@@ -176,3 +199,16 @@
       img
         object-fit: cover
         width: 100%
+
+.similar-items-section--index
+  .breadcrumbs + .title
+    margin-top: 15px
+  .btn
+    padding: 20px
+    border: none
+    display: block
+    width: 357px
+    margin: 45px auto 10px
+    color: $white
+    &:hover
+      color: $black

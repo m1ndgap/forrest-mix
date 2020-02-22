@@ -23,5 +23,6 @@ navicon.addEventListener('click', function(){
 });
 
 
+
 // type replacement for mobile/desktop date
 // $('input[type="date"]').attr('type','text');

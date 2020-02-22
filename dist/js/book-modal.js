@@ -12,11 +12,12 @@ let optionsCls = 'cselect__options',
     phoneErrMsg = 'Введите номер телефона',
     successClass = 'book-modal__success',
     loadingClass = 'book-modal__loading',
+    errorClass = 'book-modal__error',
     xmlhttpUrl = 'http://forrestmix.zzyzx.ru/api/callback/add/';
 
-let viewportCS = document.body.clientWidth;
-
 window.location.hash = '';
+
+let viewportCS = document.body.clientWidth;
 
 let xhr = new XMLHttpRequest();
 
@@ -27,8 +28,10 @@ function updateSelect(select, value) {
 }
 
 function updateTel(telEl, tel) {
-    telEl.innerText = tel;
-    telEl.setAttribute('href', 'tel:' + tel);
+    telEl.forEach(function(el) {
+        el.setAttribute('href', 'tel:' + tel);
+        el.innerText = tel;
+    });
 }
 
 function updateEmail(emailEl, email) {
@@ -73,6 +76,40 @@ function toggleLoading(el, bool = true) {
         el.classList.add(loadingClass + '--active')
     } else {
         el.classList.remove(loadingClass + '--active')
+    }
+}
+
+function toggleError(el, bool = true) {
+    if (bool) {
+        el.classList.add(errorClass + '--active')
+    } else {
+        el.classList.remove(errorClass + '--active')
+    }
+}
+
+// getting django CSRF token to put in our request header
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+function openXHR(xhr, url){
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    let csrftoken = getCookie('csrftoken');
+    console.log(csrftoken);
+    if (csrftoken){
+        xhr.setRequestHeader("X-CSRFToken", csrftoken);
     }
 }
 
@@ -139,12 +176,13 @@ function drawCustomSelect() {
 
 
 let modalButtons = document.querySelectorAll("[href='#book-modal']"),
-    phoneLink = document.querySelector('.js-modal-phone'),
+    phoneLink = document.querySelectorAll('.js-modal-phone'),
     emailInput = document.querySelector('.js-modal-email'),
     modalSubmit = document.querySelector('.js-book-modal-submit'),
     clientPhone = document.querySelector('.book-modal__input-tel'),
     successDOM = document.querySelector('.' + successClass),
-    loadingDOM = document.querySelector('.' + loadingClass);
+    loadingDOM = document.querySelector('.' + loadingClass),
+    errorDOM = document.querySelector('.' + errorClass);
 
 if (viewportCS <= 768) {
     select[0].addEventListener('change', function(){
@@ -160,10 +198,10 @@ modalButtons.forEach(function (mbutton) {
         let info = getCurrentData(select);
         updateTel(phoneLink, info.tel);
         updateEmail(emailInput, info.email);
-        xhr.open("POST", xmlhttpUrl, true);
-        xhr.setRequestHeader("Content-Type", "application/json");
+        openXHR(xhr, xmlhttpUrl);
         toggleLoading(loadingDOM, false);
         toggleSuccess(successDOM, false);
+        toggleError(errorDOM, false);
         drawCustomSelect();
     })
 });
@@ -172,6 +210,7 @@ modalSubmit.addEventListener('click', function (evt) {
     evt.preventDefault();
     let info = getCurrentData(select);
     let phone = clientPhone.value;
+    toggleLoading(loadingDOM);
     if (validatePhone(clientPhone)) {
         let data = {
             code: info.type,
@@ -179,7 +218,7 @@ modalSubmit.addEventListener('click', function (evt) {
         };
         console.log(data);
         console.log(xhr);
-        xhr.send(JSON.stringify(data+123123));
+        xhr.send(JSON.stringify(data));
     }
 });
 
@@ -190,13 +229,12 @@ xhr.onreadystatechange = function() {
             toggleLoading(loadingDOM, false);
             toggleSuccess(successDOM);
         }, 500);
-
-    } else if (this.readyState !== XMLHttpRequest.DONE) {
-        if ((this.status !== 200))
-        console.log("LOADING " + this.status)
-        toggleLoading(loadingDOM)
     } else if (this.status === 500) {
-        console.log(this.readyState)
+        console.log(this.readyState);
+        let timeOut = window.setTimeout(function() {
+            toggleLoading(loadingDOM, false);
+            toggleError(errorDOM)
+        }, 500);
     }
 };
 

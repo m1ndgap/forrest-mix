@@ -9,12 +9,17 @@ body
   background-color: $maincolor
   font-family: 'Open Sans', sans-serif
   font-size: 1rem
+  @include media("<huge")
+    padding-left: 74px
+    padding-top: 74px
   @include media("<large")
     padding-left: 0
-    padding-top: 76px
+
 
 .main-container
   height: calc(100vh - 84px)
+  @include media("<huge")
+    height: calc(100vh - 74px)
 
 .main-content-container
   position: relative

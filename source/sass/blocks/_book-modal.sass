@@ -115,6 +115,8 @@
     align-items: center
     @include media("<tablet")
       padding-top: 0
+    &--error
+      padding-top: 0
   &__call-us-text, &__call-us-link
     display: block
     text-align: center
@@ -160,7 +162,7 @@
       top: 15px
       right: 15px
 
-  &__success
+  &__success, &__error
     position: absolute
     display: flex
     flex-flow: column nowrap
@@ -179,7 +181,6 @@
     box-sizing: border-box
     @include media("<tablet")
       padding: 15px
-
     span
       text-align: center
     &-icon
@@ -191,6 +192,13 @@
       margin-top: 18px
     &--active
       opacity: 1
+      pointer-events: all
+  &__error
+    svg
+      width: 54px
+      height: 54px
+    &-text
+      max-width: 350px
   &__loading
     position: absolute
     top: 0

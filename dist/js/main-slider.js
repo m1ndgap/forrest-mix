@@ -1,9 +1,11 @@
-let slideDelay = 7000;
+let slideDelay = 7000,
+    mainSliderSelector = '.slides .master-slider',
+    interleaveOffset = 0.5;
 
 // progress bar options
 let strokeWidth = 2;
 let trailColor = 'transparent';
-let mainColor = "#FFFFFF";
+let mainColor = '#FFFFFF';
 
 var promoSlider = new Swiper ('.js-main-subtitle',{
     loop: true,
@@ -33,20 +35,16 @@ var cursiveSlider = new Swiper ('.js-main-cursive' ,{
     },
 });
 
-var mySwiper4 = new Swiper('.slides .master-slider', {
+
+let mainSliderOptions = {
     loop: true,
-    speed: 3000,
-    preloadImages: false,
-    preventInteractionOnTransition: 'true',
-    simulateTouch: false,
-    lazy: {
-        loadPrevNext: true,
-        loadPrevNextAmount: 10,
+    speed:3000,
+    autoplay:{
+        delay:7000
     },
-    autoplay: {
-        delay: slideDelay,
-        disableOnInteraction: false,
-    },
+    loopAdditionalSlides: 10,
+    grabCursor: true,
+    watchSlidesProgress: true,
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
@@ -66,32 +64,54 @@ var mySwiper4 = new Swiper('.slides .master-slider', {
                 });
             })
         },
-        autoplay: function() {
-            //console.log("autoplay!");
-            promoSlider.slideNext();
-            cursiveSlider.slideNext()
-            prgbar.animate(1.0)
+        init: function(){
+            this.autoplay.stop();
         },
-        slideChangeTransitionStart: function () {
-            // let picSlide = this.activeIndex,
-            //     realPicSlide = this.realIndex,
-            //     prevSlide = this.previousIndex;
-            // console.log("active index: " + picSlide + "\nreal index: " + realPicSlide + "\nprev index: " + prevSlide)
-            // promoSlider.slideToLoop(realPicSlide);
-            // cursiveSlider.slideToLoop(realPicSlide);
+        imagesReady: function(){
+            this.el.classList.remove('loading');
+            this.autoplay.start();
         },
-        slideChangeTransitionEnd: function () {
+        slideChangeTransitionEnd: function(){
             let activeSlide = this.slides[this.activeIndex],
                 prevSlide = this.slides[this.previousIndex],
                 slides = Array.from(this.slides);
             slides.forEach(function (el) {
-                el.classList.remove('slide-zoom');
+                el.querySelector('img').classList.remove('slide-zoom');
             });
-            prevSlide.classList.remove('slide-zoom');
-            activeSlide.classList.add('slide-zoom');
+            prevSlide.querySelector('img').classList.remove('slide-zoom');
+            activeSlide.querySelector('img').classList.add('slide-zoom');
+        },
+        autoplay: function() {
+            promoSlider.slideNext();
+            cursiveSlider.slideNext();
+        },
+        progress: function(){
+            let swiper = this;
+            for (let i = 0; i < swiper.slides.length; i++) {
+                let slideProgress = swiper.slides[i].progress,
+                    innerOffset = swiper.width * interleaveOffset,
+                    innerTranslate = slideProgress * innerOffset;
+                swiper.slides[i].querySelector(".slide-fig").style.transform =
+                    "translate3d(" + innerTranslate + "px, 0, 0)";
+            }
+        },
+        touchStart: function() {
+            let swiper = this;
+            for (let i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].style.transition = "";
+            }
+        },
+        setTransition: function(speed) {
+            let swiper = this;
+            for (let i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].style.transition = speed + "ms";
+                swiper.slides[i].querySelector(".slide-fig").style.transition =
+                    speed + "ms";
+            }
         }
-    },
-});
+    }
+};
+let mainSlider = new Swiper(mainSliderSelector, mainSliderOptions);
 
 
 let prgbar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
@@ -103,8 +123,8 @@ let prgbar = new ProgressBar.Circle('.swiper-pagination-bullet-active', {
     svgStyle: null
 });
 prgbar.animate(1.0);
-mySwiper4.on('transitionEnd', function() {
-    let bullets = Array.from(mySwiper4.pagination.bullets);
+mainSlider.on('transitionEnd', function() {
+    let bullets = Array.from(mainSlider.pagination.bullets);
     bullets.forEach(function(el) {
         let svg = el.querySelector('svg');
         if (svg) {
@@ -121,8 +141,8 @@ mySwiper4.on('transitionEnd', function() {
     });
     bar.animate(1.0);
 });
-mySwiper4.on('transitionStart', function() {
-    let bullets = Array.from(mySwiper4.pagination.bullets);
+mainSlider.on('transitionStart', function() {
+    let bullets = Array.from(mainSlider.pagination.bullets);
     bullets.forEach(function(el) {
         let svg = el.querySelector('svg');
         if (svg) {

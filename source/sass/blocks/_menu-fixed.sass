@@ -1,11 +1,13 @@
 .menu-fixed
-  padding: 36px 0px
+  padding: 36px 0
   background-color: $black
   height: 100vh
   width: 84px
   position: fixed
-  left: 0px
-  top: 0px
+  left: 0
+  top: 0
+  @include media("<huge")
+    width: 74px
   @include media("<large")
     display: none
 
@@ -34,6 +36,11 @@
     height: 46px
     font-weight: 500
     letter-spacing: 2px
+    @include media("<huge")
+      transform: rotate(270deg) translate(-74px, -48px)
+      height: 42px
+      padding: 14px 15px
+      width: 180px
 
   &__link
     margin-top: 24px

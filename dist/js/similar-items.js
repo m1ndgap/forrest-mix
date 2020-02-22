@@ -1,32 +1,6 @@
 "use strict";
 
-let SIslider1 = document.querySelectorAll('.similar-items--slides-1 .swiper-container');
-SIslider1.forEach(function(element) {
-    let toggles = element.parentNode.querySelectorAll('.swiper-toggle-area');
-    var swiper = new Swiper(element, {
-        speed: 500,
-        preventInteractionOnTransition: true,
-        simulateTouch: false,
-        allowTouchMove: false,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-        on: {
-            init: function () {
-                let that = this;
-                toggles.forEach(function (elt, i) {
-                    elt.addEventListener('mouseenter', function(){
-                        that.slideTo(i);
-                    })
-                })
-            }
-        }
-    })
-});
-
-
-let SIslider3 = document.querySelectorAll('.similar-items--slides-3 .swiper-container');
+let SIslider3 = document.querySelectorAll('.similar-items--slides .swiper-container');
 SIslider3.forEach(function(element) {
     let toggles = element.parentNode.querySelectorAll('.swiper-toggle-area');
     var swiper = new Swiper(element, {
@@ -38,7 +12,6 @@ SIslider3.forEach(function(element) {
         on: {
             init: function () {
                 let that = this;
-                console.log("I N I T");
                 toggles.forEach(function (elt, i) {
                     elt.addEventListener('mouseenter', function(){
                         that.slideTo(i);

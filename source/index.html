@@ -37,24 +37,35 @@
 <section class="slides main-container">
     <div class="swiper-container master-slider">
         <div class="swiper-wrapper">
+<!--            <div class="swiper-slide">-->
+<!--               <img data-src="./img/slide-1.jpg"-->
+<!--                    data-srcset="./img/slide-1-sm.jpg 768w,-->
+<!--                                 ./img/slide-1-md.jpg 1200w,-->
+<!--                                 ./img/slide-1.jpg 1920w"-->
+<!--                    sizes="(max-width: 768px) 760px,-->
+<!--                           (max-width: 1280px) 1200px,-->
+<!--                            1920px"-->
+<!--                    class="swiper-lazy">-->
+<!--            </div>-->
             <div class="swiper-slide">
-               <img data-src="./img/slide-1.jpg"
-                    data-srcset="./img/slide-1-sm.jpg 768w,
-                                 ./img/slide-1-md.jpg 1200w,
-                                 ./img/slide-1.jpg 1920w"
-                    sizes="(max-width: 768px) 760px,
-                           (max-width: 1280px) 1200px,
-                            1920px"
-                    class="swiper-lazy">
+                <figure class="slide-fig">
+                    <img src="./img/slide-1.jpg" class="entity-img" />
+                </figure>
             </div>
             <div class="swiper-slide">
-                <img data-src="./img/slide-2.jpg" class="swiper-lazy">
+                <figure class="slide-fig">
+                    <img src="./img/slide-2.jpg" class="entity-img" />
+                </figure>
             </div>
             <div class="swiper-slide">
-                <img data-src="./img/slide-3.jpg" class="swiper-lazy">
+                <figure class="slide-fig">
+                    <img src="./img/slide-3.jpg" class="entity-img" />
+                </figure>
             </div>
             <div class="swiper-slide">
-                <img data-src="./img/slide-4.jpg" class="swiper-lazy">
+                <figure class="slide-fig">
+                    <img src="./img/slide-4.jpg" class="entity-img" />
+                </figure>
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -106,124 +117,696 @@
         </div>
     </div>
 </section>
-<section class="main-section main-section--rooms">
+<section class="collection-header collection-header--index">
+    <div class="collection-header__wrapper">
+        <h1 class="collection-header__title"
+            data-aos="fade-left"
+            data-aos-delay="300"
+            >Отель в курортном районе СПб</h1>
+        <p class="collection-header__text"
+           data-aos="fade-left"
+           data-aos-delay="400">forRestMix Club - место притяжения приверженцев активного отдыха, поклонников расслабляющих процедур и гурманов - любителей побаловать себя хорошей кухней.Мы предлагаем для размещения 107 просторных гостевых номеров различных категорий. Интерьер Клуба выполнен в загородном скандинавском стиле, с панорамными окнами и террасами. </p>
+        <a href="./about-us.html" class="btn"
+           data-aos="fade-left"
+           data-aos-delay="500">Подробнее об отеле</a>
+    </div>
+    <span class="collection-header__index-cursive">ForRestMix Club</span>
+</section>
+<section class="main-section similar-items-section similar-items-section--index">
     <div class="main-content-container">
-        <div class="main-card main-card--with-text-slider card">
-            <h2 class="main-card__main-title content-title">
-                <a href="./rooms.html" class="main-card__index-link">наши номера</a>
-            </h2>
-            <div class="main-card-text-slider swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <h3 class="main-card__subtitle title" data-roomhref="./room.html">Класс "Standard"</h3>
-                        <div class="main-card__text-wrapper">
-                            <p>Клуб располагает 38 гостевыми номерами данной категории, а также  2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями.</p>
-                        </div>
-                        <div class="main-card__features main-card__features--two-col">
-                            <p class="main-card__features-title">Комплектация Номера</p>
-                            <ul class="main-card__features-list dotted-list">
-                                <li class="main-card__features-list-item">Wi-Fi</li>
-                                <li class="main-card__features-list-item">Спутниковое телевидение</li>
-                                <li class="main-card__features-list-item">Кондиционер</li>
-                                <li class="main-card__features-list-item">Ванная комната</li>
-                                <li class="main-card__features-list-item">Сейф</li>
-                                <li class="main-card__features-list-item">Холодильник</li>
-                                <li class="main-card__features-list-item">Кровать «King size»</li>
-                                <li class="main-card__features-list-item">Обслуживание номеров</li>
-                                <li class="main-card__features-list-item">Завтрак "Шведский стол"</li>
-                                <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
-                            </ul>
-                        </div>
-                        <div class="main-card__details">
-                            <div class="main-card__detail">
-                                <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                                <p class="main-card__detail-text">От — 8000</p>
+        <div class="similar-items__wrapper">
+            <ul class="breadcrumbs breadcrumbs--dark">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="/rooms.html">основные категории номеров </a>
+                </li>
+            </ul>
+            <h2 class="title">Наши номера</h2>
+            <div class="similar-items">
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-2.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
                             </div>
-                            <div class="main-card__detail">
-                                <div class="main-card__detail-icon main-card__detail-icon--square-m"></div>
-                                <p class="main-card__detail-text">От — 14 м<sup>2</sup></p>
-                            </div>
-                        </div></div>
-                    <div class="swiper-slide">
-                        <h3 class="main-card__subtitle title" data-roomhref="./rooms.html">Класс "asdasdasd"</h3>
-                        <div class="main-card__text-wrapper">
-                            <p>ной категории, а также  2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями. Клуб располагает 38 гостевыми номерами дан </p>
                         </div>
-                        <div class="main-card__features main-card__features--two-col">
-                            <p class="main-card__features-title">Комплектация Номера</p>
-                            <ul class="main-card__features-list dotted-list">
-                                <li class="main-card__features-list-item">Ванная комната</li>
-                                <li class="main-card__features-list-item">Сейф</li>
-                                <li class="main-card__features-list-item">Холодильник</li>
-                                <li class="main-card__features-list-item">Кровать «King size»</li>
-                                <li class="main-card__features-list-item">Обслуживание номеров</li>
-                                <li class="main-card__features-list-item">Wi-Fi</li>
-                                <li class="main-card__features-list-item">Спутниковое телевидение</li>
-                                <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
-                            </ul>
+                        <h4 class="similar-items__title">«Superior»</h4>
+                    </a>
+                    <p class="similar-items__text"
+                       data-aos="fade-left"
+                       data-aos-delay="300">Клуб располагает 16 гостевыми номерами данной категории, расположеными на 1 и 3 этажах. Номера оснащены дополнительным раскладным диваном.</p>
+                    <div class="similar-items__details details"
+                         data-aos="fade-left"
+                         data-aos-delay="300">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
                         </div>
-                        <div class="main-card__details">
-                            <div class="main-card__detail">
-                                <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                                <p class="main-card__detail-text">От — 18000</p>
-                            </div>
-                            <div class="main-card__detail">
-                                <div class="main-card__detail-icon main-card__detail-icon--square-m"></div>
-                                <p class="main-card__detail-text">От — 34 м<sup>2</sup></p>
-                            </div>
-                        </div></div>
-                    <div class="swiper-slide">
-                        <h3 class="main-card__subtitle title" data-roomhref="./restaurant.html">Класс "ФЫВStandard"</h3>
-                        <div class="main-card__text-wrapper">
-                            <p>Клуб 2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями.  располагает 38 гостевыми номерами данной категории, а также </p>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
                         </div>
-                        <div class="main-card__features main-card__features--two-col">
-                            <p class="main-card__features-title">Комплектация Номера</p>
-                            <ul class="main-card__features-list dotted-list">
-                                <li class="main-card__features-list-item">Кровать «King size»</li>
-                                <li class="main-card__features-list-item">Обслуживание номеров</li>
-                                <li class="main-card__features-list-item">Завтрак "Шведский стол"</li>
-                                <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
-                                <li class="main-card__features-list-item">Wi-Fi</li>
-                                <li class="main-card__features-list-item">Спутниковое телевидение</li>
-                                <li class="main-card__features-list-item">Кондиционер</li>
-                                <li class="main-card__features-list-item">Ванная комната</li>
-                                <li class="main-card__features-list-item">Сейф</li>
-                                <li class="main-card__features-list-item">Холодильник</li>
-                            </ul>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                            </div>
                         </div>
-                        <div class="main-card__details">
-                            <div class="main-card__detail">
-                                <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                                <p class="main-card__detail-text">От — 14000</p>
+                        <h4 class="similar-items__title">«Junior»</h4>
+                    </a>
+                    <p class="similar-items__text"
+                       data-aos="fade-left"
+                       data-aos-delay="400">Номера дополнительно укомплектованы  раскладными креслами. В номерах данной категории  предоставляется возможность позднего выезда до 18:00 без дополнительной оплаты.</p>
+                    <div class="similar-items__details details"
+                         data-aos="fade-left"
+                         data-aos-delay="400">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-2.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
                             </div>
-                            <div class="main-card__detail">
-                                <div class="main-card__detail-icon main-card__detail-icon--square-m"></div>
-                                <p class="main-card__detail-text">От — 21 м<sup>2</sup></p>
+                        </div>
+                        <h4 class="similar-items__title">«Family»</h4>
+                    </a>
+                    <p class="similar-items__text"
+                       data-aos="fade-left"
+                       data-aos-delay="500">Клуб располагает 6 гостевыми номерами данной категории. Номер двухкомнатный, состоит из гостиной и спальной. Предназначен для более комфортного проживания семей с детьми.</p>
+                    <div class="similar-items__details details"
+                         data-aos="fade-left"
+                         data-aos-delay="500">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
                             </div>
-                        </div></div>
+                        </div>
+                        <h4 class="similar-items__title">«Standard»</h4>
+                    </a>
+                    <p class="similar-items__text"
+                       data-aos="fade-left"
+                       data-aos-delay="300">Клуб располагает 16 гостевыми номерами данной категории, расположеными на 1 и 3 этажах. Номера оснащены дополнительным раскладным   диваном.</p>
+                    <div class="similar-items__details details"
+                         data-aos="fade-left"
+                         data-aos-delay="300">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-2.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="similar-items__title">«Junior»</h4>
+                    </a>
+                    <p class="similar-items__text"
+                       data-aos="fade-left"
+                       data-aos-delay="400">Номера дополнительно укомплектованы  раскладными креслами. В номерах данной категории  предоставляется возможность позднего выезда до 18:00 без дополнительной оплаты.</p>
+                    <div class="similar-items__details details"
+                         data-aos="fade-left"
+                         data-aos-delay="400">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-3.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="similar-items__title">«Junior»</h4>
+                    </a>
+                    <p class="similar-items__text"
+                       data-aos="fade-left"
+                       data-aos-delay="500">Клуб располагает 6 гостевыми номерами данной категории. Номер двухкомнатный, состоит из гостиной и спальной. Предназначен для более комфортного проживания семей с детьми.</p>
+                    <div class="similar-items__details details"
+                         data-aos="fade-left"
+                         data-aos-delay="500">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="main-card__interaction">
-                <a href="#book-modal" data-modalopt="banquet" data-modaltel="+7 (812) 777-77-77" class="main-card__book-btn btn">Забронировать</a>
-                <a href="./room.html" class="main-card__more-info">подробнее о номере</a>
+            <a href="./about-us.html" class="btn">Смотреть все номера</a>
+        </div>
+    </div>
+    <div class="main-card__cursive-aside">
+        <p class="cursive-aside-title">Other rooms</p>
+    </div>
+</section>
+<section class="main-section similar-items-section similar-items-section--index">
+    <div class="main-content-container">
+        <div class="similar-items__wrapper">
+            <ul class="breadcrumbs breadcrumbs--dark">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="/rooms.html">номера класса люкс</a>
+                </li>
+            </ul>
+            <h2 class="title">Клубный этаж </h2>
+            <div class="similar-items">
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-2.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="similar-items__title">«Superior»</h4>
+                    </a>
+                    <p class="similar-items__text">Клуб располагает 16 гостевыми номерами данной категории, расположеными на 1 и 3 этажах. Номера оснащены дополнительным раскладным диваном.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="similar-items__title">«Junior»</h4>
+                    </a>
+                    <p class="similar-items__text">Номера дополнительно укомплектованы  раскладными креслами. В номерах данной категории  предоставляется возможность позднего выезда до 18:00 без дополнительной оплаты.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-2.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="similar-items__title">«Family»</h4>
+                    </a>
+                    <p class="similar-items__text">Клуб располагает 6 гостевыми номерами данной категории. Номер двухкомнатный, состоит из гостиной и спальной. Предназначен для более комфортного проживания семей с детьми.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="similar-items__title">«Standard»</h4>
+                    </a>
+                    <p class="similar-items__text">Клуб располагает 16 гостевыми номерами данной категории, расположеными на 1 и 3 этажах. Номера оснащены дополнительным раскладным   диваном.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-2.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="similar-items__title">«Junior»</h4>
+                    </a>
+                    <p class="similar-items__text">Номера дополнительно укомплектованы  раскладными креслами. В номерах данной категории  предоставляется возможность позднего выезда до 18:00 без дополнительной оплаты.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="similar-items__item">
+                    <a class="similar-items__cover similar-items--slides" href="/room.html">
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-toggle-area"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-3.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-1.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="slide-fig">
+                                        <img src="./img/rooms-slide-4.png" alt="" class="similar-items__slide-img">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="similar-items__title">«Junior»</h4>
+                    </a>
+                    <p class="similar-items__text">Клуб располагает 6 гостевыми номерами данной категории. Номер двухкомнатный, состоит из гостиной и спальной. Предназначен для более комфортного проживания семей с детьми.</p>
+                    <div class="similar-items__details details">
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--ruble"></div>
+                            <p class="details__detail-text">От 8000</p>
+                        </div>
+                        <div class="details__detail">
+                            <div class="details__detail-icon details__detail-icon--square-m"></div>
+                            <p class="details__detail-text">От 27 кв/м</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="./about-us.html" class="btn">Смотреть все номера</a>
+        </div>
+    </div>
+    <div class="main-card__cursive-aside">
+        <p class="cursive-aside-title">Other rooms</p>
+    </div>
+</section>
+<section class="main-section">
+    <div class="main-content-container">
+        <div class="main-card main-card--index-card">
+            <h3 class="main-card__subtitle title"
+                data-aos="fade-left"
+                data-aos-delay="200">Аква и фитнес</h3>
+            <div class="main-card__text-wrapper"
+                 data-aos="fade-left"
+                 data-aos-delay="300">
+                <p class="main-card__text common-text">Гостиная "Kal'vados" является рестораном высокой кухни. В классическом интерьере, в атмосфере приватности и эксклюзивности сервируются блюда кухни европейских стран. Применяются свежие гастрономические решения на оcнове изысканных ингредиентов.</p>
+            </div>
+            <div class="main-card__features main-card__features--two-col"
+                 data-aos="fade-left"
+                 data-aos-delay="400">
+                <p class="main-card__features-title">Некоторые услуги </p>
+                <ul class="main-card__features-list main-card__features-list--wide dotted-list">
+                    <li class="main-card__features-list-item">Аква и фитнес</li>
+                    <li class="main-card__features-list-item">Массажи</li>
+                    <li class="main-card__features-list-item">Эстетическая косметология</li>
+                    <li class="main-card__features-list-item">Медицинская косметология</li>
+                    <li class="main-card__features-list-item">Мастерская красоты</li>
+                </ul>
+            </div>
+            <div class="main-card__contact-info"
+                 data-aos="fade-left"
+                 data-aos-delay="500">
+                <p class="main-card__contact-info-title">Рецепция СПА</p>
+                <p class="common-text common-text--black">+7 (812) 416 75 12</p>
+                <a href="mailto:spa@forrestmix.ru" class="inline-link">spa@forrestmix.ru</a>
+            </div>
+<!--            <div class="main-card__details restaurant-card__details">-->
+<!--                <div class="main-card__detail">-->
+<!--                    <div class="main-card__detail-icon main-card__detail-icon&#45;&#45;ruble"></div>-->
+<!--                    <p class="main-card__detail-text">От – 20 000</p>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="main-card__interaction"
+                 data-aos="fade-left"
+                 data-aos-delay="600">
+                <a href="./service.html" class="main-card__book-btn btn">Все фитнес и спа услуги</a>
+            </div>
+            <div class="main-card__slider main-card__slider--left-side">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="slide-fig">
+                                <img src="./img/spa-slide-1.png" alt="spa slide" class="entity-img" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="slide-fig">
+                                <img src="./img/spa-slide-2.png" alt="spa slide" class="entity-img" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="slide-fig">
+                                <img src="./img/spa-slide-3.png" alt="spa slide" class="entity-img" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="slide-fig">
+                                <img src="./img/spa-slide-4.png" alt="spa slide" class="entity-img" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="slide-fig">
+                                <img src="./img/spa-slide-5.png" alt="spa slide" class="entity-img" />
+                            </figure>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--left">
+                </div>
+                <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--left">
+                </div>
+                <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--left">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="main-card__cursive-aside">
+        <p class="cursive-aside-title">Fitness</p>
+    </div>
+</section>
+<section class="main-section">
+    <div class="main-content-container">
+        <div class="main-card main-card--index-card">
+            <h3 class="main-card__subtitle title"
+                data-aos="fade-right"
+                data-aos-delay="300">Наши рестораны</h3>
+            <div class="main-card__text-wrapper"
+                 data-aos="fade-right"
+                 data-aos-delay="350">
+                <p class="main-card__text common-text">На территории клуба ForRestMix расположено сразу несколько загородных ресторанов и баров. Все они прекрасно подходят для организации торжеств — дней рождения, свадеб, корпоративов, тематических вечеринок, презентаций. Загородные рестораны ForRestMix — это стильные интерьеры, изысканное меню и уютная атмосфера для каждого гостя. Любое блюдо от наших шеф-поваров готовится с учетом принципов здорового питания и становится настоящим эталоном изумительного вкуса.
+                </p>
+            </div>
+<!--            <div class="main-card__features">-->
+<!--                <p class="main-card__features-title">Некоторые услуги</p>-->
+<!--                <ul class="main-card__features-list main-card__features-list&#45;&#45;wide dotted-list">-->
+<!--                    <li class="main-card__features-list-item">Лечебный массаж с остеопатическими техниками</li>-->
+<!--                    <li class="main-card__features-list-item">Общий оздоровительный массаж</li>-->
+<!--                    <li class="main-card__features-list-item">Общий укрепляющий массаж для детей от 1 до 12 лет</li>-->
+<!--                    <li class="main-card__features-list-item">Ортопедический виды массажей</li>-->
+<!--                    <li class="main-card__features-list-item">Экзотические массажные методики</li>-->
+<!--                </ul>-->
+<!--            </div>-->
+            <div class="main-card__contact-info"
+                 data-aos="fade-right"
+                 data-aos-delay="400">
+                <p class="main-card__contact-info-title">Заказать банкет или столик</p>
+                <p class="common-text common-text--black">+7 (812) 416 75 12</p>
+                <a href="mailto:spa@forrestmix.ru" class="inline-link">reception@forrestmix.ru</a>
+            </div>
+            <div class="main-card__details restaurant-card__details"
+                 data-aos="fade-right"
+                 data-aos-delay="450">
+                <div class="main-card__detail">
+                    <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
+                    <p class="main-card__detail-text">Средний чек — 1300</p>
+                </div>
+
+            </div>
+            <div class="main-card__interaction"
+                 data-aos="fade-right"
+                 data-aos-delay="500">
+                <a href="./service.html" class="main-card__book-btn btn">обзор всех ресторанов</a>
+
             </div>
             <div class="main-card__slider">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./img/rooms-slide-1.png" alt="">
+                            <figure class="slide-fig">
+                                <img src="./img/restaurant-slide-1.png" alt="spa slide" class="entity-img" />
+                            </figure>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/rooms-slide-2.png" alt="">
+                            <figure class="slide-fig">
+                                <img src="./img/restaurant-slide-2.png" alt="spa slide" class="entity-img" />
+                            </figure>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/rooms-slide-3.png" alt="">
+                            <figure class="slide-fig">
+                                <img src="./img/restaurant-slide-3.png" alt="spa slide" class="entity-img" />
+                            </figure>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/rooms-slide-4.png" alt="">
+                            <figure class="slide-fig">
+                                <img src="./img/restaurant-slide-4.png" alt="spa slide" class="entity-img" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="slide-fig">
+                                <img src="./img/restaurant-slide-5.png" alt="spa slide" class="entity-img" />
+                            </figure>
                         </div>
                     </div>
 
@@ -234,124 +817,63 @@
                 </div>
                 <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--right">
                 </div>
-        </div>
+            </div>
 
         </div>
     </div>
-    <div class="main-card__cursive-aside main-card__cursive-aside--rooms">
-        <p class="cursive-aside-title">Rooms</p>
+    <div class="main-card__cursive-aside main-card__cursive-aside--beauty">
+        <p class="cursive-aside-title">Food & drink</p>
     </div>
 </section>
-<section class="main-section main-section--beauty">
+<section class="main-section">
     <div class="main-content-container">
-        <div class="main-card main-card--with-text-slider main-card--with-text-slider--no-list card">
-            <h2 class="main-card__main-title content-title">
-                <a href="./spa.html" class="main-card__index-link">фитнесс и спа</a>
-            </h2>
-            <div class="main-card-text-slider swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <h3 class="main-card__subtitle title" data-href="./services.html">Массажи</h3>
-                        <div class="main-card__text-wrapper">
-                            <p>Специалисты-косметологи лучшего Spa-центра России с заботой и вниманием выслушают ваши пожелания. Дадут профессиональные советы по уходу за лицом и телом. Проведут все необходимые процедуры с вниманием ко всем особенностям вашего организма.</p>
-                        </div>
-                        <div class="main-card__features">
-                            <p class="main-card__features-title">Виды массажа</p>
-                            <ul class="main-card__features-list dotted-list">
-                                <li class="main-card__features-list-item">Кровать «King size»</li>
-                                <li class="main-card__features-list-item">Обслуживание номеров</li>
-                                <li class="main-card__features-list-item">Завтрак "Шведский стол"</li>
-                                <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
-                                <li class="main-card__features-list-item">Wi-Fi</li>
-                                <li class="main-card__features-list-item">Спутниковое телевидение</li>
-                                <li class="main-card__features-list-item">Кондиционер</li>
-                                <li class="main-card__features-list-item">Ванная комната</li>
-                            </ul>
-                        </div>
-                        <div class="main-card__details">
-                            <div class="main-card__detail">
-                                <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                                <p class="main-card__detail-text">От — 8000</p>
-                            </div>
-                        </div></div>
-                    <div class="swiper-slide">
-                        <h3 class="main-card__subtitle title" data-href="./rooms.html">Класс "asdasdasd"</h3>
-                        <div class="main-card__text-wrapper">
-                            <p>ной категории, а также  2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями. Клуб располагает 38 гостевыми номерами дан </p>
-                        </div>
-                        <div class="main-card__features">
-                            <p class="main-card__features-title">Комплектация Номера</p>
-                            <ul class="main-card__features-list dotted-list">
-                                <li class="main-card__features-list-item">Ванная комната</li>
-                                <li class="main-card__features-list-item">Сейф</li>
-                                <li class="main-card__features-list-item">Холодильник</li>
-                                <li class="main-card__features-list-item">Кровать «King size»</li>
-                                <li class="main-card__features-list-item">Обслуживание номеров</li>
-                                <li class="main-card__features-list-item">Wi-Fi</li>
-                                <li class="main-card__features-list-item">Спутниковое телевидение</li>
-                                <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
-                            </ul>
-                        </div>
-                        <div class="main-card__details">
-                            <div class="main-card__detail">
-                                <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                                <p class="main-card__detail-text">От — 18000</p>
-                            </div>
-                        </div></div>
-                    <div class="swiper-slide">
-                        <h3 class="main-card__subtitle title" data-href="./restaurants.html">Класс "ФЫВStandard"</h3>
-                        <div class="main-card__text-wrapper">
-                            <p>Клуб 2 номера для людей с ограниченными физическими возможностями. Часть номеров оборудована двумя отдельными кроватями.  располагает 38 гостевыми номерами данной категории, а также </p>
-                        </div>
-                        <div class="main-card__features">
-                            <p class="main-card__features-title">Комплектация Номера</p>
-                            <ul class="main-card__features-list dotted-list">
-                                <li class="main-card__features-list-item">Кровать «King size»</li>
-                                <li class="main-card__features-list-item">Обслуживание номеров</li>
-                                <li class="main-card__features-list-item">Завтрак "Шведский стол"</li>
-                                <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
-                                <li class="main-card__features-list-item">Wi-Fi</li>
-                                <li class="main-card__features-list-item">Спутниковое телевидение</li>
-                                <li class="main-card__features-list-item">Кондиционер</li>
-                                <li class="main-card__features-list-item">Ванная комната</li>
-                                <li class="main-card__features-list-item">Сейф</li>
-                                <li class="main-card__features-list-item">Холодильник</li>
-                            </ul>
-                        </div>
-                        <div class="main-card__details">
-                            <div class="main-card__detail">
-                                <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                                <p class="main-card__detail-text">От — 14000</p>
-                            </div>
-                        </div></div>
+        <div class="main-card main-card--index-card">
+            <h3 class="main-card__subtitle title">Бизнес услуги</h3>
+            <div class="main-card__text-wrapper">
+                <p class="main-card__text common-text">Клуб предлагает типовой набор бизнес-услуг: Интернет (Wi-Fi), отправка корреспонденции, копировальные услуги, факс и залы для деловых переговоров и встреч. Организационно-техническая поддержка конференц-зала  позволяет проводить семинары тренинги и конференции максимально  продуктивными. А так же организация корпоративов и банкетов.</p>
+            </div>
+            <!--            <div class="main-card__features">-->
+            <!--                <p class="main-card__features-title">Некоторые услуги</p>-->
+            <!--                <ul class="main-card__features-list main-card__features-list&#45;&#45;wide dotted-list">-->
+            <!--                    <li class="main-card__features-list-item">Лечебный массаж с остеопатическими техниками</li>-->
+            <!--                    <li class="main-card__features-list-item">Общий оздоровительный массаж</li>-->
+            <!--                    <li class="main-card__features-list-item">Общий укрепляющий массаж для детей от 1 до 12 лет</li>-->
+            <!--                    <li class="main-card__features-list-item">Ортопедический виды массажей</li>-->
+            <!--                    <li class="main-card__features-list-item">Экзотические массажные методики</li>-->
+            <!--                </ul>-->
+            <!--            </div>-->
+            <div class="main-card__contact-info">
+                <p class="main-card__contact-info-title">Контакты для брони</p>
+                <p class="common-text common-text--black">+7 (812) 416 75 12</p>
+                <a href="mailto:spa@forrestmix.ru" class="inline-link">reception@forrestmix.ru</a>
+            </div>
+            <div class="main-card__details restaurant-card__details">
+                <div class="main-card__detail">
+                    <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
+                    <p class="main-card__detail-text">От — 13000</p>
                 </div>
             </div>
             <div class="main-card__interaction">
-                <a href="./service.html" class="main-card__book-btn btn">Подробнее</a>
-                <a href="./spa.html" class="main-card__more-info">все фитнес и спа услуги</a>
+                <a href="./service.html" class="main-card__book-btn btn">список всех бизнес услуг</a>
+
             </div>
             <div class="main-card__slider main-card__slider--left-side">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./img/beauty-slide-1.png" alt="">
+                            <figure class="slide-fig">
+                                <img src="./img/business-slide-1.png" alt="spa slide" class="entity-img" />
+                            </figure>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/beauty-slide-4.png" alt="">
+                            <figure class="slide-fig">
+                                <img src="./img/business-slide-2.png" alt="spa slide" class="entity-img" />
+                            </figure>
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/beauty-slide-2.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/beauty-slide-3.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/beauty-slide-4.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/beauty-slide-5.png" alt="">
+                            <figure class="slide-fig">
+                                <img src="./img/business-slide-3.png" alt="spa slide" class="entity-img" />
+                            </figure>
                         </div>
                     </div>
 
@@ -367,208 +889,7 @@
         </div>
     </div>
     <div class="main-card__cursive-aside main-card__cursive-aside--beauty">
-        <p class="cursive-aside-title">Beauty</p>
-    </div>
-</section>
-<section class="main-section main-section--food-n-drink">
-    <div class="main-content-container">
-        <div class="main-card card">
-            <h2 class="main-card__main-title content-title">
-                <a href="./restaurants.html" class="main-card__index-link">рестораны и бары</a>
-            </h2>
-            <h3 class="main-card__subtitle title">«KAL'VADOS»</h3>
-            <div class="main-card__text-wrapper">
-                <p class="main-card__text common-text">Гостиная "Kal'vados" является рестораном высокой кухни. В классическом интерьере, в атмосфере приватности и эксклюзивности сервируются блюда кухни европейских стран. Применяются свежие гастрономические решения на оcнове изысканных ингредиентов.</p>
-            </div>
-            <div class="main-card__features">
-                <p class="main-card__features-title">Некоторые блюда </p>
-                <ul class="main-card__features-list dotted-list main-card__features-list--wide">
-                    <li class="main-card__features-list-item">Wi-Fi Спутниковое телевидениеСпутниковое телевидение</li>
-                    <li class="main-card__features-list-item">Спутниковое телевидение</li>
-                    <li class="main-card__features-list-item">КондиционерСпутниковое телевидение</li>
-                    <li class="main-card__features-list-item">Ванная комнатаСпутниковое телевидение</li>
-                    <li class="main-card__features-list-item">СейфСпутниковое телевидениеСпутниковое телевидение</li>
-                </ul>
-            </div>
-            <div class="main-card__details">
-                <div class="main-card__detail">
-                    <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                    <p class="main-card__detail-text">средний чек – 2500</p>
-                </div>
-                <div class="main-card__detail">
-                    <div class="main-card__detail-icon main-card__detail-icon--clock"></div>
-                    <p class="main-card__detail-text">12:00 – 00:00</p>
-                </div>
-            </div>
-            <div class="main-card__interaction">
-                <a href="restaurant.html" class="main-card__book-btn btn">Забронировать</a>
-                <a href="./restaurants.html" class="main-card__more-info">все  рестораны</a>
-            </div>
-            <div class="main-card__slider">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./img/food-slide-1.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/food-slide-2.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/food-slide-3.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/food-slide-4.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/food-slide-5.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--right">
-                </div>
-                <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--right">
-                </div>
-                <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--right">
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="main-card__cursive-aside main-card__cursive-aside--food">
-        <p class="cursive-aside-title">Food</p>
-    </div>
-</section>
-<section class="main-section main-section--relaxand">
-    <div class="main-content-container">
-        <div class="main-card card">
-            <h2 class="main-card__main-title content-title">
-                <a href="./services.html" class="main-card__index-link">специальные предложения</a>
-            </h2>
-            <h3 class="main-card__subtitle title">«Свадебный подарок»  </h3>
-            <div class="main-card__text-wrapper">
-                <p class="main-card__text common-text">forRestMix Club sport&relax предлагает Вам отпраздновать важнейшее событие Вашей жизни и дарит уникальную возможность насладиться атмосферой романтики и роскоши.</p>
-            </div>
-            <div class="main-card__features">
-                <p class="main-card__features-title">В стоимость включено</p>
-                <ul class="main-card__features-list dotted-list main-card__features-list--wide">
-                    <li class="main-card__features-list-item">Проживание с завтраком «под опрос», с доставкой в номер.</li>
-                    <li class="main-card__features-list-item">Поздний заезд с 20.00 и поздний выезд до 18.00.</li>
-                    <li class="main-card__features-list-item">Посещение SPA-зоны с бассейном и термальной зоной.</li>
-                    <li class="main-card__features-list-item">Бутылка Шампанского (Ferrari Brut) и фрукты в номер при заезде.</li>
-                    <li class="main-card__features-list-item">Персональное обслуживание на время всего отдыха.</li>
-                    <li class="main-card__features-list-item">Русский бильярд на этаже бесплатно, круглосуточно.</li>
-                </ul>
-            </div>
-            <div class="main-card__details">
-                <div class="main-card__detail">
-                    <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                    <p class="main-card__detail-text">От — 20000</p>
-                </div>
-                <!--                <div class="main-card__detail">-->
-                <!--                    <div class="main-card__detail-icon main-card__detail-icon&#45;&#45;square-m"></div>-->
-                <!--                    <p class="main-card__detail-text">От — 14 м<sup>2</sup></p>-->
-                <!--                </div>-->
-            </div>
-            <div class="main-card__interaction">
-                <a href="service.html" class="main-card__book-btn btn">Подробнее</a>
-                <a href="./services.html" class="main-card__more-info">все акции</a>
-            </div>
-            <div class="main-card__slider main-card__slider--left-side">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./img/special-slide-1.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/special-slide-2.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/special-slide-3.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--left">
-                </div>
-                <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--left">
-                </div>
-                <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--left">
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="main-card__cursive-aside main-card__cursive-aside--relax">
-        <p class="cursive-aside-title">Relax</p>
-    </div>
-</section>
-<section class="main-section main-section--relax main-section--last-card">
-    <div class="main-content-container">
-        <div class="main-card card">
-            <h2 class="main-card__main-title content-title">
-                <a href="./services.html" class="main-card__index-link">бизнес услуги</a>
-            </h2>
-            <h3 class="main-card__subtitle title">Конференц услуги</h3>
-            <div class="main-card__text-wrapper">
-                <p class="main-card__text common-text">Клуб предлагает типовой набор бизнес-услуг: Интернет (Wi-Fi), отправка корреспонденции, копировальные услуги, факс и залы для деловых переговоров и встреч.</p>
-            </div>
-            <div class="main-card__features main-card__features--two-col">
-                <p class="main-card__features-title">Некоторые услуги</p>
-                <ul class="main-card__features-list dotted-list">
-                    <li class="main-card__features-list-item">Wi-Fi</li>
-                    <li class="main-card__features-list-item">Спутниковое телевидение</li>
-                    <li class="main-card__features-list-item">Кондиционер</li>
-                    <li class="main-card__features-list-item">Ванная комната</li>
-                    <li class="main-card__features-list-item">Сейф</li>
-                    <li class="main-card__features-list-item">Холодильник</li>
-                    <li class="main-card__features-list-item">Кровать «King size»</li>
-                    <li class="main-card__features-list-item">Обслуживание номеров</li>
-                    <li class="main-card__features-list-item">Завтрак "Шведский стол"</li>
-                    <li class="main-card__features-list-item">БЕСПЛАТНАЯ отмена брони</li>
-                </ul>
-            </div>
-            <div class="main-card__details">
-                <div class="main-card__detail">
-                    <div class="main-card__detail-icon main-card__detail-icon--ruble"></div>
-                    <p class="main-card__detail-text">от – 20000</p>
-                </div>
-<!--                <div class="main-card__detail">-->
-<!--                    <div class="main-card__detail-icon main-card__detail-icon&#45;&#45;clock"></div>-->
-<!--                    <p class="main-card__detail-text">12:00 – 00:00</p>-->
-<!--                </div>-->
-            </div>
-            <div class="main-card__interaction">
-                <a href="service.html" class="main-card__book-btn btn">Забронировать</a>
-                <a href="./services.html" class="main-card__more-info">все конференц услуги</a>
-            </div>
-            <div class="main-card__slider">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./img/business-slide-1.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/business-slide-2.png" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./img/business-slide-3.png" alt="">
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--right">
-                </div>
-                <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--right">
-                </div>
-                <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--right">
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="main-card__cursive-aside main-card__cursive-aside--relax">
-        <p class="cursive-aside-title">Relax</p>
+        <p class="cursive-aside-title">Business</p>
     </div>
 </section>
 
@@ -579,5 +900,7 @@
 <script src="./js/main-card.js"></script>
 <script src="./js/index.js"></script>
 <script src="./js/book-modal.js"></script>
+<script src="./js/similar-items.js"></script>
+<script src="./js/AOS.js"></script>
 
 //= ./html-components/footer.html
