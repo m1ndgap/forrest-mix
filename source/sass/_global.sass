@@ -20,6 +20,8 @@ body
   height: calc(100vh - 84px)
   @include media("<huge")
     height: calc(100vh - 74px)
+  @include media("<tablet")
+    height: unset
 
 .main-content-container
   position: relative
@@ -83,7 +85,9 @@ body
     background-color: rgba($white, 0.5)
 
 .main-section
+  overflow: hidden
   min-height: 900px
+  transform-style: preserve-3d
   &:nth-of-type(even)
     background-color: $section-bg
   &:nth-of-type(odd)
@@ -223,6 +227,7 @@ body
   color: $maincolor
   font-size: 15.2rem
   position: absolute
+  transform-origin: bottom left
   transform: rotate(-90deg)
   user-select: none
   pointer-events: none

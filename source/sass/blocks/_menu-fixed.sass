@@ -25,6 +25,8 @@
     position: relative
     width: 84px
     height: 200px
+    @include media("<huge")
+      height: 190px
 
 
   &__order-call-btn
@@ -50,6 +52,9 @@
       margin-top: 0
       svg
         fill: $white
+        transition: none
+        @include media("<huge")
+          height: 176px
     &--telegram, &--whatsapp
       svg
         fill: $maincolor

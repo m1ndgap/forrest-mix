@@ -24,7 +24,9 @@ let xhr = new XMLHttpRequest();
 function updateSelect(select, value) {
     let options = Array.from(select[0].querySelectorAll("option"));
     let option = options.filter(opt => opt.getAttribute("value") == value);
-    option[0].setAttribute("selected", '');
+    if (option[0]) {
+        option[0].setAttribute("selected", '');
+    }
 }
 
 function updateTel(telEl, tel) {
@@ -155,8 +157,10 @@ function drawCustomSelect() {
             let newOptions = selectOptions.querySelectorAll('.' + optionsItem);
             newOptions.forEach(function(nOpt){
                 nOpt.addEventListener('click', function () {
-                    let option = elem.querySelector('[value="'+ nOpt.getAttribute("value") + '"]');
+                    let newValue = nOpt.getAttribute("value");
+                    let option = elem.querySelector('[value="'+ newValue + '"]');
                     let textVal = selectStyled.querySelector('.' + mainTextCls);
+                    updateSelect(select, newValue);
                     let newData = getCurrentData(select);
                     updateTel(phoneLink, newData.tel);
                     updateEmail(emailInput, newData.email);

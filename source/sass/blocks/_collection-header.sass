@@ -24,19 +24,19 @@
 
   &--restaurants
     &::after
-      background-image: url('../img/restaurants-bg-img.png')
+      background-image: url('../img/restaurants-bg-img.jpg')
   &--spa
     &::after
-      background-image: url('../img/spa-bg-img.png')
+      background-image: url('../img/spa-bg-img.jpg')
   &--services
     &::after
-      background-image: url('../img/services-bg-img.png')
+      background-image: url('../img/services-bg-img.jpg')
   &--rooms
     &::after
-      background-image: url('../img/rooms-bg-img.png')
+      background-image: url('../img/rooms-bg-img.jpg')
   &--specials
     &::after
-      background-image: url('../img/specials-bg-img.png')
+      background-image: url('../img/specials-bg-img.jpg')
   &--index
     background-color: $section-bg
     color: $black
@@ -52,8 +52,13 @@
       width: 357px
       margin: 45px auto 10px
       color: $white
+      max-width: 100%
       &:hover
         color: $black
+      @include media('<large')
+        &:hover
+          color: $white
+
   &__index-cursive
     font-size: 18rem
     font-family: 'Northwell', cursive

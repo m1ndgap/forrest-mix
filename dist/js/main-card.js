@@ -13,7 +13,6 @@ swipers2.forEach(function(element){
         loop: true,
         preventInteractionOnTransition: true,
         simulateTouch: false,
-        allowTouchMove: false,
         watchSlidesProgress: true,
         pagination: {
             el: pagination,
