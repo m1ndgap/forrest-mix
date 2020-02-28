@@ -16,6 +16,7 @@
     right: 0
     z-index: -1
     background-size: cover
+    background-position: center
   @include media('<large')
     padding: 120px 15px 125px
   @include media('<tablet')
@@ -34,6 +35,9 @@
   &--rooms
     &::after
       background-image: url('../img/rooms-bg-img.jpg')
+  &--rooms-luxe
+    &::after
+      background-image: url('../img/luxe-bg-img.jpg')
   &--specials
     &::after
       background-image: url('../img/specials-bg-img.jpg')

@@ -771,6 +771,11 @@
 
             </div>
             <div class="main-card__slider">
+                <button class="gallery-btn btn js-gallery-btn">
+                    <svg viewBox="0 0 20 20" width="20" height="20">
+                        <use xlink:href="#icon-search"></use>
+                    </svg>
+                </button>
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -806,6 +811,42 @@
                 <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--right">
                 </div>
                 <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--right">
+                </div>
+            </div>
+            <div class="main-card__gallery gallery gallery--hidden">
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                        <div class="swiper-slide"></div>
+                    </div>
+                </div>
+                <div class="gallery__close">
+                    <svg viewBox="0 0 30 30" width="30" height="30">
+                        <use xlink:href="#icon-close"></use>
+                    </svg>
                 </div>
             </div>
 
@@ -893,5 +934,6 @@
 <script src="./js/similar-items.js"></script>
 <script src="./js/AOS.js"></script>
 <script src="./js/parallax.js"></script>
+<script src="./js/gallery.js"></script>
 
 //= ./html-components/footer.html
