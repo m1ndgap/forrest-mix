@@ -25,10 +25,11 @@ btns.forEach(function (btn) {
     console.log(gallery);
     console.log(section);
     btn.addEventListener('click', function(){
-        toggleGallery(gallery, section)
+        toggleGallery(gallery, section);
+        closeBtn.addEventListener('click', function close(){
+            toggleGallery(gallery, section, false);
+            closeBtn.removeEventListener('click', close)
+        })
     });
-    closeBtn.addEventListener('click', function close(){
-        toggleGallery(gallery, section, false);
-        closeBtn.removeEventListener('click', close)
-    })
+
 });
