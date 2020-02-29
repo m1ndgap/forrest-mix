@@ -41,7 +41,7 @@ let mainSliderOptions = {
     speed:3000,
     autoplay:{
         delay:7000,
-        //disableOnInteraction: false,
+        disableOnInteraction: false,
     },
     loopAdditionalSlides: 10,
     grabCursor: true,
