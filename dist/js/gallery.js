@@ -113,6 +113,8 @@ btns.forEach(function (btn) {
         initSwiper(UI);
         UI.closeBtn.addEventListener('click', function close(){
             toggleGallery(UI.gallery, UI.section, false);
+            window.swiperThumbs.destroy();
+            window.swiperGallery.destroy();
             UI.closeBtn.removeEventListener('click', close)
         })
     });
