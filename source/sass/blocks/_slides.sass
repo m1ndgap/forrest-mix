@@ -89,13 +89,19 @@
     &__slide
       width: 205px
     &__slide-text
-      top: -30px
-      left: -250%
-      width: 1022px
+      @include resetmargin
+      position: absolute
+      bottom: -170px
+      left: 0
+      transform: rotate(-90deg)
+      transform-origin: top left
+      font-size: 13rem
+      white-space: nowrap
+      color: $maincolor
+      font-family: "Northwell", cursive
       @include media("<huge")
-        top: 50px
-        font-size: 11rem
-        left: -280%
+        font-size: 12rem
+
 
 .master-slider
   width: 100%
@@ -165,6 +171,7 @@
       img
         object-fit: cover
         width: 100%
+        height: 100%
   .slide-zoom
     animation-name: slide-zoom
     animation-duration: 7000ms

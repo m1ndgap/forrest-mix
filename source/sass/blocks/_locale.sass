@@ -1,0 +1,56 @@
+.locale
+  height: 17px
+  position: relative
+  &:after
+    display: block
+    content: ""
+    position: absolute
+    right: 21px
+    top: 50%
+    width: 5px
+    height: 5px
+    border-right: 1px solid $dark-text
+    border-bottom: 1px solid $dark-text
+    transform: translate(0, -70%) rotate(45deg) scaleX(1)
+    transition: $transition/2
+  @include media("<large")
+    display: none
+  &--active
+    &:after
+     transform: translate(0, -20%) rotate(135deg) scaleX(-1)
+    .locale__list
+      background-color: $white
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+    .locale__item
+      &:nth-child(n+2)
+        opacity: 1
+    .locale__link
+      pointer-events: all
+
+
+  &__list
+    @include resetlist()
+    margin-top: -10px
+    transition: background-color $transition/2
+  &__item
+    padding-right: 7px
+    width: 76px
+    height: 38px
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: opacity $transition/2
+    cursor: pointer
+    &:nth-child(n+2)
+      opacity: 0
+    &:hover
+      .locale__link
+        color: $maincolor
+  &__link
+    transition: color $transition
+    pointer-events: none
+    &:after
+      display: none
+
+
+

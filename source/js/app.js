@@ -1,13 +1,10 @@
 'use strict';
 
-function toggleClass(element, cls) {
-    element.classList.toggle(cls);
-}
+let mainMenu = document.querySelector('.main-menu__list'),
+    navicon = document.querySelector('#nav-icon'),
+    naviconCls = 'open',
+    mainMenuCls = 'main-menu__list--active';
 
-let mainMenu = document.querySelector('.main-menu__list');
-let navicon = document.querySelector('#nav-icon');
-let naviconCls = 'open';
-let mainMenuCls = 'main-menu__list--active';
 navicon.addEventListener('click', function(){
     this.classList.toggle(naviconCls);
     mainMenu.classList.toggle(mainMenuCls);
@@ -22,7 +19,9 @@ navicon.addEventListener('click', function(){
     });
 });
 
+let locale = document.querySelectorAll('.locale');
 
+locale[0].addEventListener('click', function(){
+    this.classList.toggle('locale--active');
+});
 
-// type replacement for mobile/desktop date
-// $('input[type="date"]').attr('type','text');

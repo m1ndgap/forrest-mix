@@ -85,7 +85,6 @@ body
     background-color: rgba($white, 0.5)
 
 .main-section
-  overflow: hidden
   min-height: 900px
   transform-style: preserve-3d
   &:nth-of-type(even)
@@ -96,6 +95,7 @@ body
     padding-bottom: 50px
   @include media('<large')
     height: auto
+    overflow: hidden
 
 .detailed-section
   &:nth-of-type(even)

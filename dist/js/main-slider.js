@@ -44,7 +44,7 @@ let mainSliderOptions = {
         disableOnInteraction: false,
     },
     loopAdditionalSlides: 10,
-    grabCursor: true,
+    allowTouchMove: false,
     watchSlidesProgress: true,
     pagination: {
         el: '.swiper-pagination',

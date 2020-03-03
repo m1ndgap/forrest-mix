@@ -261,16 +261,18 @@
   &__cursive-aside
     z-index: 1
     position: absolute
-    right: -20px
-    bottom: 150px
-    width: 100px
+    right: 0
+    bottom: 113px
+    width: 250px
+    height: 100%
     user-select: none
     pointer-events: none
+    overflow: hidden
     @include media('<huger')
       display: none
     .cursive-aside-title
-      bottom: 0
-      left: 0
+      bottom: 20px
+      left: 150px
       height: 100px
       white-space: nowrap
       pointer-events: none
