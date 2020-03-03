@@ -17,8 +17,6 @@ let swiperGalleryParams = {
     preventInteractionOnTransition: true,
     simulateTouch: false,
     watchSlidesProgress: true,
-    preloadImages: false,
-    lazy: true,
     pagination: {
         el: "",
         type: 'custom',
@@ -39,6 +37,13 @@ let swiperGalleryParams = {
         swiper: ""
     },
     on: {
+        init: function(){
+            console.log("init main gallery slider")
+        },
+        imagesReady: function(){
+            console.log("images ready")
+        }
+        ,
         progress: function(){
             let swiper = this;
             for (let i = 0; i < swiper.slides.length; i++) {
@@ -85,6 +90,14 @@ let initSwiper = function(gallery){
     window.swiperGallery = new Swiper(gallery.initEl.querySelector('.swiper-container'), swiperParams);
 };
 
+let loadImages = function(gallery){
+    let images = gallery.querySelectorAll('img');
+    images.forEach(function (elt) {
+        let url = elt.dataset.src;
+        elt.src = url;
+    })
+};
+
 let returnEls = function(btn){
     let section = btn.closest('section'),
         gallery = section.querySelector('.' + galleryCls),
@@ -110,6 +123,7 @@ btns.forEach(function (btn) {
     let UI = returnEls(btn);
     btn.addEventListener('click', function(){
         toggleGallery(UI.gallery, UI.section);
+        loadImages(UI.gallery);
         initSwiper(UI);
         UI.closeBtn.addEventListener('click', function close(){
             toggleGallery(UI.gallery, UI.section, false);
