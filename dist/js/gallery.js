@@ -93,8 +93,7 @@ let initSwiper = function(gallery){
 let loadImages = function(gallery){
     let images = gallery.querySelectorAll('img');
     images.forEach(function (elt) {
-        let url = elt.dataset.src;
-        elt.src = url;
+        elt.src = elt.dataset.src;
     })
 };
 

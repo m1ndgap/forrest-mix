@@ -4470,6 +4470,8 @@ body {
       .callback-form__input-wrapper {
         flex-basis: 100%;
         margin-bottom: 10px; } }
+    .callback-form__input-wrapper--vld-err {
+      outline: 2px solid darkred; }
   .callback-form__name, .callback-form__tel, .callback-form__submit {
     box-sizing: border-box;
     width: 100%;
@@ -4481,6 +4483,8 @@ body {
     @media (max-width: 1279px) {
       .callback-form__name, .callback-form__tel, .callback-form__submit {
         max-width: none; } }
+    .callback-form__name:focus, .callback-form__name:active, .callback-form__tel:focus, .callback-form__tel:active, .callback-form__submit:focus, .callback-form__submit:active {
+      outline: 1px solid #DCD0BF; }
   .callback-form__name, .callback-form__tel {
     padding: 0 24px;
     font-size: 1.6rem; }
@@ -4493,6 +4497,70 @@ body {
   .callback-form__disclaimer {
     font-size: 1.4rem;
     margin-top: 20px; }
+  .callback-form__success, .callback-form__error {
+    position: absolute;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    bottom: 50px;
+    padding: 60px 66px 66px 66px;
+    background-color: #FFFFFF;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 350ms;
+    transition: opacity 350ms;
+    box-sizing: border-box; }
+    @media (max-width: 767px) {
+      .callback-form__success, .callback-form__error {
+        padding: 15px; } }
+    .callback-form__success span, .callback-form__error span {
+      text-align: center; }
+    .callback-form__success-icon, .callback-form__error-icon {
+      background-color: #DCD0BF;
+      padding: 25px;
+      border-radius: 50%;
+      margin-bottom: 18px; }
+    .callback-form__success-text, .callback-form__error-text {
+      margin-top: 18px; }
+    .callback-form__success--active, .callback-form__error--active {
+      opacity: 1;
+      pointer-events: all; }
+  .callback-form__error svg {
+    width: 54px;
+    height: 54px; }
+  .callback-form__error-text {
+    max-width: 350px; }
+  .callback-form__loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    background-color: rgba(101, 105, 108, 0.4);
+    z-index: 4;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 350ms;
+    transition: opacity 350ms; }
+    .callback-form__loading--active {
+      opacity: 1;
+      pointer-events: all; }
 
 .breadcrumbs {
   padding-left: 0;

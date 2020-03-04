@@ -220,8 +220,6 @@ modalSubmit.addEventListener('click', function (evt) {
             code: info.type,
             phone: phone
         };
-        console.log(data);
-        console.log(xhr);
         xhr.send(JSON.stringify(data));
     }
 });
