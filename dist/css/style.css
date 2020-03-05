@@ -5323,7 +5323,7 @@ body {
     .locale__item:nth-child(n+2) {
       opacity: 0; }
     .locale__item:hover .locale__link {
-      color: #DCD0BF; }
+      color: #A69986; }
   .locale__link {
     -webkit-transition: color 700ms;
     transition: color 700ms;
@@ -6463,7 +6463,8 @@ body {
                   text-decoration: underline rgba(255, 255, 255, 0.5);
           display: block;
           max-width: 400px;
-          width: calc(100% - 50px); } }
+          width: calc(100% - 50px);
+          position: absolute; } }
     .slides .main-subtitle__promotion-link--activate {
       opacity: 1;
       pointer-events: all;
