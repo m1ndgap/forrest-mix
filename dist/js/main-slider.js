@@ -14,15 +14,9 @@ var promoSlider = new Swiper ('.js-main-subtitle',{
     simulateTouch: false,
     autoplay: false,
     on: {
-        init: function(){
-            console.log("init promo slider")
-        },
         slideChange: function () {
-            let that = this;
-            console.log(that.slides);
-            let actSlide = that.slides[this.activeIndex],
-                prevSlide = that.slides[this.previousIndex];
-            console.log(actSlide);
+            let actSlide = this.slides[this.activeIndex],
+                prevSlide = this.slides[this.previousIndex];
             actSlide.classList.add('main-subtitle__promotion-link--activate');
             prevSlide.classList.remove('main-subtitle__promotion-link--activate');
         }

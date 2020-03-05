@@ -318,7 +318,11 @@
       @include media('<tablet')
         margin: 30px auto 30px
         left: 20px
-    .swiper-wrapper
+    .swiper-container
+      cursor: pointer
+      transition: filter $transition
+      &:hover
+        filter: brightness(85%)
     .swiper-slide
       height: 610px
       width: 456px
@@ -338,7 +342,6 @@
           object-fit: cover
           width: 100%
           height: 100%
-          object-fit: cover
           object-position: center
 
 

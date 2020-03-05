@@ -1,6 +1,6 @@
 "use strict";
 
-let btns = document.querySelectorAll('.js-gallery-btn'),
+let btns = document.querySelectorAll('.main-card__slider .swiper-container'),
     galleryCls = 'gallery',
     galleryBtnCloseCls = 'gallery__close',
     galleryHideCls = 'gallery--hidden',
@@ -9,7 +9,8 @@ let btns = document.querySelectorAll('.js-gallery-btn'),
     galleryNextBtnCls = 'swiper-button-next-gallery',
     galleryPaginationCls = 'swiper-pagination-gallery',
     galleryThumbsCls = 'gallery__thumbs',
-    interleaveOffsetGallery = 0.5;
+    interleaveOffsetGallery = 0.5,
+    galViewport = document.body.clientWidth;
 
 let swiperGalleryParams = {
     speed: 1000,
@@ -99,8 +100,10 @@ let loadImages = function(gallery){
 
 let returnEls = function(btn){
     let section = btn.closest('section'),
-        gallery = section.querySelector('.' + galleryCls),
-        initEl = section.querySelector('.' + swiperWrapCls),
+        gallery = section.querySelector('.' + galleryCls);
+    console.log(section);
+    console.log(gallery);
+    let initEl = section.querySelector('.' + swiperWrapCls),
         closeBtn = gallery.querySelector('.' + galleryBtnCloseCls),
         nextBtn = gallery.querySelector('.' + galleryNextBtnCls),
         prevBtn = gallery.querySelector('.' + galleryPrevBtnCls),
@@ -118,7 +121,8 @@ let returnEls = function(btn){
     }
 };
 
-btns.forEach(function (btn) {
+if (galViewport > 1024) {
+    btns.forEach(function (btn) {
     let UI = returnEls(btn);
     btn.addEventListener('click', function(){
         toggleGallery(UI.gallery, UI.section);
@@ -131,5 +135,5 @@ btns.forEach(function (btn) {
             UI.closeBtn.removeEventListener('click', close)
         })
     });
-
-});
+    })
+}

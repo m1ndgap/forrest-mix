@@ -5820,6 +5820,15 @@ body {
         .main-card__slider--left-side {
           margin: 30px auto 30px;
           left: 20px; } }
+    .main-card__slider .swiper-container {
+      cursor: pointer;
+      -webkit-transition: -webkit-filter 700ms;
+      transition: -webkit-filter 700ms;
+      transition: filter 700ms;
+      transition: filter 700ms, -webkit-filter 700ms; }
+      .main-card__slider .swiper-container:hover {
+        -webkit-filter: brightness(85%);
+                filter: brightness(85%); }
     .main-card__slider .swiper-slide {
       height: 610px;
       width: 456px;
@@ -5841,7 +5850,6 @@ body {
              object-fit: cover;
           width: 100%;
           height: 100%;
-          object-fit: cover;
           -o-object-position: center;
              object-position: center; }
     .main-card__slider-next, .main-card__slider-prev {
