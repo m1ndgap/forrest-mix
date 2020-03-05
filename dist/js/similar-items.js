@@ -5,7 +5,6 @@ SIslider3.forEach(function(element) {
     let toggles = element.parentNode.querySelectorAll('.swiper-toggle-area');
     var swiper = new Swiper(element, {
         speed: 500,
-        preventInteractionOnTransition: true,
         simulateTouch: false,
         allowTouchMove: false,
         watchSlidesProgress: true,

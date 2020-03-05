@@ -4422,6 +4422,10 @@ body {
     width: 100%;
     position: absolute; }
 
+.tl-booking-page {
+  padding: 50px 0;
+  background-color: #e9eef0; }
+
 @font-face {
   font-family: 'Open Sans';
   src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
@@ -7039,6 +7043,10 @@ body {
     background-image: url("../img/luxe-bg-img.jpg"); }
   .collection-header--specials::after {
     background-image: url("../img/specials-bg-img.jpg"); }
+  .collection-header--booking {
+    padding: 100px 15px 100px; }
+    .collection-header--booking::after {
+      background-image: url("../img/luxe-bg-img.jpg"); }
   .collection-header--index {
     background-color: #f4f5f5;
     color: #1A1A1A;
