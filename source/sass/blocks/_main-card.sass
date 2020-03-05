@@ -7,6 +7,8 @@
   padding-top: 146px
   height: 610px
   width: 1171px
+  @include media('<huge')
+    padding-top: 73px
   @include media('<large')
     flex-flow: column nowrap
     height: auto
@@ -579,6 +581,8 @@
     position: absolute
     top: 146px
     right: 0
+    @include media('<huge')
+      top: 73px
     @include media('<large')
       position: relative
       top: unset

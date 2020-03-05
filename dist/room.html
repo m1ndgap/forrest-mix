@@ -277,34 +277,54 @@
 <!-- start TL Search form script -->
 <div class="main-content-container room-book-block">
     <div id="block-search">
-        <div id="tl-search-form" class="tl-container">
-            <noindex><a href="http://www.travelline.ru/products/tl-hotel" rel="nofollow">система онлайн-бронирования</a></noindex>
+        <div id="tl-search-form-room" class="tl-container">
+            <noindex><a href="http://www.travelline.ru/products/tl-hotel" rel="nofollow">система онлайн-бронирования</a>
+            </noindex>
         </div>
     </div>
 </div>
 <script type="text/javascript">
-    (function(w) {
-        var q = [
+    function goToUrl(dateText, nights, childsAge, adults) {
+        var room_type = 19798;
+        location.href = window.location.pathname + '?nights=' + nights + '&children-age=' + childsAge + '&date=' + dateText + '&adults=' + adults + '&tl-booking-open=true&room-type=' + room_type;
+        return false;
+    }
+
+    (function(w){
+        var q=[
             ['setContext', 'TL-INT-forrestmix-new.inner', 'ru'],
-            ['embed', 'search-form', {
-                container: 'tl-search-form'
-            }]
+            ['embed', 'search-form', {container: 'tl-search-form-room', onsubmit: function (a, b) {
+                    goToUrl(a.dateText, a.nights, a.childrenAge, a.adults);
+                    return false;
+                }}]
         ];
-        var t = w.travelline = (w.travelline || {}),
-            ti = t.integration = (t.integration || {});
-        ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;
-        if (!ti.__loader) {
-            ti.__loader = true;
-            var d = w.document,
-                p = d.location.protocol,
-                s = d.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js';
-            (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
-        }
+        var t=w.travelline=(w.travelline||{}),ti=t.integration=(t.integration||{});ti.__cq=ti.__cq?ti.__cq.concat(q):q;
+        if (!ti.__loader){ti.__loader=true;var d=w.document,p=d.location.protocol,s=d.createElement('script');s.type='text/javascript';s.async=true;s.src=(p=='https:'?p:'http:')+'//ibe.tlintegration.com/integration/loader.js';(d.getElementsByTagName('head')[0]||d.getElementsByTagName('body')[0]).appendChild(s);}
     })(window);
 </script>
+<!--<script type='text/javascript'>-->
+<!--    (function(w) {-->
+<!--        var q = [-->
+<!--            ['setContext', 'TL-INT-forrestmix-new.inner', 'ru'],-->
+<!--            ['embed', 'search-form', {-->
+<!--                container: 'tl-search-form'-->
+<!--            }]-->
+<!--        ];-->
+<!--        var t = w.travelline = (w.travelline || {}),-->
+<!--            ti = t.integration = (t.integration || {});-->
+<!--        ti.__cq = ti.__cq ? ti.__cq.concat(q) : q;-->
+<!--        if (!ti.__loader) {-->
+<!--            ti.__loader = true;-->
+<!--            var d = w.document,-->
+<!--                p = d.location.protocol,-->
+<!--                s = d.createElement('script');-->
+<!--            s.type = 'text/javascript';-->
+<!--            s.async = true;-->
+<!--            s.src = (p == 'https:' ? p : 'http:') + '//ibe.tlintegration.com/integration/loader.js';-->
+<!--            (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);-->
+<!--        }-->
+<!--    })(window);-->
+<!--</script>-->
 
 <section class="main-section detailed-section height-unset">
     <div class="main-content-container">
@@ -547,30 +567,30 @@
             Нажимая на кнопку, вы соглашаетесь с условиями обработки
             <a href="javascript:void(0)">персональных данных</a>
         </p>
-        <div class="callback-form__success">
+    </div>
+    <div class="callback-form__success">
             <span class="callback-form__success-icon">
                 <svg viewBox="0 0 46 46" width="46" height="46">
                     <use xlink:href="#icon-paperplane"></use>
                 </svg>
             </span>
-            <span class="callback-form__title">Ваш запрос успешно отправлен.</span>
-            <span class="callback-form__success-text common-text">В ближайшее время менеджер отеля свяжется с Вами для уточнения деталей. Спасибо, что пользуетесь нашими услугами.</span>
-        </div>
-        <div class="callback-form__error">
+        <span class="callback-form__title callback-form__title--msg title">Ваш запрос успешно отправлен.</span>
+        <span class="callback-form__success-text common-text">В ближайшее время менеджер отеля свяжется с Вами для уточнения деталей. Спасибо, что пользуетесь нашими услугами.</span>
+    </div>
+    <div class="callback-form__error">
             <span class="callback-form__error-icon">
                 <svg viewBox="0 0 40 54" width="40" height="54">
                     <use xlink:href="#icon-error"></use>
                 </svg>
             </span>
-            <span class="callback-form__title">К сожалению, что-то пошло не так...</span>
-            <span class="callback-form__error-text common-text">Попробуйте еще раз отправить заявку, или позвоните нам по номеру:</span>
-            <div class="callback-form__call-us callback-form__call-us--error">
-                <a href="tel:+78124167512" class="callback-form__call-us-link js-modal-phone">+7 (812) 416 75 12</a>
-            </div>
+        <span class="callback-form__title callback-form__title--msg title">К сожалению, что-то пошло не так...</span>
+        <span class="callback-form__error-text common-text">Попробуйте еще раз отправить заявку, или позвоните нам по номеру:</span>
+        <div class="callback-form__call-us callback-form__call-us--error">
+            <a href="tel:+78124167512" class="callback-form__call-us-link js-modal-phone">+7 (812) 416 75 12</a>
         </div>
-        <div class="callback-form__loading">
-            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-        </div>
+    </div>
+    <div class="callback-form__loading">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
 </section>
 

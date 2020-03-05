@@ -10,13 +10,19 @@ let mainColor = '#FFFFFF';
 var promoSlider = new Swiper ('.js-main-subtitle',{
     loop: true,
     speed: 1500,
-    preventInteractionOnTransition: 'true',
+    preventInteractionOnTransition: true,
     simulateTouch: false,
     autoplay: false,
     on: {
+        init: function(){
+            console.log("init promo slider")
+        },
         slideChange: function () {
-            let actSlide = this.slides[this.activeIndex],
-                prevSlide = this.slides[this.previousIndex];
+            let that = this;
+            console.log(that.slides);
+            let actSlide = that.slides[this.activeIndex],
+                prevSlide = that.slides[this.previousIndex];
+            console.log(actSlide);
             actSlide.classList.add('main-subtitle__promotion-link--activate');
             prevSlide.classList.remove('main-subtitle__promotion-link--activate');
         }
@@ -41,7 +47,7 @@ let mainSliderOptions = {
     speed:3000,
     autoplay:{
         delay:7000,
-        disableOnInteraction: false,
+        //disableOnInteraction: false,
     },
     loopAdditionalSlides: 10,
     allowTouchMove: false,

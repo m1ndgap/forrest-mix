@@ -53,6 +53,9 @@
     position: relative
     width: 866px
     height: 577px
+    @include media("<huge")
+      height: 470px
+      width: 700px
 
     .swiper-pagination-gallery
       position: absolute
@@ -76,12 +79,15 @@
           object-fit: cover
           object-position: center
           width: 100%
+          height: 100%
   &__thumbs
-    width: 700px
+    max-width: 700px
     margin-top: 51px
     padding: 11px
+    //.swiper-wrapper
+      justify-content: center
     .swiper-slide
-      width: 90px
+      min-width: 90px
       height: 60px
       overflow: hidden
       user-select: none

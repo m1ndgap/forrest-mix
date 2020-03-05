@@ -13,6 +13,7 @@ let optionsCls = 'cselect__options',
     successClass = 'book-modal__success',
     loadingClass = 'book-modal__loading',
     errorClass = 'book-modal__error',
+    closeClass = 'book-modal__close',
     xmlhttpUrl = 'http://forrestmix.zzyzx.ru/api/callback/add/';
 
 window.location.hash = '';
@@ -90,26 +91,19 @@ function toggleError(el, bool = true) {
 }
 
 // getting django CSRF token to put in our request header
-function getCookie(name) {
-    var cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        var cookies = document.cookie.split(';');
-        for (var i = 0; i < cookies.length; i++) {
-            var cookie = cookies[i].trim();
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
+function getToken(){
+    let token = document.querySelector('[name=csrfmiddlewaretoken]');
+    if (token) {
+        return token.value
+    } else {
+        return false
     }
-    return cookieValue;
 }
 
 function openXHR(xhr, url){
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    let csrftoken = getCookie('csrftoken');
-    console.log(csrftoken);
+    let csrftoken = getToken();
     if (csrftoken){
         xhr.setRequestHeader("X-CSRFToken", csrftoken);
     }
@@ -186,7 +180,8 @@ let modalButtons = document.querySelectorAll("[href='#book-modal']"),
     clientPhone = document.querySelector('.book-modal__input-tel'),
     successDOM = document.querySelector('.' + successClass),
     loadingDOM = document.querySelector('.' + loadingClass),
-    errorDOM = document.querySelector('.' + errorClass);
+    errorDOM = document.querySelector('.' + errorClass),
+    closeBtn = document.querySelector('.' + closeClass);
 
 if (viewportCS <= 768) {
     select[0].addEventListener('change', function(){
@@ -214,12 +209,12 @@ modalSubmit.addEventListener('click', function (evt) {
     evt.preventDefault();
     let info = getCurrentData(select);
     let phone = clientPhone.value;
-    toggleLoading(loadingDOM);
     if (validatePhone(clientPhone)) {
         let data = {
             code: info.type,
             phone: phone
         };
+        toggleLoading(loadingDOM);
         xhr.send(JSON.stringify(data));
     }
 });
@@ -230,15 +225,21 @@ xhr.onreadystatechange = function() {
         let timeOut = window.setTimeout(function() {
             toggleLoading(loadingDOM, false);
             toggleSuccess(successDOM);
-        }, 500);
-    } else if (this.status === 500) {
+        }, 300);
+    } else if (this.readyState === XMLHttpRequest.DONE && this.status !== 200) {
         console.log(this.readyState);
         let timeOut = window.setTimeout(function() {
             toggleLoading(loadingDOM, false);
             toggleError(errorDOM)
-        }, 500);
+        }, 300);
     }
 };
+
+closeBtn.addEventListener('click', function () {
+    toggleLoading(loadingDOM, false);
+    toggleSuccess(successDOM, false);
+    toggleError(successDOM, false);
+});
 
 // xhr.addEventListener('load', function() { // Call a function when the state changes.
 //     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
