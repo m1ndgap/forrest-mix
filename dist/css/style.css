@@ -4426,6 +4426,14 @@ body {
   padding: 50px 0;
   background-color: #e9eef0; }
 
+@media (max-width: 1279px) {
+  .tl-container-room {
+    padding: 0 30px; } }
+
+@media (max-width: 767px) {
+  .tl-container-room {
+    padding: 0 10px; } }
+
 @font-face {
   font-family: 'Open Sans';
   src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
@@ -6223,7 +6231,11 @@ body {
             justify-content: center;
     -webkit-box-align: center;
             align-items: center;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: background-color 700ms;
+    transition: background-color 700ms; }
+    .gallery__close:hover {
+      background-color: #cab89e; }
   .gallery__slider-wrapper {
     position: relative;
     width: 866px;
@@ -6271,7 +6283,8 @@ body {
       -webkit-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
-              user-select: none; }
+              user-select: none;
+      cursor: pointer; }
       .gallery__thumbs .swiper-slide img {
         width: 100%;
         -o-object-fit: cover;

@@ -1,5 +1,8 @@
 "use strict";
 
+
+
+
 let SIslider3 = document.querySelectorAll('.similar-items--slides .swiper-container');
 SIslider3.forEach(function(element) {
     let toggles = element.parentNode.querySelectorAll('.swiper-toggle-area');
@@ -13,9 +16,15 @@ SIslider3.forEach(function(element) {
                 let that = this;
                 toggles.forEach(function (elt, i) {
                     elt.addEventListener('mouseenter', function(){
-                        that.slideTo(i);
+                        if (that.slides[i]) {
+                            that.slideTo(i);
+                        }
+                    });
+                    elt.addEventListener('mouseleave', function(evt){
+                        that.slideTo(0)
                     })
-                })
+
+                });
             },
             progress: function(){
                 let swiper = this;

@@ -100,10 +100,8 @@ let loadImages = function(gallery){
 
 let returnEls = function(btn){
     let section = btn.closest('section'),
-        gallery = section.querySelector('.' + galleryCls);
-    console.log(section);
-    console.log(gallery);
-    let initEl = section.querySelector('.' + swiperWrapCls),
+        gallery = section.querySelector('.' + galleryCls),
+        initEl = section.querySelector('.' + swiperWrapCls),
         closeBtn = gallery.querySelector('.' + galleryBtnCloseCls),
         nextBtn = gallery.querySelector('.' + galleryNextBtnCls),
         prevBtn = gallery.querySelector('.' + galleryPrevBtnCls),
