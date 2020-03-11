@@ -7,7 +7,10 @@ let mainlogo = document.querySelector('.menu-fixed__link--main'),
 
 window.addEventListener('load', function () {
     console.log("loaded");
-    popupalert.classList.add('alert-popup--active')
+    window.timeout = setTimeout(function () {
+        popupalert.classList.add('alert-popup--active')
+    }, 1000)
+
 });
 
 mainlogo.addEventListener('click', function (evt) {
