@@ -1,0 +1,97 @@
+.specials-slider
+  padding: 146px 0
+  &__breadcrumbs
+    margin-top: 0
+  &__slide-title, &__slide-text
+    display: block
+    z-index: 1
+    color: $white
+    opacity: 0
+    transition: opacity $transition
+    &--active
+      opacity: 1
+      transition: opacity $transition
+  &__slide-title
+    @include resetmargin
+    font-family: "Yeseva One", serif
+    font-size: 4.8rem
+    font-weight: normal
+    @include media("<tablet")
+      font-size: 3rem
+      text-align: center
+      max-width: calc(100% - 10px)
+  &__slide-text
+    font-family: "Open Sans", sans-serif
+    text-align: center
+    max-width: 665px
+    font-size: 2.2rem
+    line-height: 3.6rem
+    @include media("<tablet")
+      font-size: 1.6rem
+      line-height: normal
+      max-width: 80%
+    @include media("<tiny")
+      font-size: 1.4rem
+      max-width: calc(100% - 10px)
+  &__slider
+    margin-top: 20px
+    width: 100%
+    transition: opacity .6s ease, transform .3s ease
+    .swiper-container
+      height: 400px
+    &-next, &-prev
+      border: none
+      box-sizing: border-box
+      width: 52px
+      height: 52px
+      @include media('<tablet')
+        width: 44px
+        height: 44px
+      &:after
+        font-size: 17px
+      &:focus, &:active
+        outline: none
+    &-next
+      top: unset
+      bottom: 0
+      right: 0
+    &-prev
+      top: unset
+      left: unset
+      bottom: 0
+      right: 52px
+      @include media('<tablet')
+        right: 44px
+    &-pagination
+      justify-content: flex-start
+      text-align: left
+      padding-left: 32px
+      bottom: 20px !important
+      .swiper-pagination-bullet
+        width: 12px
+        height: 12px
+        background-color: $white
+    .swiper-slide
+      text-decoration: none
+      display: flex
+      flex-flow: column nowrap
+      flex: 0 0 auto
+      justify-content: center
+      align-items: center
+      overflow: hidden
+      .slide-fig
+        margin: 0
+        padding: 0
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-position: center
+        background-size: cover
+        filter: brightness(75%)
+        img
+          object-position: center
+          object-fit: cover
+          width: 100%
+          height: 100%

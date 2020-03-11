@@ -156,9 +156,20 @@
         </svg>
         <span class="main-menu__bookbtn-text">забронировать</span>
     </a>
+    <div class="alert-popup alert-popup--active" data-hash="xxxxxxxxx">
+        <span class="alert-popup__title">Важная информация.</span>
+        <p class="alert-popup__text">
+            forRestMix Club - место притяжения приверженцев активного отдыха, поклонников расслабляющих процедур! forRestMix Club - место притяжения приверженцевforRestMix Club - место притяжения приверженцев
+        </p>
+        <button class="alert-popup__close">
+            <svg viewBox="0 0 10 10" width="10" height="10">
+                <use xlink:href="#icon-close"></use>
+            </svg>
+        </button>
+    </div>
 </nav>
 <aside class="menu-fixed">
-    <nav class="menu-fixed__nav">
+    <div class="menu-fixed__nav">
         <a href="/" class="menu-fixed__link menu-fixed__link--main">
             <svg width="40" height="203">
                 <use xlink:href="#ForRestMix-logo"></use>
@@ -177,8 +188,7 @@
                 <use xlink:href="#icon-telegram"></use>
             </svg>
         </a>
-    </nav>
-
+    </div>
 </aside>
 
 <section class="main-section detailed-section">
@@ -252,161 +262,256 @@
         <p class="cursive-aside-title">Terrassa</p>
     </div>
 </section>
-<section class="main-section detailed-section accordion-section">
+<section class="main-section">
     <div class="main-content-container">
-        <div class="accordion__wrapper">
-            <h3 class="accordion__main-title title">Меню Ресторана</h3>
-            <div class="accordion menu">
-                <div class="accordion__item">
-                    <h4 class="accordion__item-title">
-                        <svg width="28" height="23" class="accordion__title-svg-icon">
-                            <use xlink:href="#icon-breakfast"></use>
-                        </svg>
-                        <span>Завтраки</span>
-                        <div class="accordion__item-title_button">
-                            <svg viewBox="0 0 12 6" width="12" height="6">
-                                <use xlink:href="#icon-input-arrow"></use>
-                            </svg>
+        <div class="main-card menu-card">
+            <h3 class="main-card__subtitle title">Меню</h3>
+            <div class="main-card__text-wrapper">
+                <p class="main-card__text common-text">Гостиная "Kal'vados" является рестораном высокой кухни. В классическом интерьере, в атмосфере приватности и эксклюзивности сервируются блюда кухни европейских стран. Применяются свежие гастрономические решения на оcнове изысканных ингредиентов.</p>
+            </div>
+            <a href="./pdf/test-pdf.pdf" target="_blank" class="btn menu-card__btn menu-card__btn--main">A la Carte</a>
+            <a href="./pdf/test-pdf.pdf" target="_blank" class="btn menu-card__btn menu-card__btn--secondary">Secondary Menu</a>
+            <a href="./pdf/test-pdf.pdf" target="_blank" class="btn menu-card__btn menu-card__btn--secondary">Wine card</a>
+            <div class="main-card__slider main-card__slider--left-side">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-2.png" alt="">
                         </div>
-                    </h4>
-                    <div class="accordion__content">
-                        <ul class="accordion__list dotted-list">
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Уха из трёх рыб</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">390</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">760</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Щи суточные из квашеной капусты с молочной телятиной, белыми грибами и моченой брусникой</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">1370</div>
-                            </li>
-                        </ul>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-1.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-3.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-4.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-5.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-6.png" alt="">
+                        </div>
                     </div>
+
                 </div>
-                <div class="accordion__item">
-                    <h4 class="accordion__item-title">
-                        <svg width="34" height="27" class="accordion__title-svg-icon">
-                            <use xlink:href="#icon-salad"></use>
-                        </svg>
-                        <span>Салаты</span>
-                        <div class="accordion__item-title_button">
-                            <svg viewBox="0 0 12 6" width="12" height="6">
-                                <use xlink:href="#icon-input-arrow"></use>
-                            </svg>
-                        </div>
-                    </h4>
-                    <div class="accordion__content">
-                        <ul class="accordion__list dotted-list">
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">760</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Уха из трёх рыб</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">390</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">760</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Щи суточные из квашеной капусты с молочной телятиной, белыми грибами и моченой брусникой</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">1370</div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--left">
                 </div>
-                <div class="accordion__item">
-                    <h4 class="accordion__item-title">
-                        <svg width="28" height="26" class="accordion__title-svg-icon">
-                            <use xlink:href="#icon-soup"></use>
-                        </svg>
-                        <span>Супы</span>
-                        <div class="accordion__item-title_button">
-                            <svg viewBox="0 0 12 6" width="12" height="6">
-                                <use xlink:href="#icon-input-arrow"></use>
-                            </svg>
-                        </div>
-                    </h4>
-                    <div class="accordion__content">
-                        <ul class="accordion__list dotted-list">
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Уха из трёх рыб</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">390</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">760</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Щи суточные из квашеной капусты с молочной телятиной, белыми грибами и моченой брусникой</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">1370</div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--left">
                 </div>
-                <div class="accordion__item">
-                    <h4 class="accordion__item-title">
-                        <svg width="27" height="33" class="accordion__title-svg-icon">
-                            <use xlink:href="#icon-wine"></use>
-                        </svg>
-                        <span>Винная карта</span>
-                        <div class="accordion__item-title_button">
-                            <svg viewBox="0 0 12 6" width="12" height="6">
-                                <use xlink:href="#icon-input-arrow"></use>
-                            </svg>
-                        </div>
-                    </h4>
-                    <div class="accordion__content">
-                        <ul class="accordion__list dotted-list">
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Уха из трёх рыб</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">390</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">760</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">760</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Щи суточные из квашеной капусты с молочной телятиной, белыми грибами и моченой брусникой</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">1370</div>
-                            </li>
-                            <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>
-                                <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
-                                <div class="accordion__list-item-content accordion__list-item-content--price">760</div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--left">
                 </div>
             </div>
+
         </div>
     </div>
-    <div class="main-card__cursive-aside">
+    <div class="main-card__cursive-aside main-card__cursive-aside--beauty">
         <p class="cursive-aside-title">Menu</p>
     </div>
 </section>
+<section class="main-section">
+    <div class="main-content-container">
+        <div class="main-card menu-card">
+            <h3 class="main-card__subtitle title">Меню</h3>
+<!--            <div class="main-card__text-wrapper">-->
+<!--                <p class="main-card__text common-text">Гостиная "Kal'vados" является рестораном высокой кухни. В классическом интерьере, в атмосфере приватности и эксклюзивности сервируются блюда кухни европейских стран. Применяются свежие гастрономические решения на оcнове изысканных ингредиентов.</p>-->
+<!--            </div>-->
+            <a href="./pdf/test-pdf.pdf" target="_blank" class="btn menu-card__btn menu-card__btn--main">A la Carte</a>
+
+            <div class="main-card__slider main-card__slider--left-side">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-2.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-1.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-3.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-4.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-5.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/restaurant-slide-6.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination main-card__slider-pagination main-card__slider-pagination--left">
+                </div>
+                <div class="swiper-button-prev btn main-card__slider-prev main-card__slider-prev--left">
+                </div>
+                <div class="swiper-button-next btn main-card__slider-next main-card__slider-next--left">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="main-card__cursive-aside main-card__cursive-aside--beauty">
+        <p class="cursive-aside-title">Menu</p>
+    </div>
+</section>
+<!--<section class="main-section detailed-section accordion-section">-->
+<!--    <div class="main-content-container">-->
+<!--        <div class="accordion__wrapper">-->
+<!--            <h3 class="accordion__main-title title">Меню Ресторана</h3>-->
+<!--            <div class="accordion menu">-->
+<!--                <div class="accordion__item">-->
+<!--                    <h4 class="accordion__item-title">-->
+<!--                        <svg width="28" height="23" class="accordion__title-svg-icon">-->
+<!--                            <use xlink:href="#icon-breakfast"></use>-->
+<!--                        </svg>-->
+<!--                        <span>Завтраки</span>-->
+<!--                        <div class="accordion__item-title_button">-->
+<!--                            <svg viewBox="0 0 12 6" width="12" height="6">-->
+<!--                                <use xlink:href="#icon-input-arrow"></use>-->
+<!--                            </svg>-->
+<!--                        </div>-->
+<!--                    </h4>-->
+<!--                    <div class="accordion__content">-->
+<!--                        <ul class="accordion__list dotted-list">-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Уха из трёх рыб</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">390</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">760</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Щи суточные из квашеной капусты с молочной телятиной, белыми грибами и моченой брусникой</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">1370</div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="accordion__item">-->
+<!--                    <h4 class="accordion__item-title">-->
+<!--                        <svg width="34" height="27"  class="accordion__title-svg-icon">-->
+<!--                            <use xlink:href="#icon-salad"></use>-->
+<!--                        </svg>-->
+<!--                        <span>Салаты</span>-->
+<!--                        <div class="accordion__item-title_button">-->
+<!--                            <svg viewBox="0 0 12 6" width="12" height="6">-->
+<!--                                <use xlink:href="#icon-input-arrow"></use>-->
+<!--                            </svg>-->
+<!--                        </div>-->
+<!--                    </h4>-->
+<!--                    <div class="accordion__content">-->
+<!--                        <ul class="accordion__list dotted-list">-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">760</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Уха из трёх рыб</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">390</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">760</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Щи суточные из квашеной капусты с молочной телятиной, белыми грибами и моченой брусникой</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">1370</div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="accordion__item">-->
+<!--                    <h4 class="accordion__item-title">-->
+<!--                        <svg width="28" height="26" class="accordion__title-svg-icon">-->
+<!--                            <use xlink:href="#icon-soup"></use>-->
+<!--                        </svg>-->
+<!--                        <span>Супы</span>-->
+<!--                        <div class="accordion__item-title_button">-->
+<!--                            <svg viewBox="0 0 12 6" width="12" height="6">-->
+<!--                                <use xlink:href="#icon-input-arrow"></use>-->
+<!--                            </svg>-->
+<!--                        </div>-->
+<!--                    </h4>-->
+<!--                    <div class="accordion__content">-->
+<!--                        <ul class="accordion__list dotted-list">-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Уха из трёх рыб</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">390</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">760</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Щи суточные из квашеной капусты с молочной телятиной, белыми грибами и моченой брусникой</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">1370</div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="accordion__item">-->
+<!--                    <h4 class="accordion__item-title">-->
+<!--                        <svg width="27" height="33" class="accordion__title-svg-icon">-->
+<!--                            <use xlink:href="#icon-wine"></use>-->
+<!--                        </svg>-->
+<!--                        <span>Винная карта</span>-->
+<!--                        <div class="accordion__item-title_button">-->
+<!--                            <svg viewBox="0 0 12 6" width="12" height="6">-->
+<!--                                <use xlink:href="#icon-input-arrow"></use>-->
+<!--                            </svg>-->
+<!--                        </div>-->
+<!--                    </h4>-->
+<!--                    <div class="accordion__content">-->
+<!--                        <ul class="accordion__list dotted-list">-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Уха из трёх рыб</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">390</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">760</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">760</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Щи суточные из квашеной капусты с молочной телятиной, белыми грибами и моченой брусникой</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">1370</div>-->
+<!--                            </li>-->
+<!--                            <li class="accordion__list-item">-->
+<!--                                <div class="accordion__list-item-content">Вьетнамский пряный суп с говядиной, рисовой лапшой и ростками фасоли</div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;dots"></div>-->
+<!--                                <div class="accordion__list-item-content accordion__list-item-content&#45;&#45;price">760</div>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="main-card__cursive-aside">-->
+<!--        <p class="cursive-aside-title">Menu</p>-->
+<!--    </div>-->
+<!--</section>-->
 <section class="main-section detailed-section similar-items-section">
     <div class="main-content-container">
         <div class="similar-items__wrapper">
@@ -613,7 +718,7 @@
             <a href="mailto:booking@forrestmix.ru" class="footer__contact-info-link footer__contact-info-link--email">booking@forrestmix.ru</a>
             <p class="footer__address">Репино, ул.Луговая 10А</p>
             <a href="/" class="footer__contact-info-link footer__contact-info-link--map">Смотреть карту</a>
-            <a href="/" class="footer__contact-info-link footer__contact-info-link--map-mobile btn">открыть в яндекс.карты</a>
+            <a href="https://yandex.ru/maps/-/CKenILPP" class="footer__contact-info-link footer__contact-info-link--map-mobile btn">открыть в яндекс.карты</a>
             <div class="footer__icons">
                 <a href="" class="footer__icon-link">
                     <svg width="20" height="20">

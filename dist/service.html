@@ -156,9 +156,20 @@
         </svg>
         <span class="main-menu__bookbtn-text">забронировать</span>
     </a>
+    <div class="alert-popup alert-popup--active" data-hash="xxxxxxxxx">
+        <span class="alert-popup__title">Важная информация.</span>
+        <p class="alert-popup__text">
+            forRestMix Club - место притяжения приверженцев активного отдыха, поклонников расслабляющих процедур! forRestMix Club - место притяжения приверженцевforRestMix Club - место притяжения приверженцев
+        </p>
+        <button class="alert-popup__close">
+            <svg viewBox="0 0 10 10" width="10" height="10">
+                <use xlink:href="#icon-close"></use>
+            </svg>
+        </button>
+    </div>
 </nav>
 <aside class="menu-fixed">
-    <nav class="menu-fixed__nav">
+    <div class="menu-fixed__nav">
         <a href="/" class="menu-fixed__link menu-fixed__link--main">
             <svg width="40" height="203">
                 <use xlink:href="#ForRestMix-logo"></use>
@@ -177,8 +188,7 @@
                 <use xlink:href="#icon-telegram"></use>
             </svg>
         </a>
-    </nav>
-
+    </div>
 </aside>
 
 <section class="main-section detailed-section detailed-section--service">
@@ -500,7 +510,7 @@
                                 <div class="accordion__list-item-content accordion__list-item-content--price">3500</div>
                             </li>
                             <li class="accordion__list-item">
-                                <div class="accordion__list-item-content">1 месяц (8 занятий)</div>
+                                <div class="accordion__list-item-content">1 месяц (8 занятий) 1 месяц (8 занятий)1 месяц (8 занятий)1 месяц (8 занятий)1 месяц (8 занятий)1 месяц (8 занятий)1 месяц (8 занятий)1 месяц (8 занятий)</div>
                                 <div class="accordion__list-item-content accordion__list-item-content--dots"></div>
                                 <div class="accordion__list-item-content accordion__list-item-content--price">3500</div>
                             </li>
@@ -508,8 +518,10 @@
                     </div>
                 </div>
             </div>
+            <a href="./pdf/test-pdf.pdf" class="btn accordion__price-btn">Смотреть полный прайс</a>
         </div>
     </div>
+
     <div class="main-card__cursive-aside">
         <p class="cursive-aside-title">Price</p>
     </div>
@@ -629,6 +641,73 @@
         <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
 </section>
+<div class="book-modal" id="book-modal">
+    <div class="book-modal__window">
+        <div class="book-modal__title-block">
+            <h3 class="book-modal__title">Заказать Услугу</h3>
+            <span class="book-modal__subtitle common-text">Отправьте запрос и мы перезвоним Вам.</span>
+        </div>
+        <div class="book-modal__form-wrapper">
+            <form action="" class="book-modal__form">
+                <div class="book-modal__form-input-wrap book-modal__form-input-wrap--select cselect__wrap">
+                    <label for="book-modal-select" class="book-modal__select-label">выберите услугу</label>
+                    <select name="" id="book-modal-select" class="book-modal__select">
+                        <option value="aqua" data-tel="+00000000" data-email="harin@forrestmix.ru">Аква и фитнес (заказать абонемент)</option>
+                        <option value="massage" data-tel="+333333212" data-email="321@forrestmix.ru">Запись на массаж</option>
+                        <option value="estet" data-tel="+222222222" data-email="55555@forrestmix.ru">Запись на услуги эстетической косметологии</option>
+                        <option value="medic" data-tel="+11222223231" data-email="66666@forrestmix.ru">Запись на услуги медицинской косметологии</option>
+                        <option value="master" data-tel="+000000002" data-email="77777@forrestmix.ru">Запись на услуги мастерской красоты</option>
+                        <option value="conf" data-tel="+8778786656" data-email="999999@forrestmix.ru">Аренда конференц зала</option>
+                        <option value="corpo" data-tel="+6666666666" data-email="1111111@forrestmix.ru">Проведение корпоратива</option>
+                        <option value="banquet" data-tel="55555552" data-email="1313131313@forrestmix.ru">Заказать банкет</option>
+                        <option value="table" data-tel="+31231451412" data-email="151515151515@forrestmix.ru">Бронирование столика в ресторане</option>
+                        <option value="action" data-tel="+111111111" data-email="21212121@forrestmix.ru">Заказать услугу по акции</option>
+                    </select>
+                </div>
+                <div class="book-modal__form-input-wrap book-modal__form-input-wrap--tel">
+                    <input type="tel" class="book-modal__input-tel" placeholder="ваш телефон">
+                </div>
+                <input type="email" class="book-modal__input-email js-modal-email" style="display: none" placeholder="ваш телефон" value="harin@forrestmix.ru">
+                <div class="book-modal__form-input-wrap book-modal__form-input-wrap--submit">
+                    <input type="submit" value="ОТПРАВИТЬ ЗАПРОС" class="btn book-modal__submit js-book-modal-submit">
+                </div>
+            </form>
+        </div>
+        <div class="book-modal__call-us">
+            <span class="book-modal__call-us-text common-text">Или звоните нам по номеру:</span>
+            <a href="tel:+78124167512" class="book-modal__call-us-link js-modal-phone">+7 (812) 416 75 12</a>
+        </div>
+        <a href="#main-menu" class="book-modal__close">
+            <svg viewBox="0 0 15 15" width="15" height="15">
+                <use xlink:href="#icon-close"></use>
+            </svg>
+        </a>
+        <div class="book-modal__success">
+            <span class="book-modal__success-icon">
+                <svg viewBox="0 0 46 46" width="46" height="46">
+                    <use xlink:href="#icon-paperplane"></use>
+                </svg>
+            </span>
+            <span class="book-modal__title">Ваш запрос успешно отправлен.</span>
+            <span class="book-modal__success-text common-text">В ближайшее время менеджер отеля свяжется с Вами для уточнения деталей. Спасибо, что пользуетесь нашими услугами.</span>
+        </div>
+        <div class="book-modal__error">
+            <span class="book-modal__error-icon">
+                <svg viewBox="0 0 40 54" width="40" height="54">
+                    <use xlink:href="#icon-error"></use>
+                </svg>
+            </span>
+            <span class="book-modal__title">К сожалению, что-то пошло не так...</span>
+            <span class="book-modal__error-text common-text">Попробуйте еще раз отправить заявку, или позвоните нам по номеру:</span>
+            <div class="book-modal__call-us book-modal__call-us--error">
+                <a href="tel:+78124167512" class="book-modal__call-us-link js-modal-phone">+7 (812) 416 75 12</a>
+            </div>
+        </div>
+        <div class="book-modal__loading">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+</div>
 
 <script src="./js/main-card.js"></script>
 <script src="./js/accordion.js"></script>
@@ -687,7 +766,7 @@
             <a href="mailto:booking@forrestmix.ru" class="footer__contact-info-link footer__contact-info-link--email">booking@forrestmix.ru</a>
             <p class="footer__address">Репино, ул.Луговая 10А</p>
             <a href="/" class="footer__contact-info-link footer__contact-info-link--map">Смотреть карту</a>
-            <a href="/" class="footer__contact-info-link footer__contact-info-link--map-mobile btn">открыть в яндекс.карты</a>
+            <a href="https://yandex.ru/maps/-/CKenILPP" class="footer__contact-info-link footer__contact-info-link--map-mobile btn">открыть в яндекс.карты</a>
             <div class="footer__icons">
                 <a href="" class="footer__icon-link">
                     <svg width="20" height="20">

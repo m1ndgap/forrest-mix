@@ -1,0 +1,27 @@
+.menu-card
+  align-content: flex-start
+  justify-content: center
+  @include media("<large")
+    align-content: center
+    justify-content: flex-start
+  .main-card__slider
+    margin-right: 150px
+    @include media("<large")
+  .main-card__text-wrapper
+    max-width: 430px
+    @include media("<large")
+      max-width: 515px
+      width: 100%
+  &__btn
+    padding: 20px
+    border: none
+    width: 406px
+    @include media("<large")
+      width: 100%
+      order: 3
+    &--main
+      margin-top: 50px
+    &--secondary
+      color: $black
+      margin-top: 24px
+      background-image: linear-gradient(to right, $inline-link 50%, $maincolor 50%)

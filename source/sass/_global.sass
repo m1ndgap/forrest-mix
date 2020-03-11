@@ -61,11 +61,10 @@ body
   cursor: pointer
   transition: background-position $transition, color $transition
   &:hover
+    outline: none
     background-position: 0 0
     color: $black
-  &:active
-    outline: none
-  &:focus
+  &:active, &:focus
     outline: 1px solid $maincolor
   @include media("<large")
     &:hover
@@ -85,6 +84,7 @@ body
     background-color: rgba($white, 0.5)
 
 .main-section
+  overflow: hidden
   min-height: 900px
   &:nth-of-type(even)
     background-color: $section-bg
@@ -111,6 +111,7 @@ body
   min-height: unset
 
 .aside-section
+  overflow: visible
   padding: 188px 0 196px
   @include media('<large')
     padding: 80px 0 80px
@@ -280,8 +281,14 @@ body
   padding: 50px 0
   background-color: $booking-color
 
-.tl-container-room
+.tl-container-room, .title-tl-search-form
   @include media("<large")
     padding: 0 30px
   @include media("<tablet")
     padding: 0 10px
+
+#callback-form
+  &:focus
+    outline: none
+
+

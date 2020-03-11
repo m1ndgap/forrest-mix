@@ -1,0 +1,91 @@
+.alert-popup
+  position: absolute
+  top: calc(100% + 39px)
+  left: 6px
+  box-sizing: border-box
+  max-width: 0
+  max-height: 117px
+  overflow: hidden
+  padding: 0
+  background-image: url("../img/icon-warning.svg")
+  background-color: $white
+  background-repeat: no-repeat
+  background-position: 24px 30px
+  @include media("<large")
+    top: calc(100% + 15px)
+    left: 15px
+  @include media("<tablet")
+    top: calc(100% + 5px)
+    left: 5px
+    right: 5px
+  &:before
+    content: ""
+    position: absolute
+    left: -14px
+    top: 49px
+    width: 23px
+    height: 23px
+    background-color: $white
+    opacity: 0
+    transform: rotate(121deg) translate(-50%) skewY(30deg)
+    @include media("<large")
+      display: none
+  &--active
+    max-width: 100%
+    max-height: 500px
+    overflow: visible
+    padding: 16px 33px 16px 74px
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+    transition: max-width $transition*2, max-height $transition $transition/1.5
+    @include media("<tablet")
+      transition: max-width $transition*2, max-height $transition $transition*2
+    &:before
+      opacity: 1
+      transition: opacity $transition $transition
+    .alert-popup__title
+      max-height: unset
+      opacity: 1
+      transition: max-height $transition $transition/2, opacity $transition $transition/1.5
+    .alert-popup__text
+      max-height: unset
+      opacity: 1
+      transition: max-height $transition $transition/1.5, opacity $transition $transition/1.5
+      @include media("<tablet")
+        transition: opacity $transition $transition*2.5
+    .alert-popup__close
+      opacity: 1
+      transition: opacity $transition $transition*1.5
+
+
+
+  &__title
+    max-height: 0
+    width: 420px
+    font-size: 1.6rem
+    font-family: "Yeseva One", serif
+    color: $black
+    opacity: 0
+  &__text
+    max-height: 0
+    width: 420px
+    font-size: 1.4rem
+    color: $dark-text
+    opacity: 0
+    @include media("<tablet")
+      width: 100%
+  &__close
+    position: absolute
+    top: 16px
+    right: 13px
+    border: none
+    background: none
+    cursor: pointer
+    opacity: 0
+    @include media("<large")
+      top: 5px
+      right: 5px
+      height: 44px
+      width: 44px
+      svg
+        height: 15px
+        width: 15px

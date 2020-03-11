@@ -31,6 +31,15 @@
     .breadcrumbs__item + .breadcrumbs__item
       &::before
         color: $black
+  &--flat
+    padding-top: 20px
+    padding-left: 0
+    justify-content: center
+    &:before
+      top: 7px
+      left: 50%
+      transform: translate(-50%)
+
 
   &__item
     position: relative

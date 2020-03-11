@@ -2,6 +2,8 @@
   margin-top: 46px
   &__wrapper
     padding: 145px 0 195px
+    @include media("<tablet")
+      padding: 65px 0 75px
   &__main-title
     font-size: 3.0rem
   &__item
@@ -92,17 +94,22 @@
       padding-right: 15px
       position: relative
       &::after
-        font-family: "Open Sans", sans-serif
+        font-family: "Open Sans", sans-serif, -apple-system
         position: absolute
         display: block
-        content: ""
-        background-image: url("../img/icon-ruble.svg")
-        background-repeat: no-repeat
-        background-size: 0.9rem
+        content: "\20BD"
         width: 10px
         height: 20px
         right: 0
-        top: 10px
+        top: 0
       @include media("<tablet")
         margin-left: auto
-
+  &__price-btn
+    display: block
+    padding: 20px
+    margin: 72px auto 0
+    border: none
+    width: 412px
+    @include media("<large")
+      max-width: 456px
+      width: 100%
