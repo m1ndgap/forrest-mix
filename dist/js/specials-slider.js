@@ -69,9 +69,6 @@ let specialSliderOptions = {
                 activeSlide = swiper.el.querySelector('.swiper-slide-active'),
                 activeText = activeSlide.querySelector('.' + sliderTextCls),
                 activeTitle = activeSlide.querySelector('.' + sliderTitleCls);
-            console.log('real index is ' + this.realIndex);
-            console.log('active index is ' + this.activeIndex);
-            console.log(activeSlide);
             activeText.classList.add(sliderTextCls + '--active');
             activeTitle.classList.add(sliderTitleCls + '--active');
         },

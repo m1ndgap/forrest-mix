@@ -5,6 +5,11 @@ let mainlogo = document.querySelector('.menu-fixed__link--main'),
     popupalert = document.querySelector('.alert-popup'),
     alertClose = popupalert.querySelector('.alert-popup__close');
 
+window.addEventListener('load', function () {
+    console.log("loaded");
+    popupalert.classList.add('alert-popup--active')
+});
+
 mainlogo.addEventListener('click', function (evt) {
     evt.preventDefault();
     popupalert.classList.toggle('alert-popup--active')
