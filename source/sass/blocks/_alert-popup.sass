@@ -46,6 +46,8 @@
       max-height: unset
       opacity: 1
       transition: max-height $transition $transition/2, opacity $transition $transition/1.5
+      @include media("<tablet")
+        transition: opacity $transition $transition*2.5
     .alert-popup__text
       max-height: unset
       opacity: 1

@@ -5549,6 +5549,10 @@ body {
       opacity: 1;
       -webkit-transition: max-height 700ms 350ms, opacity 700ms 466.66667ms;
       transition: max-height 700ms 350ms, opacity 700ms 466.66667ms; }
+      @media (max-width: 767px) {
+        .alert-popup--active .alert-popup__title {
+          -webkit-transition: opacity 700ms 1750ms;
+          transition: opacity 700ms 1750ms; } }
     .alert-popup--active .alert-popup__text {
       max-height: unset;
       opacity: 1;
