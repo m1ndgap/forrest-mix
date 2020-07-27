@@ -92,6 +92,11 @@ body
     background-color: $white
   &--last-card
     padding-bottom: 50px
+  &--color-flip
+    &:nth-of-type(odd)
+      background-color: $section-bg
+    &:nth-of-type(even)
+      background-color: $white
   @include media('<large')
     height: auto
     overflow: hidden

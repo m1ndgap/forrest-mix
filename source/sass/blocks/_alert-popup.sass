@@ -48,7 +48,7 @@
       transition: max-height $transition $transition/2, opacity $transition $transition/1.5
       @include media("<tablet")
         transition: opacity $transition $transition*2.5
-    .alert-popup__text
+    .alert-popup__text, .alert-popup__link
       max-height: unset
       opacity: 1
       transition: max-height $transition $transition/1.5, opacity $transition $transition/1.5
@@ -67,7 +67,7 @@
     font-family: "Yeseva One", serif
     color: $black
     opacity: 0
-  &__text
+  &__text, &__link
     max-height: 0
     width: 420px
     font-size: 1.4rem

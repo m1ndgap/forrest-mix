@@ -109,7 +109,7 @@
         </div>
     </div>
 </section>
-<section class="collection-header collection-header--index">
+<section class="collection-header collection-header--cursive">
     <div class="collection-header__wrapper">
         <h1 class="collection-header__title"
             data-aos="fade-left"
@@ -124,10 +124,10 @@
         <a href="./about-us.html" class="btn">Подробнее об отеле</a>
         </div>
     </div>
-    <span class="collection-header__index-cursive">ForRestMix Club</span>
+    <span class="collection-header__cursive">ForRestMix Club</span>
 </section>
-<section class="specials-slider main-section height-unset">
-    <div class="main-content-container">
+<section class="main-section similar-items-section similar-items-section--index">
+    <div class="main-content-container specials-slider">
         <ul class="specials-slider__breadcrumbs breadcrumbs breadcrumbs--dark breadcrumbs--flat">
             <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/services.html">сезонные мероприятия</a>
@@ -146,9 +146,9 @@
                         <figure class="slide-fig">
                             <img srcset="./img/index-special-slide-1-sm.jpg 700w,
                                          ./img/index-special-slide-1.jpg 1800w"
-                                    sizes="(max-width: 770px) 700px,
+                                 sizes="(max-width: 770px) 700px,
                                            1800px"
-                                    src="./img/index-special-slide-1.jpg" alt="spa slide" class="entity-img" />
+                                 src="./img/index-special-slide-1.jpg" alt="spa slide" class="entity-img" />
                         </figure>
                     </a>
                     <a href="./service.html" class="swiper-slide">
@@ -216,8 +216,6 @@
             </div>
         </div>
     </div>
-</section>
-<section class="main-section similar-items-section similar-items-section--index">
     <div class="main-content-container">
         <div class="similar-items__wrapper">
             <ul class="breadcrumbs breadcrumbs--dark">
@@ -278,7 +276,12 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <figure class="slide-fig">
-                                        <img src="./img/rooms-slide-4.jpg" alt="" class="similar-items__slide-img">
+<!--                                        <img src="" alt="" class="similar-items__slide-img">-->
+                                        <img srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg== 700w,
+                                         ./img/rooms-slide-4.jpg 1800w"
+                                             sizes="(max-width: 770px) 700px,
+                                           1800px"
+                                             src="./img/rooms-slide-4.jpg" alt="spa slide" class="entity-img" />
                                     </figure>
                                 </div>
                                 <div class="swiper-slide">
@@ -481,7 +484,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#book-modal" data-modalopt="master" class="btn">Смотреть все номера</a>
+            <a href="#book-modal" data-modalopt="master" class="btn similar-items__more-info-btn">Смотреть все номера</a>
         </div>
     </div>
     <div class="main-card__cursive-aside">

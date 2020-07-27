@@ -1,6 +1,6 @@
 "use strict";
 
-let btns = document.querySelectorAll('.main-card__slider .swiper-container'),
+let btns = document.querySelectorAll('.main-card__slider:not(.js-maincard-slider--no-gallery) .swiper-container'),
     galleryCls = 'gallery',
     galleryBtnCloseCls = 'gallery__close',
     galleryHideCls = 'gallery--hidden',

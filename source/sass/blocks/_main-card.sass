@@ -52,10 +52,11 @@
       width: 100%
       margin-top: 5px
       li
+        margin-top: 6px
         position: relative
         padding-left: 14px
         font-size: 1.5rem
-        line-height: 28px
+        line-height: 24px
         color: $dark-text
         &::before
           position: absolute
@@ -224,6 +225,8 @@
       margin-top: 30px
       order: 5
       flex-flow: row wrap
+  &__features + &__interaction
+    margin-top: auto
   &__book-btn
     border: none
     width: 256px
@@ -285,7 +288,9 @@
   &__index-link
     text-decoration: none
     color: $black
-
+  &__dl-pdf
+    margin-top: 10px
+    align-self: flex-start
 
 
 
@@ -432,6 +437,8 @@
 .service-card
   .main-card__interaction
     margin-top: auto
+  .main-card__details + .main-card__interaction
+    margin-top: 10px
 
 .detailed-card
   .main-card__slider

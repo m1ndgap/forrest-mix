@@ -25,27 +25,27 @@
 
   &--restaurants
     &::after
-      background-image: url('../img/restaurants-bg-img.jpg')
+      background-image: url('../../media/static/img/restaurants-bg-img.jpg')
   &--spa
     &::after
-      background-image: url('../img/spa-bg-img.jpg')
+      background-image: url('../../media/static/img/spa-bg-img.jpg')
   &--services
     &::after
-      background-image: url('../img/services-bg-img.jpg')
+      background-image: url('../../media/static/img/services-bg-img.jpg')
   &--rooms
     &::after
-      background-image: url('../img/rooms-bg-img.jpg')
+      background-image: url('../../media/static/img/rooms-bg-img.jpg')
   &--rooms-luxe
     &::after
-      background-image: url('../img/luxe-bg-img.jpg')
+      background-image: url('../../media/static/img/luxe-bg-img.jpg')
   &--specials
     &::after
-      background-image: url('../img/specials-bg-img.jpg')
+      background-image: url('../../media/static/img/specials-bg-img.jpg')
   &--booking
     padding: 100px 15px 100px
     &::after
-      background-image: url('../img/luxe-bg-img.jpg')
-  &--index
+      background-image: url('../../media/static/img/luxe-bg-img.jpg')
+  &--cursive
     background-color: $section-bg
     color: $black
     overflow: hidden
@@ -67,7 +67,7 @@
         &:hover
           color: $white
 
-  &__index-cursive
+  &__cursive
     font-size: 18rem
     font-family: 'Northwell', cursive
     line-height: 100%
@@ -82,7 +82,6 @@
     @include media('<desktop')
       display: none
   &__wrapper
-    max-width: 680px
     margin: auto
     @include media('<large')
       max-width: 456px
@@ -105,11 +104,12 @@
 
   &__text
     @include resetmargin
-    margin-top: 30px
+    margin: 30px auto 0
     font-family: "Open Sans", sans-serif
     font-size: 1.8rem
     line-height: 156%
     text-align: center
+    max-width: 680px
     @include media('<large')
       font-size: 1.6rem
     @include media('<tablet')
