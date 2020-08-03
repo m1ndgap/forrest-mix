@@ -13,8 +13,9 @@
 
   .main-title
     right: 387px
-    bottom: 268px
+    top: 450px
     @include media("<huge")
+      top: 200px
       right: 340px
     @include media("<tablet")
       top: 30px
@@ -34,38 +35,38 @@
 
 
   .main-subtitle
-    position: relative
-    right: 0
-    bottom: 268px
+    width: 550px
+    position: absolute
+    right: 387px
+    top: 570px
     @include resetmargin
     font-weight: normal
-    font-size: 3.6rem
-    line-height: 52px
+    font-size: 3.2rem
+    line-height: 46px
     @include media("<huge")
       font-size: 3rem
-      right: 0
+      right: 340px
+      top: 300px
+    @include media("<desktop")
+      width: 400px
     @include media("<tablet")
       position: absolute
-      top: 82px
-      right: 0
       width: 100%
-      height: 110px
+      right: 0
+      top: 88px
     @include media("<phone")
       font-size: 1.8rem
 
 
   .main-subtitle__promotion-link
     text-decoration: none
-    right: 387px
     color: $white
     pointer-events: none
     opacity: 0
     transition: opacity $transition/2
     @include media("<huge")
-      right: 347px
     @include media("<large")
       font-size: 2.8rem
-      height: 200px
       line-height: 38px
       .custom-underline
         text-decoration: underline rgba($white, 0.5)
@@ -78,8 +79,9 @@
       span:nth-of-type(2)
         top: 76px
     @include media("<tablet")
-      right: 40px
-      height: 150px
+      padding-right: 40px
+      box-sizing: border-box
+      width: calc(100% - 40px)
       display: flex
       flex-flow: column
       align-items: flex-end
@@ -110,7 +112,30 @@
     &--activate
       opacity: 1
       pointer-events: all
-      transition: opacity $transition 700ms
+      transition: opacity $transition 1000ms
+
+    a
+      display: block
+      width: max-content
+      margin-left: auto
+      margin-top: 40px
+      padding: 0 20px
+      text-decoration: none
+      color: $white
+      font-family: "Open Sans", sans-serif
+      font-weight: 300
+      font-size: 1.2rem
+      text-transform: uppercase
+      letter-spacing: 2px
+      border: 2px solid $white
+      transition: background-color $transition
+      &:hover
+        background-color: rgba($white, 0.2)
+      @include media("<tablet")
+        margin-top: 10px
+        font-size: 1rem
+        padding: 0 10px
+
 
   .main-cursive
     height: 691px
@@ -147,14 +172,14 @@
   @include media("<huge")
     height: calc(100vh - 74px)
   @include media("<tablet")
-    height: 633px
+    height: 672px
   .swiper-pagination-bullets
     width: auto
-    right: 373px
-    bottom: 65px
+    right: 50px
+    top: 65px
     left: auto
     @include media("<tablet")
-      top: 200px
+      top: 250px
       right: 40px
     .swiper-pagination-bullet
       background-color: transparent
@@ -293,9 +318,11 @@
   @include media("<huge")
     max-width: 222px
     max-height: 348px
+    bottom: unset
+    top: 200px
   @include media("<tablet")
     right: 40px
-    bottom: 20px
+    top: 300px
 
 .tl-container
   padding: 0 36px
