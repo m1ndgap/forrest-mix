@@ -1,0 +1,49 @@
+.gdpr
+  position: fixed
+  bottom: -100%
+  width: calc(100% - 84px)
+  padding: 5px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: rgba($white, 0.5)
+  z-index: 15
+  transition: all $transition
+  @include media("<large")
+    width: 100%
+  @include media("<tablet")
+    flex-flow: column nowrap
+
+  &--active
+    bottom: 0
+
+
+  &__text
+    font-size: 1.4rem
+    color: $dark-text
+    text-align: left
+    flex-basis: 80%
+    flex-grow: 0
+    @include media("<large")
+      flex-basis: 60%
+    @include media("<tablet")
+      text-align: center
+      max-width: 500px
+
+  &__link
+    margin-left: 15px
+    font-size: 1.4rem
+    color: $dark-text
+    text-transform: uppercase
+    @include media("<tablet")
+      margin-top: 10px
+
+  &__btn
+    font-size: 1.2rem
+    margin-left: 15px
+    padding: 5px
+    border: 1px solid $dark-text
+    background: transparent
+    text-transform: uppercase
+    @include media("<tablet")
+      margin-top: 10px

@@ -14,7 +14,7 @@ let optionsCls = 'cselect__options',
     loadingClass = 'book-modal__loading',
     errorClass = 'book-modal__error',
     closeClass = 'book-modal__close',
-    xmlhttpUrl = 'http://forrestmix.zzyzx.ru/api/callback/add/';
+    xmlhttpUrl = 'http://forrestmix.ru/api/callback/add/';
 
 window.location.hash = '';
 

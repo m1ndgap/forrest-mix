@@ -4664,6 +4664,8 @@ body {
     text-transform: uppercase;
     font-size: 1.2rem;
     letter-spacing: 1.5px; }
+  .breadcrumbs li:last-child a {
+    pointer-events: none; }
 
 .accordion {
   margin-top: 46px; }
@@ -6545,11 +6547,11 @@ body {
     text-align: right; }
   .slides .main-title {
     right: 387px;
-    top: 450px; }
+    top: calc(100vh - 572px); }
     @media (max-width: 1439px) {
       .slides .main-title {
         top: 200px;
-        right: 340px; } }
+        top: calc(100vh - 450px); } }
     @media (max-width: 767px) {
       .slides .main-title {
         top: 30px;
@@ -6571,10 +6573,11 @@ body {
         .slides .main-title__title {
           font-size: 4.5rem; } }
   .slides .main-subtitle {
-    width: 550px;
+    width: 750px;
+    height: 252px;
     position: absolute;
     right: 387px;
-    top: 570px;
+    top: calc(100vh - 450px);
     margin: 0;
     padding: 0;
     font-weight: normal;
@@ -6582,9 +6585,10 @@ body {
     line-height: 46px; }
     @media (max-width: 1439px) {
       .slides .main-subtitle {
-        font-size: 3rem;
+        font-size: 2.9rem;
+        height: 227px;
         right: 340px;
-        top: 300px; } }
+        top: calc(100vh - 350px); } }
     @media (max-width: 1023px) {
       .slides .main-subtitle {
         width: 400px; } }
@@ -6592,6 +6596,7 @@ body {
       .slides .main-subtitle {
         position: absolute;
         width: 100%;
+        height: unset;
         right: 0;
         top: 88px; } }
     @media (max-width: 320px) {
@@ -6662,12 +6667,15 @@ body {
       transition: opacity 700ms 1000ms; }
     .slides .main-subtitle__promotion-link a {
       display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
       width: -webkit-max-content;
       width: -moz-max-content;
       width: max-content;
       margin-left: auto;
       margin-top: 40px;
-      padding: 0 20px;
+      padding: 5px 38px;
       text-decoration: none;
       color: #FFFFFF;
       font-family: "Open Sans", sans-serif;
@@ -6680,8 +6688,12 @@ body {
       transition: background-color 700ms; }
       .slides .main-subtitle__promotion-link a:hover {
         background-color: rgba(255, 255, 255, 0.2); }
+      @media (max-width: 1279px) {
+        .slides .main-subtitle__promotion-link a {
+          padding: 9px 38px; } }
       @media (max-width: 767px) {
         .slides .main-subtitle__promotion-link a {
+          position: static;
           margin-top: 10px;
           font-size: 1rem;
           padding: 0 10px; } }
@@ -6904,7 +6916,7 @@ body {
       max-width: 222px;
       max-height: 348px;
       bottom: unset;
-      top: 200px; } }
+      top: calc(100vh - 450px); } }
   @media (max-width: 767px) {
     #block-search-main {
       right: 40px;
@@ -8267,6 +8279,64 @@ body {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
+
+.gdpr {
+  position: fixed;
+  bottom: -100%;
+  width: calc(100% - 84px);
+  padding: 5px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 15;
+  -webkit-transition: all 700ms;
+  transition: all 700ms; }
+  @media (max-width: 1279px) {
+    .gdpr {
+      width: 100%; } }
+  @media (max-width: 767px) {
+    .gdpr {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-flow: column nowrap; } }
+  .gdpr--active {
+    bottom: 0; }
+  .gdpr__text {
+    font-size: 1.4rem;
+    color: #65696C;
+    text-align: left;
+    flex-basis: 80%;
+    -webkit-box-flex: 0;
+            flex-grow: 0; }
+    @media (max-width: 1279px) {
+      .gdpr__text {
+        flex-basis: 60%; } }
+    @media (max-width: 767px) {
+      .gdpr__text {
+        text-align: center;
+        max-width: 500px; } }
+  .gdpr__link {
+    margin-left: 15px;
+    font-size: 1.4rem;
+    color: #65696C;
+    text-transform: uppercase; }
+    @media (max-width: 767px) {
+      .gdpr__link {
+        margin-top: 10px; } }
+  .gdpr__btn {
+    font-size: 1.2rem;
+    margin-left: 15px;
+    padding: 5px;
+    border: 1px solid #65696C;
+    background: transparent;
+    text-transform: uppercase; }
+    @media (max-width: 767px) {
+      .gdpr__btn {
+        margin-top: 10px; } }
 
 .test-slider {
   width: 100%;

@@ -13,10 +13,10 @@
 
   .main-title
     right: 387px
-    top: 450px
+    top: calc(100vh - 572px)
     @include media("<huge")
       top: 200px
-      right: 340px
+      top: calc(100vh - 450px)
     @include media("<tablet")
       top: 30px
       right: 40px
@@ -35,23 +35,26 @@
 
 
   .main-subtitle
-    width: 550px
+    width: 750px
+    height: 252px
     position: absolute
     right: 387px
-    top: 570px
+    top: calc(100vh - 450px)
     @include resetmargin
     font-weight: normal
     font-size: 3.2rem
     line-height: 46px
     @include media("<huge")
-      font-size: 3rem
+      font-size: 2.9rem
+      height: 227px
       right: 340px
-      top: 300px
+      top: calc(100vh - 350px)
     @include media("<desktop")
       width: 400px
     @include media("<tablet")
       position: absolute
       width: 100%
+      height: unset
       right: 0
       top: 88px
     @include media("<phone")
@@ -116,10 +119,13 @@
 
     a
       display: block
+      position: absolute
+      right: 0
+      bottom: 0
       width: max-content
       margin-left: auto
       margin-top: 40px
-      padding: 0 20px
+      padding: 5px 38px
       text-decoration: none
       color: $white
       font-family: "Open Sans", sans-serif
@@ -131,7 +137,10 @@
       transition: background-color $transition
       &:hover
         background-color: rgba($white, 0.2)
+      @include media("<large")
+        padding: 9px 38px
       @include media("<tablet")
+        position: static
         margin-top: 10px
         font-size: 1rem
         padding: 0 10px
@@ -319,7 +328,7 @@
     max-width: 222px
     max-height: 348px
     bottom: unset
-    top: 200px
+    top: calc(100vh - 450px)
   @include media("<tablet")
     right: 40px
     top: 300px
